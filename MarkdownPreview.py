@@ -22,7 +22,6 @@ from .markdown_settings import Settings
 from .markdown_wrapper import StMarkdown as Markdown
 
 _CANNOT_CONVERT = 'cannot convert markdown'
-_EXT_CONFIG = "Packages/Markdown Preview/markdown_preview.yml"
 
 PYGMENTS_LOCAL = {
     'github': 'css/pygments/github.css',
@@ -117,7 +116,7 @@ def load_utf8(filename):
 def load_resource(name):
     """Return file contents for files within the package root folder."""
     try:
-        return sublime.load_resource('Packages/Markdown Preview/{0}'.format(name))
+        return sublime.load_resource('Packages/MarkdownPreview/{0}'.format(name))
     except Exception:
         print("Error while load_resource('%s')" % name)
         traceback.print_exc()
