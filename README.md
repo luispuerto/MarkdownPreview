@@ -21,9 +21,9 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 
 ## Documentation
 
-Current Documentation: https://github.com/revolunet/sublimetext-markdown-preview/blob/st2/README.md
+Current Documentation: https://github.com/facelessuser/MarkdownPreview/blob/st2/README.md
 
-Future 2.0 Documentation: https://revolunet.github.io/sublimetext-markdown-preview/
+Future 2.0 Documentation: https://facelessuser.github.io/MarkdownPreview/
 
 ## Support
 
@@ -45,7 +45,7 @@ The code is available at [GitHub][home] under the [MIT license][license].
 [hexatrope]: https://github.com/hexatrope
 [home]: https://github.com/revolunet/sublimetext-markdown-preview
 [hozaka]: https://github.com/hozaka
-[issue]: https://github.com/revolunet/sublimetext-markdown-preview/issues
+[issue]: https://github.com/facelessuser/MarkdownPreview/issues
 [license]: http://revolunet.mit-license.org
 [live-reload]: https://packagecontrol.io/packages/LiveReload
 [pymd]: https://github.com/Python-Markdown/markdown
