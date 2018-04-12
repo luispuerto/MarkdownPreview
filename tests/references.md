@@ -1,1 +1,1 @@
-[1]: https://github.com/revolunet/sublimetext-markdown-preview
+[1]: https://github.com/facelessuser/MarkdownPreview

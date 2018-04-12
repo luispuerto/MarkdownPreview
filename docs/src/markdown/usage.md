@@ -1,7 +1,7 @@
 # Usage
 
 !!! info
-    When referring to settings, we are referring to the settings found at `Preferences`->`Package Settings`->`Markdown Preview`.
+    When referring to settings, we are referring to the settings found at `Preferences`->`Package Settings`->`MarkdownPreview`.
 
     - `Settings - User` is where you change your settings for Markdown Preview.
     - `Settings - Default` is a good reference with detailed descriptions for each setting.
@@ -9,7 +9,7 @@
 ## To preview
 
 - Optionally select some of your markdown for conversion.
-- Use the shortcut ++cmd+shift+p++ then select `Markdown Preview` to show the follow commands (you will be prompted to select which parser you prefer):
+- Use the shortcut ++cmd+shift+p++ then select `MarkdownPreview` to show the follow commands (you will be prompted to select which parser you prefer):
     - Markdown Preview: Preview in Browser
     - Markdown Preview: Export HTML in Sublime Text
     - Markdown Preview: Copy to Clipboard

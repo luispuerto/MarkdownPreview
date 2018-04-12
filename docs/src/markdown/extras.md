@@ -8,14 +8,14 @@ When using Python Markdown (the `markdown` parser), it is recommended to use som
 
 In this example, we will try to show a generalized approach that should work when using Python Markdown with `pymdownx.arithmatex` or GitHub (though preservation of math in GitHub may or may not be problematic).
 
-Markdown Preview provides a generalized script in `Markdown Preview/js/math_config.js`. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, and `#!tex \[...\]`. You can change this to only target what you want by creating your own.
+Markdown Preview provides a generalized script in `MarkdownPreview/js/math_config.js`. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, and `#!tex \[...\]`. You can change this to only target what you want by creating your own.
 
 To load MathJax support, simply include the MathJax library along with the math config file provided by this extension. You are free to provide your own if you'd like to tweak the configuration:
 
 ```js
     "js": [
         "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
-        "res://Markdown Preview/js/math_config.js"
+        "res://MarkdownPreview/js/math_config.js"
     ]
 ```
 
@@ -42,7 +42,7 @@ If you are using the extension [SuperFences extension][superfences], it has an o
         "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js",
 
         // This library applies the above libraries to the fenced code blocks `flow` and `sequence`.
-        "res://Markdown Preview/js/uml.js"
+        "res://MarkdownPreview/js/uml.js"
     ]
 ```
 
