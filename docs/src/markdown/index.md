@@ -15,10 +15,10 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 - Build markdown file using Sublime Text build system.
 - Browser preview auto reload on save if you have the [LiveReload plugin][live-reload] installed.
 - Configurable CSS and JavaScript assets with overriding if needed.
-- YAML support thanks to [@tommi][tommi].
-- Clipboard selection and copy to clipboard thanks to [@hexatrope][hexatrope].
-- MathJax support : $\frac{\pi}{2}$ thanks to [@bps10][bps10].
-- HTML template customization thanks to [@hozaka][hozaka].
+- YAML support thanks to @tommi.
+- Clipboard selection and copy to clipboard thanks to @hexatrope.
+- MathJax support : $\frac{\pi}{2}$ thanks to @bps10.
+- HTML template customization thanks to @hozaka.
 - Embed images as base64.
 - Strip out MultiMarkdown CriticMarkup.
 

@@ -21,8 +21,6 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 
 ## Documentation
 
-Current Documentation: https://github.com/facelessuser/MarkdownPreview/blob/st2/README.md
-
 Future 2.0 Documentation: https://facelessuser.github.io/MarkdownPreview/
 
 ## Support

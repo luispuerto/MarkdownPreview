@@ -1,13 +1,10 @@
 [arithmatex]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
-[bps10]: https://github.com/bps10
 [critic]: http://criticmarkup.com/
 [custom-fences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
 [flow]: https://flowchart.js.org/
 [gfm-api]: https://developer.github.com/v3/markdown/
 [gfm-help]: https://help.github.com/articles/github-flavored-markdown/
-[hexatrope]: https://github.com/hexatrope
 [home]: https://github.com/facelessuser/MarkdownPreview
-[hozaka]: https://github.com/hozaka
 [issue]: https://github.com/facelessuser/MarkdownPreview/issues
 [latest]: https://github.com/facelessuser/MarkdownPreview/archive/master.zip
 [license]: http://revolunet.mit-license.org
@@ -21,4 +18,3 @@
 [sequence]: https://bramp.github.io/js-sequence-diagrams/
 [settings]: https://github.com/facelessuser/MarkdownPreview/blob/master/MarkdownPreview.sublime-settings
 [toc]: https://pythonhosted.org/Markdown/extensions/toc.html#usage
-[tommi]: https://github.com/tommi
