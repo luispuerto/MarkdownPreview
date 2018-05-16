@@ -3,6 +3,7 @@
 ## 2.0.1
 
 - Fix missing code highlight extension.
+- Fix build command failing.
 
 ## 2.0.0
 

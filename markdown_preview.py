@@ -1061,7 +1061,7 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
 
         html, body = compiler.run(view, True, preview=False)
 
-        if 'build' in self.settings.get('include_head', ['build', 'browser', 'sublime', 'clipboard', 'save']):
+        if 'build' in settings.get('include_head', ['build', 'browser', 'sublime', 'clipboard', 'save']):
             content = html
         else:
             content = body
