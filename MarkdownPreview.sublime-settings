@@ -77,6 +77,7 @@
         "markdown.extensions.def_list",
         "markdown.extensions.tables",
         "markdown.extensions.abbr",
+        "markdown.extensions.codehilite",
         // Extra's Markdown parsing in raw HTML cannot be
         // included by itself, but "pymdownx" exposes it so we can.
         "pymdownx.extrarawhtml",

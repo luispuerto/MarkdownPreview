@@ -188,7 +188,7 @@ So let's pretend we didn't like Toc's default slugify `markdown.extensions.heade
 
 Compare to the PyYaml format:
 
-```yml
+```yaml
 markdown_extensions:
   - markdown.extensions.toc:
       slugify: !!python/name:pymdownx.slugs.uslugify

@@ -1,5 +1,9 @@
 # Changes
 
+## 2.0.1
+
+- Fix missing code highlight extension.
+
 ## 2.0.0
 
 Please read documentation as there have been big changes in this version which may require updates to your personal settings.
