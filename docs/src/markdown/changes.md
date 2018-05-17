@@ -1,5 +1,10 @@
 # Changes
 
+## 2.0.2
+
+- Code highlighting should have guessing disabled by default.
+- Fix failure when code highlighting has guessing enabled, but the user specified a language name which has no lexer.
+
 ## 2.0.1
 
 - Fix missing code highlight extension.
