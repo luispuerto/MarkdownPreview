@@ -4,6 +4,7 @@
 
 - Add support for KaTeX math.
 - Ensure MathJax properly looks for `\begin{env}...\end{env}`.
+- Unified menu.
 
 ## 2.0.3
 
