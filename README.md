@@ -21,7 +21,7 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 
 ## Documentation
 
-Future 2.0 Documentation: https://facelessuser.github.io/MarkdownPreview/
+https://facelessuser.github.io/MarkdownPreview/
 
 ## Support
 
