@@ -35,9 +35,9 @@ If you are using `pymdownx.arithmatex` you can configure it like so to take adva
 ## KaTeX Support
 
 !!! danger
-    GitHub is not supported with KaTex. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
+    GitHub is not supported with KaTeX. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
 
-To render Tex style math in Markdown, you can use the default KaTex configuration that is included with Markdown Preview or create and reference your own.
+To render Tex style math in Markdown, you can use the default KaTeX configuration that is included with Markdown Preview or create and reference your own.
 
 When using Python Markdown (the `markdown` parser), it is recommended to use something like the extension [`pymdownx.arithmatex`][arithmatex] as it ensures that math notation is preserved in the Markdown conversion process.
 
@@ -45,7 +45,7 @@ In this example, we will try to show a generalized approach that should work whe
 
 Markdown Preview provides a script in `MarkdownPreview/js/katex_config.js` that uses KaTeX's API to scan for `arithmatex` classes, and converts and renders the math. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, `#!tex \[...\]`, and `#!tex \begin{env}...\end{env}`.
 
-To load KaTeX support, simply include the KaTex library along with the KaTeX configuration script provided by this extension. You are free to provide your own and reference it instead if you'd like to tweak the configuration:
+To load KaTeX support, simply include the KaTeX library along with the KaTeX configuration script provided by this extension. You are free to provide your own and reference it instead if you'd like to tweak the configuration:
 
 ```js
     "js": [
