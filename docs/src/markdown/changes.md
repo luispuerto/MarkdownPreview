@@ -1,5 +1,9 @@
 # Changes
 
+## 2.0.3
+
+- MathJax should only scan for `arithmatex` classes in HTML.
+
 ## 2.0.2
 
 - Code highlighting should have guessing disabled by default.
