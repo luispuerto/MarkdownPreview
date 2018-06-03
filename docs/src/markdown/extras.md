@@ -2,15 +2,18 @@
 
 ## MathJax Support
 
+!!! danger
+    GitHub is not supported with MathJax. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
+
 To render Tex style math in Markdown, you can use the default MathJax configuration that is included with Markdown Preview or create and reference your own.
 
-When using Python Markdown (the `markdown` parser), it is recommended to use something like the extension [`pymdownx.arithmatex`][arithmatex] as it ensures that math notation is preserved in the Markdown conversion process. GitHub (the `github` parser) does not have such an extension, so you might have to escape accordingly.
+When using Python Markdown (the `markdown` parser), it is recommended to use something like the extension [`pymdownx.arithmatex`][arithmatex] as it ensures that math notation is preserved in the Markdown conversion process.
 
-In this example, we will try to show a generalized approach that should work when using Python Markdown with `pymdownx.arithmatex` or GitHub (though preservation of math in GitHub may or may not be problematic).
+In this example, we will try to show a generalized approach that should work when using Python Markdown with Arithmatex. Arithmatex will be configued in a generalized way that could potentially be used with libraries like MathJax or KaTeX, but only a MathJax configuration is provided by default.  It is left to the user to figure out a configuration that works for KaTex and other potential, alternate libraries. There are other non-generalized approaches we could use, but as previously stated, in this example, the output will be a non MathJax specific output via Arithmatex'x "generic" mode.
 
-Markdown Preview provides a generalized script in `MarkdownPreview/js/math_config.js`. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, and `#!tex \[...\]`. You can change this to only target what you want by creating your own.
+Markdown Preview provides a script in `MarkdownPreview/js/math_config.js` that uses MathJax's `tex2jax` plain text scanning. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, and `#!tex \[...\]`. You can change this to only target what you want by creating your own.
 
-To load MathJax support, simply include the MathJax library along with the math config file provided by this extension. You are free to provide your own if you'd like to tweak the configuration:
+To load MathJax support, simply include the MathJax library along with the math config file provided by this extension. You are free to provide your own and reference it instead if you'd like to tweak the configuration:
 
 ```js
     "js": [
@@ -19,7 +22,7 @@ To load MathJax support, simply include the MathJax library along with the math 
     ]
 ```
 
-If you are using `pymdownx.arithmatex` you can configure like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to target only what you want and output in the different forms. Check out Arithmatex documentation for more info.
+If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to output in a more MathJax specific form or tweak the output to your liking, though you may have to modify your MatjJax config to accommodate certain changes. Check out Arithmatex documentation for more info.
 
 ```js
     "markdown_extensions": {
