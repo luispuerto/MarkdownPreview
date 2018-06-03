@@ -1,5 +1,10 @@
 # Changes
 
+## 2.1.0
+
+- Add support for KaTeX math.
+- Ensure MathJax properly looks for `\begin{env}...\end{env}`.
+
 ## 2.0.3
 
 - MathJax should only scan for `arithmatex` classes in HTML.

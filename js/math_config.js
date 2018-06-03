@@ -6,6 +6,7 @@ MathJax.Hub.Config({
     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
     displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
     processEscapes: true,
+    processEnvironments: true,
     ignoreClass: ".*|",
     processClass: "arithmatex"
   },
@@ -15,7 +16,7 @@ MathJax.Hub.Config({
     TagIndent: ".8em",
     MultLineWidth: "85%",
     equationNumbers: {
-      autoNumber: "AMS",
+      autoNumber: "all",
     },
     unicode: {
       fonts: "STIXGeneral,'Arial Unicode MS'"
