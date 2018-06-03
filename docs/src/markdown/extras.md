@@ -9,7 +9,7 @@ To render Tex style math in Markdown, you can use the default MathJax configurat
 
 When using Python Markdown (the `markdown` parser), it is recommended to use something like the extension [`pymdownx.arithmatex`][arithmatex] as it ensures that math notation is preserved in the Markdown conversion process.
 
-In this example, we will try to show a generalized approach that should work when using Python Markdown with Arithmatex. Arithmatex will be configued in a generalized way that could potentially be used with libraries like MathJax or KaTeX, but only a MathJax configuration is provided by default.  It is left to the user to figure out a configuration that works for KaTex and other potential, alternate libraries. There are other non-generalized approaches we could use, but as previously stated, in this example, the output will be a non MathJax specific output via Arithmatex'x "generic" mode.
+In this example, we will try to show a generalized approach that should work when using Python Markdown with Arithmatex. Arithmatex will be configured in a generalized way that could potentially be used with libraries like MathJax or KaTeX, but only a MathJax configuration is provided by default.  It is left to the user to figure out a configuration that works for KaTeX and other potential, alternate libraries. There are other non-generalized approaches we could use, but as previously stated, in this example, the output will be a non MathJax specific output via Arithmatex's "generic" mode.
 
 Markdown Preview provides a script in `MarkdownPreview/js/math_config.js` that uses MathJax's `tex2jax` plain text scanning. It searches for `#!tex $...$`, `#!tex $$...$$`, `#!tex \(...\)`, and `#!tex \[...\]`. You can change this to only target what you want by creating your own.
 
@@ -22,7 +22,7 @@ To load MathJax support, simply include the MathJax library along with the math 
     ]
 ```
 
-If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to output in a more MathJax specific form or tweak the output to your liking, though you may have to modify your MatjJax config to accommodate certain changes. Check out Arithmatex documentation for more info.
+If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to output in a more MathJax specific form or tweak the output to your liking, though you may have to modify your MathJax config to accommodate certain changes. Check out Arithmatex documentation for more info.
 
 ```js
     "markdown_extensions": {
