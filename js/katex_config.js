@@ -3,7 +3,6 @@
 
 var katexMath = (function () {
     var maths = document.querySelectorAll('.arithmatex'),
-        block_env = /\\begin\{([a-z]+\*?)\}.+?\\end\{\1\}/,
         tex;
 
     for (var i = 0; i < maths.length; i++) {
@@ -12,8 +11,7 @@ var katexMath = (function () {
           (tex.startsWith('$') && tex.endsWith('$'))) {
         katex.render(tex.slice(2, -2), maths[i], {'displayMode': false});
       } else if ((tex.startsWith('\\[') && tex.endsWith('\\]')) ||
-                 (tex.startsWith('$$') && tex.endsWith('$$')) ||
-                 block_env.test(tex)) {
+                 (tex.startsWith('$$') && tex.endsWith('$$'))) {
         katex.render(tex.slice(2, -2), maths[i], {'displayMode': true});
       }
     }
