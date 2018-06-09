@@ -16,13 +16,12 @@ MathJax.Hub.Config({
     TagIndent: ".8em",
     MultLineWidth: "85%",
     equationNumbers: {
-      autoNumber: "all",
+      autoNumber: "AMS",
     },
     unicode: {
       fonts: "STIXGeneral,'Arial Unicode MS'"
     }
   },
-  displayAlign: "left",
   showProcessingMessages: false,
   messageStyle: 'none'
 });

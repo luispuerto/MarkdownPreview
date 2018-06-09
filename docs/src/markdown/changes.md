@@ -1,5 +1,10 @@
 # Changes
 
+## 2.1.1
+
+- Revert `autoNumber` set to `all` in MathJax config.
+- Revert alignment left of MathJax display equations as the default has always been center prior to 2.0 releases.
+
 ## 2.1.0
 
 - Add support for KaTeX math.
