@@ -1,5 +1,9 @@
 # Changes
 
+## 2.1.2
+
+- Don't allow live reload on save if using GitHub parser with no OAuth.
+
 ## 2.1.1
 
 - Revert `autoNumber` set to `all` in MathJax config.

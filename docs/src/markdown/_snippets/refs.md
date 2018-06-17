@@ -17,4 +17,5 @@
 [pymdownx]: http://facelessuser.github.io/pymdown-extensions/
 [sequence]: https://bramp.github.io/js-sequence-diagrams/
 [settings]: https://github.com/facelessuser/MarkdownPreview/blob/master/MarkdownPreview.sublime-settings
+[superfences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
 [toc]: https://pythonhosted.org/Markdown/extensions/toc.html#usage
