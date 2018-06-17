@@ -166,7 +166,9 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
     def on_post_save(self, view):
         """Handle auto-reload on save."""
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
-        if settings.get('enable_autoreload', True):
+        github_auth_provided = settings.get('github_oauth_token') is not None
+        parser = view.settings().get('parser')
+        if settings.get('enable_autoreload', True) and (parser != 'github' or github_auth_provided):
             filetypes = settings.get('markdown_filetypes')
             file_name = view.file_name()
             if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
@@ -176,7 +178,7 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
                     # todo : check if browser still opened and reopen it if needed
                     view.run_command('markdown_preview', {
                         'target': 'disk',
-                        'parser': view.settings().get('parser')
+                        'parser': parser
                     })
                     sublime.status_message('Markdown preview file updated')
 

@@ -74,7 +74,7 @@ To get live updates while editing a file after preview, you need to do the follo
         */
         "enable_autoreload": true,
     ```
-2. Install [LiveReload][7] package from Package Control.
+2. Install [LiveReload][live-reload] package from Package Control.
 3. Restart.
 4. Open the command palette and select the command `LiveReload: Enable/disable plug-ins`.
 5. Select `Simple Reload with delay (400ms)`.  It is possible you can get away with `Simple Reload`, but some experience an issue where they are one rev behind when using `Simple Reload`.
