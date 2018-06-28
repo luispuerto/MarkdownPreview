@@ -70,7 +70,7 @@ To get live updates while editing a file after preview, you need to do the follo
 1. Enable the `enable_autoreload` setting in `MarkdownPreview.sublime-settings`.
     ```js
          /*
-            Enable auto-reloaded on save. Will not work if GitHub parser is used without oauth key specified.
+            Enable auto-reloaded on save. Will not work if GitHub parser GitLab parser is used without oauth key specified.
         */
         "enable_autoreload": true,
     ```
@@ -143,7 +143,7 @@ External parser commands and arguments should first be mapped to a name.  Each b
 Then the name can be placed in `enabled_parsers` to enable use of the new parser.
 
 ```js
-    "enabled_parsers": ["markdown", "github", "multimarkdown"],
+    "enabled_parsers": ["markdown", "github", "gitlab", "multimarkdown"],
 ```
 
 ## Configuring Python Markdown Extensions
@@ -233,6 +233,7 @@ And the parser that is used when building is set in the `parser` setting:
         default - The current default parser is python-markdown parser.
         markdown - Use the built-in python-markdown parser
         github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see https://help.github.com/articles/github-flavored-markdown/
+        gitlab - Use the gitlab API to convert markdown, so you can use GitLab flavored Markdown, see https://docs.gitlab.com/ee/user/markdown.html
     */
     "parser": "markdown",
 ```
@@ -442,6 +443,32 @@ GFM does not auto guess language in fenced blocks, but Markdown Preview does thi
     ```
 
 As mentioned earlier, a number of extensions are included by default. You can remove ones that are not part of GFM.
+
+## Parsing GitLab Flavored Markdown
+
+GitLab Flavored Markdown (GFM) is a popular markdown, too.  Markdown Preview can handle them online.
+
+### Online
+
+Parsing GFM using the online method requires using the GitLab API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.
+
+```js
+    /*
+        Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
+        see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
+    */
+    "github_mode": "markdown",
+```
+
+Using the GitLab API without an oauth key is limited to so many calls.  After the limit is reached, the GitLab API will deny further calls until after a set limit of time. To avoid this issue, you can set your API key in the settings as follows:
+
+```js
+    /*
+        Uses an OAuth token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
+        Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
+    */
+    "gitlab_oauth_token": "secret",
+```
 
 ## Including CSS
 
