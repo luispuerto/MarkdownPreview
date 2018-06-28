@@ -167,8 +167,11 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
         """Handle auto-reload on save."""
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
         github_auth_provided = settings.get('github_oauth_token') is not None
+        gitlab_auth_provided = settings.get('gitlab_oauth_token') is not None
         parser = view.settings().get('parser')
-        if settings.get('enable_autoreload', True) and (parser != 'github' or github_auth_provided):
+        if settings.get('enable_autoreload', True) and (parser not in ['github', 'gitlab'] or
+                                                        (parser is 'github' and github_auth_provided) or
+                                                        (parser is 'gitlab' and gitlab_auth_provided)):
             filetypes = settings.get('markdown_filetypes')
             file_name = view.file_name()
             if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
@@ -423,7 +426,7 @@ class Compiler(object):
         return text
 
     def convert_markdown(self, markdown_text):
-        """Convert input markdown to HTML, with github or builtin parser."""
+        """Convert input markdown to HTML, with github, gitlab or builtin parser."""
         markdown_html = self.parser_specific_convert(markdown_text)
 
         image_convert = self.settings.get("image_path_conversion", "absolute")
@@ -680,6 +683,154 @@ class GithubCompiler(Compiler):
         return markdown_html
 
 
+class GitlabCompiler(Compiler):
+    """GitLab compiler."""
+
+    default_css = "css/github.css"
+
+    def curl_convert(self, data):
+        """Use curl to send Markdown content through GitLab API."""
+        try:
+            import subprocess
+
+            # It looks like the text does NOT need to be escaped and
+            # surrounded with double quotes.
+            # Tested in ubuntu 13.10, python 2.7.5+
+            shell_safe_json = data.decode('utf-8')
+            curl_args = [
+                'curl',
+                '-H',
+                'Content-Type: application/json',
+                '-d',
+                shell_safe_json,
+                'https://gitlab.com/api/v4/markdown'
+            ]
+
+            gitlab_oauth_token = self.settings.get('gitlab_oauth_token')
+            if gitlab_oauth_token:
+                curl_args[1:1] = [
+                    '-u',
+                    gitlab_oauth_token
+                ]
+
+            markdown_html = json.loads(subprocess.Popen(curl_args, stdout=subprocess.PIPE)
+                                                 .communicate()[0].decode('utf-8'))['html']
+            return markdown_html
+        except subprocess.CalledProcessError:
+            sublime.error_message(
+                textwrap.dedent(
+                    """\
+                    Cannot use gitlab API to convert markdown. SSL is not included in your Python installation. \
+                    And using curl didn't work either
+                    """
+                )
+            )
+        return None
+
+    def parser_specific_postprocess(self, html):
+        """Run GitLab specific postprocesses."""
+        if self.settings.get("github_inject_header_ids", False):
+            html = self.postprocess_inject_header_id(html)
+        return html
+
+    def postprocess_inject_header_id(self, html):
+        """Insert header ids when no anchors are present."""
+        from pymdownx.slugs import uslugify
+        unique = {}
+        re_header = re.compile(r'(?P<open><h([1-6])>)(?P<text>.*?)(?P<close></h\2>)', re.DOTALL)
+
+        def inject_id(m):
+            header_id = uslugify(m.group('text'), '-')
+            if header_id == '':
+                return m.group(0)
+            # Append a dash and number for uniqueness if needed
+            value = unique.get(header_id, None)
+            if value is None:
+                unique[header_id] = 1
+            else:
+                unique[header_id] += 1
+                header_id += "-%d" % value
+            return m.group('open')[:-1] + (' id="%s">' % header_id) + m.group('text') + m.group('close')
+
+        return re_header.sub(inject_id, html)
+
+    def get_gitlab_response_from_exception(self, e):
+        """Convert GitLab Response."""
+        body = json.loads(e.read().decode('utf-8'))
+        return 'GitLab\'s original response: (HTTP Status Code %s) "%s"' % (e.code, body['message'])
+
+    def parser_specific_convert(self, markdown_text):
+        """Convert input markdown to HTML with gitlab parser."""
+        markdown_html = _CANNOT_CONVERT
+        gitlab_oauth_token = self.settings.get('gitlab_oauth_token')
+
+        # use the gitlab API
+        sublime.status_message('converting markdown with gitlab API...')
+        github_mode = self.settings.get('github_mode', 'gfm')
+        data = {
+            "text": markdown_text,
+            # "project": "group_example/project_example",  # TODO: add `project` parameter?
+            "gfm": github_mode == 'gfm'
+        }
+        data = json.dumps(data).encode('utf-8')
+
+        try:
+            headers = {
+                'Content-Type': 'application/json'
+            }
+            if gitlab_oauth_token:
+                headers['Authorization'] = "token %s" % gitlab_oauth_token
+            url = "https://gitlab.com/api/v4/markdown"
+            sublime.status_message(url)
+            request = request_url(url, data, headers)
+            markdown_html = json.loads(urlopen(request).read().decode('utf-8'))['html']
+        except HTTPError as e:
+            if e.code == 401:
+                sublime.error_message(
+                    "GitLab API authentication failed. Please check your OAuth token.\n\n" +
+                    self.get_gitlab_response_from_exception(e)
+                )
+            elif e.code == 403:  # Forbidden
+                sublime.error_message(
+                    textwrap.dedent(
+                        """\
+                        It seems like you have exceeded GitLab's API rate limit.
+
+                        To continue using GitLab's markdown format with this package, log in to \
+                        GitLab, then go to Settings > Personal access tokens > Generate new token, \
+                        copy the token's value, and paste it in this package's user settings under the key \
+                        'gitlab_oauth_token'. Example:
+
+                        {
+                            "gitlab_oauth_token": "xxxx...."
+                        }
+
+                        """
+                    ) + self.get_gitlab_response_from_exception(e)
+                )
+            else:
+                sublime.error_message(
+                    "GitLab API responded in an unfriendly way!\n\n" +
+                    self.get_gitlab_response_from_exception(e)
+                )
+        except URLError:
+            # Maybe this is a Linux-install of ST which doesn't bundle with SSL support
+            # So let's try wrapping curl instead
+            markdown_html = self.curl_convert(data)
+        except Exception:
+            e = sys.exc_info()[1]
+            print(e)
+            traceback.print_exc()
+            sublime.error_message(
+                "Cannot use GitLab's API to convert Markdown. Please check your settings.\n\n" +
+                self.get_gitlab_response_from_exception(e)
+            )
+        else:
+            sublime.status_message('converted markdown with gitlab API successfully')
+
+        return markdown_html
+
+
 class ExternalMarkdownCompiler(Compiler):
     """Compiler for other, external Markdown parsers."""
 
@@ -837,7 +988,8 @@ class MarkdownPreviewSelectCommand(sublime_plugin.TextCommand):
         md_map = settings.get('markdown_binary_map', {})
         parsers = [
             "markdown",
-            "github"
+            "github",
+            "gitlab"
         ]
 
         # Add external markdown binaries.
@@ -847,7 +999,7 @@ class MarkdownPreviewSelectCommand(sublime_plugin.TextCommand):
         self.target = target
 
         enabled_parsers = set()
-        for p in settings.get("enabled_parsers", ["markdown", "github"]):
+        for p in settings.get("enabled_parsers", ["markdown", "github", "GitLab"]):
             if p in parsers:
                 enabled_parsers.add(p)
 
@@ -898,9 +1050,11 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
 
         if parser == "github":
             compiler = GithubCompiler()
+        elif parser == "gitlab":
+            compiler = GitlabCompiler()
         elif parser == 'markdown':
             compiler = MarkdownCompiler()
-        elif parser in self.settings.get("enabled_parsers", ("markdown", "github")):
+        elif parser in self.settings.get("enabled_parsers", ("markdown", "github", "gitlab")):
             compiler = ExternalMarkdownCompiler(parser)
         else:
             # Fallback to Python Markdown
@@ -927,7 +1081,10 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
         """Save to disk and open in browser if desired."""
         # do not use LiveReload unless autoreload is enabled
         github_auth_provided = self.settings.get('github_oauth_token') is not None
-        if self.settings.get('enable_autoreload', True) and (self.parser != 'github' or github_auth_provided):
+        gitlab_auth_provided = self.settings.get('gitlab_oauth_token') is not None
+        if self.settings.get('enable_autoreload', True) and (self.parser not in ['github', 'gitlab'] or
+                                                             (self.parser is 'github' and github_auth_provided) or
+                                                             (self.parser is 'gitlab' and gitlab_auth_provided)):
             # check if LiveReload ST2 extension installed and add its script to the resulting HTML
             if 'LiveReload' in os.listdir(sublime.packages_path()):
                 port = sublime.load_settings('LiveReload.sublime-settings').get('port', 35729)
@@ -1054,9 +1211,11 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
 
         if parser == "github":
             compiler = GithubCompiler()
+        elif parser == "gitlab":
+            compiler = GitlabCompiler()
         elif parser == 'markdown':
             compiler = MarkdownCompiler()
-        elif parser in settings.get("enabled_parsers", ("markdown", "github")):
+        elif parser in settings.get("enabled_parsers", ("markdown", "github", "gitlab")):
             compiler = ExternalMarkdownCompiler(parser)
         else:
             compiler = MarkdownCompiler()
