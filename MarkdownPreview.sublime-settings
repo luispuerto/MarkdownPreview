@@ -160,8 +160,9 @@
     },
 
     /*
-        Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
+        Default mode for the github or gitlab Markdown parser : markdown (documents) or gfm (comments)
         see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
+        and https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
     */
     "github_mode": "markdown",
 
@@ -177,10 +178,10 @@
     // "github_oauth_token": "secret",
     
     /*
-        Uses an OAuth2 token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
+        Uses a personal token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
         Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
     */
-    // "github_oauth_token": "secret",
+    // "gitlab_oauth_token": "secret",
 
     /*
         Sets the default css file to embed in the HTML
