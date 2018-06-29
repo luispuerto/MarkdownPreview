@@ -686,7 +686,7 @@ class GithubCompiler(Compiler):
 class GitlabCompiler(Compiler):
     """GitLab compiler."""
 
-    default_css = "css/github.css"
+    default_css = "css/gitlab.css"
 
     def curl_convert(self, data):
         """Use curl to send Markdown content through GitLab API."""

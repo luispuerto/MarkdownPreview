@@ -186,7 +186,7 @@
     /*
         Sets the default css file to embed in the HTML
 
-        default - Use the builtin CSS or github CSS, depending on parser config (markdown.css or github.css)
+        default - Use the builtin CSS or github CSS, depending on parser config (markdown.css, github.css or gitlab.css)
         other - Set an absolute path or url to any css file
 
         Should be an array, but will take a single string to support legacy convention.
