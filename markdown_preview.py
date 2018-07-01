@@ -584,7 +584,7 @@ class OnlineCompiler(Compiler):
         return None
 
     def get_server_exception_message(self, body):
-        """get server exception message from body of API response"""
+        """Extract server exception message from body of API response."""
         return body['message']
 
     def get_response_from_exception(self, e):
@@ -594,14 +594,14 @@ class OnlineCompiler(Compiler):
             self.compiler_name, e.code, self.get_server_exception_message(body))
 
     def pack_data(self, markdown_text, github_mode):  # TODO: should `github_mode` be ranamed in settings and etc?
-        """prepare data to send to API"""
+        """Prepare data to send to API."""
         return {
             "text": markdown_text,
             "mode": github_mode
         }
 
     def unpack_data(self, raw_data):
-        """get html from API response"""
+        """Get html from API response."""
         return raw_data.decode('utf-8')
 
     def parser_specific_convert(self, markdown_text):
@@ -680,11 +680,11 @@ class GithubCompiler(OnlineCompiler):
     url = "https://api.github.com/markdown"
 
     def get_server_exception_message(self, body):
-        """get server exception message from body of API response"""
+        """Extract server exception message from body of API response."""
         return body['message']
 
     def pack_data(self, markdown_text, github_mode):
-        """prepare data to send to API"""
+        """Prepare data to send to API."""
         return {
             "text": markdown_text,
             # "context": "group_example/project_example",  # TODO: add `context` parameter?
@@ -692,7 +692,7 @@ class GithubCompiler(OnlineCompiler):
         }
 
     def unpack_data(self, raw_data):
-        """get html from API response"""
+        """Get html from API response."""
         return raw_data.decode('utf-8')
 
     def parser_specific_postprocess(self, html):
@@ -732,11 +732,11 @@ class GitlabCompiler(OnlineCompiler):
     url = "https://gitlab.com/api/v4/markdown"
 
     def get_server_exception_message(self, body):
-        """get server exception message from body of API response"""
+        """Extract server exception message from body of API response."""
         return body['message']
 
     def pack_data(self, markdown_text, github_mode):
-        """prepare data to send to API"""
+        """Prepare data to send to API."""
         return {
             "text": markdown_text,
             # "project": "group_example/project_example",  # TODO: add `project` parameter?
@@ -744,7 +744,7 @@ class GitlabCompiler(OnlineCompiler):
         }
 
     def unpack_data(self, raw_data):
-        """get html from API response"""
+        """Get html from API response."""
         return json.loads(raw_data.decode('utf-8'))['html']
 
     def parser_specific_postprocess(self, html):
