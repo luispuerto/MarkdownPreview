@@ -146,7 +146,7 @@ html[dir="rtl"] .select2-container .select2-choice > .select2-chosen {
     font-size: 1px;
     text-decoration: none;
     border: 0;
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat;
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat;
     cursor: pointer;
     outline: 0
 }
@@ -249,7 +249,7 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow {
     display: block;
     width: 100%;
     height: 100%;
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 0 1px
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 0 1px
 }
 
 html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
@@ -281,20 +281,20 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: #fff url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px;
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
+    background: #fff url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px;
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat 100% -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
 }
 
 html[dir="rtl"] .select2-search input {
     padding: 4px 5px 4px 20px;
-    background: #fff url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px;
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
+    background: #fff url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px;
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) no-repeat -37px -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
 }
 
 .select2-drop.select2-drop-above .select2-search input {
@@ -302,11 +302,11 @@ html[dir="rtl"] .select2-search input {
 }
 
 .select2-search input.select2-active {
-    background: #fff url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%;
-    background: url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-    background: url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
+    background: #fff url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%;
+    background: url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0
 }
 
 .select2-container-active .select2-choice, .select2-container-active .select2-choices {
@@ -483,7 +483,7 @@ html[dir="rtl"] .select2-results {
 }
 
 .select2-more-results.select2-active {
-    background: #f4f4f4 url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%
+    background: #f4f4f4 url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100%
 }
 
 .select2-results .select2-ajax-error {
@@ -576,7 +576,7 @@ html[dir="rtl"] .select2-container-multi .select2-choices li {
 }
 
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
-    background: #fff url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100% !important
+    background: #fff url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) no-repeat 100% !important
 }
 
 .select2-default {
@@ -630,7 +630,7 @@ html[dir="rtl"] .select2-container-multi .select2-choices .select2-search-choice
     top: 4px;
     font-size: 1px;
     outline: none;
-    background: url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat
+    background: url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png) right top no-repeat
 }
 
 html[dir="rtl"] .select2-search-choice-close {
@@ -708,7 +708,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 2dppx) {
     .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr,
     .select2-container .select2-choice .select2-arrow b {
-        background-image: url(./select2x2-6fe28d687dc0ed4d96016238c608ba1e7198c9c9accfa0b360b78018b9fb9bc2.png) !important;
+        background-image: url(https://assets.gitlab-static.net/assets/select2x2-6fe28d687dc0ed4d96016238c608ba1e7198c9c9accfa0b360b78018b9fb9bc2.png) !important;
         background-repeat: no-repeat !important;
         background-size: 60px 40px !important
     }
@@ -19169,7 +19169,7 @@ body.modal-open {
 
 .select2-search input {
     padding: 8px;
-    background: #fff url(./select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png);
+    background: #fff url(https://assets.gitlab-static.net/assets/select2-d6b5d8d83dbc18fb8d77c8761d331cd9e5123c9684950bab0406e98a24ac5ae8.png);
     background-clip: content-box;
     background-origin: content-box;
     background-repeat: no-repeat;
@@ -19186,7 +19186,7 @@ body.modal-open {
 
 .select2-search input.select2-active {
     background-color: #fff;
-    background-image: url(./select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) !important;
+    background-image: url(https://assets.gitlab-static.net/assets/select2-spinner-f6ecff617ec2ba7f559e6f535cad9b70a3f91120737535dab4d4548a6c83576c.gif) !important;
     background-origin: content-box;
     background-repeat: no-repeat;
     background-position: right 6px center !important;
@@ -20681,7 +20681,7 @@ code.key-fingerprint {
 
 .markdown-body h1 a.anchor::after, .markdown-body h2 a.anchor::after, .markdown-body h3 a.anchor::after,
 .markdown-body h4 a.anchor::after, .markdown-body h5 a.anchor::after, .markdown-body h6 a.anchor::after {
-    content: url(./icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
+    content: url(https://assets.gitlab-static.net/assets/icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
     visibility: hidden
 }
 
@@ -20941,7 +20941,7 @@ code.key-fingerprint {
 
 .md h1 a.anchor::after, .md h2 a.anchor::after, .md h3 a.anchor::after,
 .md h4 a.anchor::after, .md h5 a.anchor::after, .md h6 a.anchor::after {
-    content: url(./icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
+    content: url(https://assets.gitlab-static.net/assets/icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
     visibility: hidden
 }
 
@@ -22517,8 +22517,8 @@ gl-emoji {
  */
 @font-face {
     font-family: 'FontAwesome';
-    src: url("./fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot");
-    src: url("./fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot?#iefix") format("embedded-opentype"), url("./fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2") format("woff2"), url("./fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff") format("woff"), url("./fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf") format("truetype"), url("./fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg#fontawesomeregular") format("svg");
+    src: url("https://assets.gitlab-static.net/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot");
+    src: url("https://assets.gitlab-static.net/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot?#iefix") format("embedded-opentype"), url("https://assets.gitlab-static.net/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2") format("woff2"), url("https://assets.gitlab-static.net/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff") format("woff"), url("https://assets.gitlab-static.net/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf") format("truetype"), url("https://assets.gitlab-static.net/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg#fontawesomeregular") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -28320,7 +28320,7 @@ ul.notes > li .note-body .note-text table.tags {
     width: 15px;
     position: absolute;
     top: 0;
-    background: url(./swipemode_sprites-522fecbb380f3edfa9b09006e88a51fbcb5c26d95dba87d2e09a363a863cd4e4.gif) 0 3px no-repeat
+    background: url(https://assets.gitlab-static.net/assets/swipemode_sprites-522fecbb380f3edfa9b09006e88a51fbcb5c26d95dba87d2e09a363a863cd4e4.gif) 0 3px no-repeat
 }
 
 .diff-file .image .view.swipe .swipe-bar .bottom-handle {
@@ -28329,7 +28329,7 @@ ul.notes > li .note-body .note-text table.tags {
     width: 15px;
     position: absolute;
     bottom: 0;
-    background: url(./swipemode_sprites-522fecbb380f3edfa9b09006e88a51fbcb5c26d95dba87d2e09a363a863cd4e4.gif) 0 -11px no-repeat
+    background: url(https://assets.gitlab-static.net/assets/swipemode_sprites-522fecbb380f3edfa9b09006e88a51fbcb5c26d95dba87d2e09a363a863cd4e4.gif) 0 -11px no-repeat
 }
 
 .diff-file .image .view.onion-skin .onion-skin-frame {
@@ -28363,7 +28363,7 @@ ul.notes > li .note-body .note-text table.tags {
     left: 12px;
     height: 10px;
     width: 276px;
-    background: url(./onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -4px -20px repeat-x
+    background: url(https://assets.gitlab-static.net/assets/onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -4px -20px repeat-x
 }
 
 .diff-file .image .view.onion-skin .controls .dragger {
@@ -28373,7 +28373,7 @@ ul.notes > li .note-body .note-text table.tags {
     top: 0;
     height: 14px;
     width: 14px;
-    background: url(./onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) 0 -34px repeat-x;
+    background: url(https://assets.gitlab-static.net/assets/onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) 0 -34px repeat-x;
     cursor: pointer
 }
 
@@ -28384,7 +28384,7 @@ ul.notes > li .note-body .note-text table.tags {
     right: 0;
     height: 10px;
     width: 10px;
-    background: url(./onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -2px 0 no-repeat
+    background: url(https://assets.gitlab-static.net/assets/onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -2px 0 no-repeat
 }
 
 .diff-file .image .view.onion-skin .controls .opaque {
@@ -28394,7 +28394,7 @@ ul.notes > li .note-body .note-text table.tags {
     left: 0;
     height: 10px;
     width: 10px;
-    background: url(./onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -2px -10px no-repeat
+    background: url(https://assets.gitlab-static.net/assets/onion_skin_sprites-5c13bf92d3d6bdf19bba75b00fee5b492a43bec51bf78a01ba158b0ad099a48b.gif) -2px -10px no-repeat
 }
 
 .diff-file .view-modes {
@@ -28781,8 +28781,8 @@ ul.notes > li .note-body .note-text table.tags {
 
 .frame.click-to-comment {
     position: relative;
-    cursor: url(./illustrations/image_comment_light_cursor-edc3791b5c9f6694585af95d66f7b252be97436a13d32f9d427a5ca38848bd78.svg) 12 12, auto;
-    cursor: -webkit-image-set(url(./illustrations/image_comment_light_cursor-edc3791b5c9f6694585af95d66f7b252be97436a13d32f9d427a5ca38848bd78.svg) 1x, url(./illustrations/image_comment_light_cursor@2x-10fa8bdc4b52588b90e1d94785978b0a6ae72c4c9278f61d1043d947f0e147f1.svg) 2x) 12 12, auto
+    cursor: url(https://assets.gitlab-static.net/assets/illustrations/image_comment_light_cursor-edc3791b5c9f6694585af95d66f7b252be97436a13d32f9d427a5ca38848bd78.svg) 12 12, auto;
+    cursor: -webkit-image-set(url(https://assets.gitlab-static.net/assets/illustrations/image_comment_light_cursor-edc3791b5c9f6694585af95d66f7b252be97436a13d32f9d427a5ca38848bd78.svg) 1x, url(https://assets.gitlab-static.net/assets/illustrations/image_comment_light_cursor@2x-10fa8bdc4b52588b90e1d94785978b0a6ae72c4c9278f61d1043d947f0e147f1.svg) 2x) 12 12, auto
 }
 
 .frame.click-to-comment .comment-indicator {
@@ -35412,7 +35412,7 @@ ul.notes > li .note-body .note-text h5 a.anchor, ul.notes > li .note-body .note-
 ul.notes > li .note-body .note-text h1 a.anchor::after, ul.notes > li .note-body .note-text h2 a.anchor::after,
 ul.notes > li .note-body .note-text h3 a.anchor::after, ul.notes > li .note-body .note-text h4 a.anchor::after,
 ul.notes > li .note-body .note-text h5 a.anchor::after, ul.notes > li .note-body .note-text h6 a.anchor::after {
-    content: url(./icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
+    content: url(https://assets.gitlab-static.net/assets/icon_anchor-297aa9b0225eff3d6d0da74ce042a0ed5575b92aa66b7109a5e060a795b42e36.svg);
     visibility: hidden
 }
 
