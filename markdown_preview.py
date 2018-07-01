@@ -211,7 +211,8 @@ class MarkdownCheatsheetCommand(sublime_plugin.TextCommand):
 class Compiler(object):
     """Base compiler that does the markdown converting."""
 
-    default_css = "css/markdown.css"
+    default_css = ["css/markdown.css"]
+    compiler_js = []
 
     def isurl(self, css_name):
         """Check if URL."""
@@ -243,7 +244,11 @@ class Compiler(object):
                 css_text.append("<style>%s</style>" % load_utf8(os.path.expanduser(css_name)))
             elif css_name == 'default':
                 # use parser CSS file
-                css_text.append("<style>%s</style>" % load_resource(self.default_css))
+                for css in self.default_css:
+                    if css.startswith("http://") or css.startswith("https://"):
+                        css_text.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"%s\">" % css)
+                    else:
+                        css_text.append("<style>%s</style>" % load_resource(css))
 
         return '\n'.join(css_text)
 
@@ -266,9 +271,9 @@ class Compiler(object):
         """Return the correct CSS file based on parser and settings."""
         return self.get_default_css() + self.get_override_css()
 
-    def get_javascript(self):
+    def get_javascript(self, defaults=[]):
         """Return JavaScript."""
-        js_files = self.settings.get('js')
+        js_files = defaults + self.settings.get('js')
         scripts = ''
 
         if js_files is not None:
@@ -512,7 +517,7 @@ class Compiler(object):
             head = ''
             head += self.get_meta()
             head += self.get_stylesheet()
-            head += self.get_javascript()
+            head += self.get_javascript(self.compiler_js)
             head += self.get_highlight()
             head += self.get_title()
 
@@ -524,7 +529,7 @@ class Compiler(object):
             html += '<html><head><meta charset="utf-8">'
             html += self.get_meta()
             html += self.get_stylesheet()
-            html += self.get_javascript()
+            html += self.get_javascript(self.compiler_js)
             html += self.get_highlight()
             html += self.get_title()
             html += '</head><body>'
@@ -540,7 +545,6 @@ class Compiler(object):
 class OnlineCompiler(Compiler):
     """Online compiler."""
 
-    default_css = "css/github.css"
     compiler_name = ""
     content_type = "application/json"
     url = ""
@@ -674,7 +678,7 @@ class OnlineCompiler(Compiler):
 class GithubCompiler(OnlineCompiler):
     """GitHub compiler."""
 
-    default_css = "css/github.css"
+    default_css = ["css/github.css"]
     compiler_name = "github"
     content_type = "application/json"
     url = "https://api.github.com/markdown"
@@ -726,7 +730,15 @@ class GithubCompiler(OnlineCompiler):
 class GitlabCompiler(OnlineCompiler):
     """GitLab compiler."""
 
-    default_css = "css/gitlab.css"
+    default_css = [
+        "css/gitlab.css",
+        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css",
+        "res://MarkdownPreview/css/katex_eqnum.css"
+    ]
+    compiler_js = [
+        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
+        "res://MarkdownPreview/js/katex_gitlab_config.js"
+    ]
     compiler_name = "gitlab"
     content_type = "application/json"
     url = "https://gitlab.com/api/v4/markdown"
@@ -778,7 +790,7 @@ class GitlabCompiler(OnlineCompiler):
 class ExternalMarkdownCompiler(Compiler):
     """Compiler for other, external Markdown parsers."""
 
-    default_css = "css/markdown.css"
+    default_css = ["css/markdown.css"]
 
     def __init__(self, parser):
         """Initialize."""
@@ -824,7 +836,7 @@ class ExternalMarkdownCompiler(Compiler):
 class MarkdownCompiler(Compiler):
     """Python Markdown compiler."""
 
-    default_css = "css/markdown.css"
+    default_css = ["css/markdown.css"]
 
     def set_highlight(self, pygments_style, css_class):
         """Set the Pygments css."""
