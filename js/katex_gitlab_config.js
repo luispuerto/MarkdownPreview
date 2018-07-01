@@ -5,6 +5,7 @@ var katexMath = (function () {
     var maths = document.querySelectorAll('.js-render-math');
     for (var i = 0; i < maths.length; i++) {
       katex.render(maths[i].textContent || maths[i].innerText, maths[i], {'displayMode': false});
+      maths[i].className += " center";
     }
 });
 
