@@ -537,13 +537,16 @@ class Compiler(object):
         return html, body
 
 
-class GithubCompiler(Compiler):
-    """GitHub compiler."""
+class OnlineCompiler(Compiler):
+    """Online compiler."""
 
     default_css = "css/github.css"
+    compiler_name = ""
+    content_type = "application/json"
+    url = ""
 
     def curl_convert(self, data):
-        """Use curl to send Markdown content through GitHub API."""
+        """Use curl to send Markdown content through API."""
         try:
             import subprocess
 
@@ -554,31 +557,137 @@ class GithubCompiler(Compiler):
             curl_args = [
                 'curl',
                 '-H',
-                'Content-Type: application/json',
+                'Content-Type: %s' % self.content_type,
                 '-d',
                 shell_safe_json,
-                'https://api.github.com/markdown'
+                self.url
             ]
 
-            github_oauth_token = self.settings.get('github_oauth_token')
-            if github_oauth_token:
+            oauth_token = self.settings.get('%s_oauth_token', self.compiler_name)
+            if oauth_token:
                 curl_args[1:1] = [
                     '-u',
-                    github_oauth_token
+                    oauth_token
                 ]
 
-            markdown_html = subprocess.Popen(curl_args, stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
+            markdown_html = self.unpack_data(subprocess.Popen(curl_args, stdout=subprocess.PIPE).communicate()[0])
             return markdown_html
         except subprocess.CalledProcessError:
             sublime.error_message(
                 textwrap.dedent(
                     """\
-                    Cannot use github API to convert markdown. SSL is not included in your Python installation. \
+                    Cannot use %s API to convert markdown. SSL is not included in your Python installation. \
                     And using curl didn't work either
-                    """
+                    """ % self.compiler_name
                 )
             )
         return None
+
+    def get_server_exception_message(self, body):
+        return body['message']
+
+    def get_response_from_exception(self, e):
+        """Convert Online Compiler Response."""
+        body = json.loads(e.read().decode('utf-8'))
+        return '%s\'s original response: (HTTP Status Code %s) "%s"' % (
+            self.compiler_name, e.code, self.get_server_exception_message(body))
+
+    def pack_data(self, markdown_text, github_mode):  # TODO: should `github_mode` be ranamed in settings and etc?
+        return {
+            "text": markdown_text,
+            "mode": github_mode
+        }
+
+    def unpack_data(self, raw_data):
+        return raw_data.decode('utf-8')
+
+    def parser_specific_convert(self, markdown_text):
+        """Convert input markdown to HTML with online compiler parser."""
+        markdown_html = _CANNOT_CONVERT
+        oauth_token = self.settings.get('%s_oauth_token' % self.compiler_name)
+
+        # use the online compiler API
+        sublime.status_message('converting markdown with %s API...' % self.compiler_name)
+        github_mode = self.settings.get('github_mode', 'gfm')  # TODO: should be ranamed in settings and etc?
+        data = self.pack_data(markdown_text, github_mode)
+        data = json.dumps(data).encode('utf-8')
+
+        try:
+            headers = {
+                'Content-Type': self.content_type
+            }
+            if oauth_token:
+                headers['Authorization'] = "token %s" % oauth_token
+            sublime.status_message(self.url)
+            request = request_url(self.url, data, headers)
+            markdown_html = self.unpack_data(urlopen(request).read())
+        except HTTPError as e:
+            if e.code == 401:
+                sublime.error_message(
+                    ("%s API authentication failed. Please check your OAuth token.\n\n" % self.compiler_name) +
+                    self.get_response_from_exception(e)
+                )
+            elif e.code == 403:  # Forbidden
+                sublime.error_message(
+                    textwrap.dedent(
+                        """\
+                        It seems like you have exceeded %s's API rate limit.
+
+                        To continue using %s's markdown format with this package, log in to \
+                        %s, then generate a new token, \
+                        copy the token's value, and paste it in this package's user settings under the key \
+                        '%s_oauth_token'. Example:
+
+                        {
+                            "%s_oauth_token": "xxxx...."
+                        }
+
+                        """ % tuple(self.compiler_name for i in range(5))
+                    ) + self.get_response_from_exception(e)
+                )
+            else:
+                sublime.error_message(
+                    "%s API responded in an unfriendly way!\n\n" % self.compiler_name +
+                    self.get_response_from_exception(e)
+                )
+        except URLError:
+            # Maybe this is a Linux-install of ST which doesn't bundle with SSL support
+            # So let's try wrapping curl instead
+            markdown_html = self.curl_convert(data)
+        except Exception:
+            e = sys.exc_info()[1]
+            print(e)
+            traceback.print_exc()
+            sublime.error_message(
+                "Cannot use %s's API to convert Markdown. Please check your settings.\n\n" % self.compiler_name +
+                self.get_response_from_exception(e)
+            )
+        else:
+            sublime.status_message('converted markdown with github API successfully')
+
+        return markdown_html
+
+
+class GithubCompiler(OnlineCompiler):
+    """GitHub compiler."""
+
+    default_css = "css/github.css"
+    compiler_name = "github"
+    content_type = "application/json"
+    url = "https://api.github.com/markdown"
+
+    def get_server_exception_message(self, body):
+        return body['message']
+
+    def pack_data(self, markdown_text, github_mode):
+        return {
+            "text": markdown_text,
+            # "context": "group_example/project_example",  # TODO: add `context` parameter?
+            "mode": github_mode
+        }
+
+    def unpack_data(self, raw_data):
+        return raw_data.decode('utf-8')
 
     def parser_specific_postprocess(self, html):
         """Run GitHub specific postprocesses."""
@@ -607,129 +716,31 @@ class GithubCompiler(Compiler):
 
         return re_header.sub(inject_id, html)
 
-    def get_github_response_from_exception(self, e):
-        """Convert GitHub Response."""
-        body = json.loads(e.read().decode('utf-8'))
-        return 'GitHub\'s original response: (HTTP Status Code %s) "%s"' % (e.code, body['message'])
 
-    def parser_specific_convert(self, markdown_text):
-        """Convert input markdown to HTML with github parser."""
-        markdown_html = _CANNOT_CONVERT
-        github_oauth_token = self.settings.get('github_oauth_token')
-
-        # use the github API
-        sublime.status_message('converting markdown with github API...')
-        github_mode = self.settings.get('github_mode', 'gfm')
-        data = {
-            "text": markdown_text,
-            "mode": github_mode
-        }
-        data = json.dumps(data).encode('utf-8')
-
-        try:
-            headers = {
-                'Content-Type': 'application/json'
-            }
-            if github_oauth_token:
-                headers['Authorization'] = "token %s" % github_oauth_token
-            url = "https://api.github.com/markdown"
-            sublime.status_message(url)
-            request = request_url(url, data, headers)
-            markdown_html = urlopen(request).read().decode('utf-8')
-        except HTTPError as e:
-            if e.code == 401:
-                sublime.error_message(
-                    "GitHub API authentication failed. Please check your OAuth token.\n\n" +
-                    self.get_github_response_from_exception(e)
-                )
-            elif e.code == 403:  # Forbidden
-                sublime.error_message(
-                    textwrap.dedent(
-                        """\
-                        It seems like you have exceeded GitHub's API rate limit.
-
-                        To continue using GitHub's markdown format with this package, log in to \
-                        GitHub, then go to Settings > Personal access tokens > Generate new token, \
-                        copy the token's value, and paste it in this package's user settings under the key \
-                        'github_oauth_token'. Example:
-
-                        {
-                            "github_oauth_token": "xxxx...."
-                        }
-
-                        """
-                    ) + self.get_github_response_from_exception(e)
-                )
-            else:
-                sublime.error_message(
-                    "GitHub API responded in an unfriendly way!\n\n" +
-                    self.get_github_response_from_exception(e)
-                )
-        except URLError:
-            # Maybe this is a Linux-install of ST which doesn't bundle with SSL support
-            # So let's try wrapping curl instead
-            markdown_html = self.curl_convert(data)
-        except Exception:
-            e = sys.exc_info()[1]
-            print(e)
-            traceback.print_exc()
-            sublime.error_message(
-                "Cannot use GitHub's API to convert Markdown. Please check your settings.\n\n" +
-                self.get_github_response_from_exception(e)
-            )
-        else:
-            sublime.status_message('converted markdown with github API successfully')
-
-        return markdown_html
-
-
-class GitlabCompiler(Compiler):
+class GitlabCompiler(OnlineCompiler):
     """GitLab compiler."""
 
     default_css = "css/gitlab.css"
+    compiler_name = "gitlab"
+    content_type = "application/json"
+    url = "https://gitlab.com/api/v4/markdown"
 
-    def curl_convert(self, data):
-        """Use curl to send Markdown content through GitLab API."""
-        try:
-            import subprocess
+    def get_server_exception_message(self, body):
+        return body['message']
 
-            # It looks like the text does NOT need to be escaped and
-            # surrounded with double quotes.
-            # Tested in ubuntu 13.10, python 2.7.5+
-            shell_safe_json = data.decode('utf-8')
-            curl_args = [
-                'curl',
-                '-H',
-                'Content-Type: application/json',
-                '-d',
-                shell_safe_json,
-                'https://gitlab.com/api/v4/markdown'
-            ]
+    def pack_data(self, markdown_text, github_mode):
+        return {
+            "text": markdown_text,
+            # "project": "group_example/project_example",  # TODO: add `project` parameter?
+            "gfm": github_mode == 'gfm'
+        }
 
-            gitlab_oauth_token = self.settings.get('gitlab_oauth_token')
-            if gitlab_oauth_token:
-                curl_args[1:1] = [
-                    '-u',
-                    gitlab_oauth_token
-                ]
-
-            markdown_html = json.loads(subprocess.Popen(curl_args, stdout=subprocess.PIPE)
-                                                 .communicate()[0].decode('utf-8'))['html']
-            return markdown_html
-        except subprocess.CalledProcessError:
-            sublime.error_message(
-                textwrap.dedent(
-                    """\
-                    Cannot use gitlab API to convert markdown. SSL is not included in your Python installation. \
-                    And using curl didn't work either
-                    """
-                )
-            )
-        return None
+    def unpack_data(self, raw_data):
+        return json.loads(raw_data.decode('utf-8'))['html']
 
     def parser_specific_postprocess(self, html):
         """Run GitLab specific postprocesses."""
-        if self.settings.get("github_inject_header_ids", False):
+        if self.settings.get("github_inject_header_ids", False):  # TODO: should be ranamed in settings and etc?
             html = self.postprocess_inject_header_id(html)
         return html
 
@@ -753,82 +764,6 @@ class GitlabCompiler(Compiler):
             return m.group('open')[:-1] + (' id="%s">' % header_id) + m.group('text') + m.group('close')
 
         return re_header.sub(inject_id, html)
-
-    def get_gitlab_response_from_exception(self, e):
-        """Convert GitLab Response."""
-        body = json.loads(e.read().decode('utf-8'))
-        return 'GitLab\'s original response: (HTTP Status Code %s) "%s"' % (e.code, body['message'])
-
-    def parser_specific_convert(self, markdown_text):
-        """Convert input markdown to HTML with gitlab parser."""
-        markdown_html = _CANNOT_CONVERT
-        gitlab_oauth_token = self.settings.get('gitlab_oauth_token')
-
-        # use the gitlab API
-        sublime.status_message('converting markdown with gitlab API...')
-        github_mode = self.settings.get('github_mode', 'gfm')
-        data = {
-            "text": markdown_text,
-            # "project": "group_example/project_example",  # TODO: add `project` parameter?
-            "gfm": github_mode == 'gfm'
-        }
-        data = json.dumps(data).encode('utf-8')
-
-        try:
-            headers = {
-                'Content-Type': 'application/json'
-            }
-            if gitlab_oauth_token:
-                headers['Authorization'] = "token %s" % gitlab_oauth_token
-            url = "https://gitlab.com/api/v4/markdown"
-            sublime.status_message(url)
-            request = request_url(url, data, headers)
-            markdown_html = json.loads(urlopen(request).read().decode('utf-8'))['html']
-        except HTTPError as e:
-            if e.code == 401:
-                sublime.error_message(
-                    "GitLab API authentication failed. Please check your OAuth token.\n\n" +
-                    self.get_gitlab_response_from_exception(e)
-                )
-            elif e.code == 403:  # Forbidden
-                sublime.error_message(
-                    textwrap.dedent(
-                        """\
-                        It seems like you have exceeded GitLab's API rate limit.
-
-                        To continue using GitLab's markdown format with this package, log in to \
-                        GitLab, then go to Settings > Personal access tokens > Generate new token, \
-                        copy the token's value, and paste it in this package's user settings under the key \
-                        'gitlab_oauth_token'. Example:
-
-                        {
-                            "gitlab_oauth_token": "xxxx...."
-                        }
-
-                        """
-                    ) + self.get_gitlab_response_from_exception(e)
-                )
-            else:
-                sublime.error_message(
-                    "GitLab API responded in an unfriendly way!\n\n" +
-                    self.get_gitlab_response_from_exception(e)
-                )
-        except URLError:
-            # Maybe this is a Linux-install of ST which doesn't bundle with SSL support
-            # So let's try wrapping curl instead
-            markdown_html = self.curl_convert(data)
-        except Exception:
-            e = sys.exc_info()[1]
-            print(e)
-            traceback.print_exc()
-            sublime.error_message(
-                "Cannot use GitLab's API to convert Markdown. Please check your settings.\n\n" +
-                self.get_gitlab_response_from_exception(e)
-            )
-        else:
-            sublime.status_message('converted markdown with gitlab API successfully')
-
-        return markdown_html
 
 
 class ExternalMarkdownCompiler(Compiler):
