@@ -47434,4 +47434,6 @@ ul.markdown-body-pages-list.content-list ul li {
     cursor: not-allowed
 }
 
-
+pre.js-render-math {
+    text-align: center;
+}
