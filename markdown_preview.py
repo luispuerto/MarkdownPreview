@@ -737,7 +737,7 @@ class GitlabCompiler(OnlineCompiler):
     ]
     compiler_js = [
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
-        "res://MarkdownPreview/js/katex_gitlab_config.js"
+        "res://MarkdownPreview/js/gitlab_config.js"
     ]
     compiler_name = "gitlab"
     content_type = "application/json"
@@ -763,6 +763,9 @@ class GitlabCompiler(OnlineCompiler):
         """Run GitLab specific postprocesses."""
         if self.settings.get("github_inject_header_ids", False):  # TODO: should be ranamed in settings and etc?
             html = self.postprocess_inject_header_id(html)
+        if not self.settings.get('html_simple', False):
+            html += '<script>const HIGHLIGHT_THEME = "%s";</script>' % (
+                self.settings.get('gitlab_highlight_theme', 'white'))
         return html
 
     def postprocess_inject_header_id(self, html):

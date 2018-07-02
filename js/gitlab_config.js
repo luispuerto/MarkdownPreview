@@ -8,6 +8,12 @@ var katexMath = (function () {
     }
 });
 
+var addHighlightTheme = (function () {
+    document.querySelectorAll('.highlight').forEach(
+      block => block.className += " " + HIGHLIGHT_THEME
+    );
+});
+
 (function () {
   var onReady = function onReady(fn) {
     if (document.addEventListener) {
@@ -22,6 +28,7 @@ var katexMath = (function () {
   };
 
   onReady(function () {
+    addHighlightTheme();
     if (typeof katex !== "undefined") {
       katexMath();
     }

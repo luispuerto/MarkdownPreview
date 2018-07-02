@@ -509,6 +509,12 @@ By default, the head is always included in the HTML output. This includes the CS
     "include_head": ["build", "browser", "sublime", "clipboard", "save"]
 ```
 
+### GitLab Highlight Theme
+
+In case of using GitLab online compiler, you can set `gitlab_highlight_theme` to personalize syntax highlighting.
+
+Currently available options are "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai". Take a look at GitLab documentations [here][gitlab_highlight_theme] for more details.
+
 ## Including JavaScript
 
 JavaScript files can be included via the `js` setting.  It is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.

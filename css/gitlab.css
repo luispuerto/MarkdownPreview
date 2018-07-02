@@ -20582,7 +20582,7 @@ code.key-fingerprint {
     text-align: right
 }
 
-.markdown-body pre {
+.markdown-body pre:not(.js-render-math) {
     margin-bottom: 16px;
     font-size: 13px;
     line-height: 1.6em;
@@ -43150,1856 +43150,1856 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #eee
 }
 
-.code.dark .line-numbers, .code.dark .diff-line-num {
+.code.dark:not(.js-render-math) .line-numbers, .code.dark:not(.js-render-math) .diff-line-num {
     background-color: #1d1f21
 }
 
-.code.dark .diff-line-num, .code.dark .diff-line-num a {
+.code.dark:not(.js-render-math) .diff-line-num, .code.dark:not(.js-render-math) .diff-line-num a {
     color: rgba(255, 255, 255, 0.3)
 }
 
-.code.dark pre.code, .code.dark .diff-line-num {
+.code.dark:not(.js-render-math) pre.code, .code.dark:not(.js-render-math) .diff-line-num {
     border-color: #666
 }
 
-.code.dark, .code.dark pre.code, .code.dark .line_holder .line_content {
+.code.dark:not(.js-render-math), .code.dark:not(.js-render-math) pre.code, .code.dark:not(.js-render-math) .line_holder .line_content {
     background-color: #1d1f21;
     color: #c5c8c6
 }
 
-.code.dark .line_holder.match .line_content {
+.code.dark:not(.js-render-math) .line_holder.match .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.dark .line_holder td.diff-line-num.hll:not(.empty-cell),
-.code.dark .line_holder td.line_content.hll:not(.empty-cell) {
+.code.dark:not(.js-render-math) .line_holder td.diff-line-num.hll:not(.empty-cell),
+.code.dark:not(.js-render-math) .line_holder td.line_content.hll:not(.empty-cell) {
     background-color: #557;
     border-color: #35354a
 }
 
-.code.dark .line_holder .diff-line-num.new, .code.dark .line_holder .line_content.new {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.new, .code.dark:not(.js-render-math) .line_holder .line_content.new {
     background: rgba(51, 255, 51, 0.1)
 }
 
-.code.dark .line_holder .diff-line-num.new.line_content span.idiff,
-.code.dark .line_holder .line_content.new.line_content span.idiff {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.new.line_content span.idiff,
+.code.dark:not(.js-render-math) .line_holder .line_content.new.line_content span.idiff {
     background: rgba(51, 255, 51, 0.2)
 }
 
-.code.dark .line_holder .diff-line-num.new.diff-line-num, .code.dark .line_holder .line_content.new.diff-line-num {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.new.diff-line-num, .code.dark:not(.js-render-math) .line_holder .line_content.new.diff-line-num {
     border-color: #808080
 }
 
-.code.dark .line_holder .diff-line-num.new::before, .code.dark .line_holder .diff-line-num.new a,
-.code.dark .line_holder .line_content.new::before, .code.dark .line_holder .line_content.new a {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.new::before, .code.dark:not(.js-render-math) .line_holder .diff-line-num.new a,
+.code.dark:not(.js-render-math) .line_holder .line_content.new::before, .code.dark:not(.js-render-math) .line_holder .line_content.new a {
     color: #627165
 }
 
-.code.dark .line_holder .diff-line-num.old, .code.dark .line_holder .line_content.old {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.old, .code.dark:not(.js-render-math) .line_holder .line_content.old {
     background: rgba(255, 51, 51, 0.2)
 }
 
-.code.dark .line_holder .diff-line-num.old.line_content span.idiff,
-.code.dark .line_holder .line_content.old.line_content span.idiff {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.old.line_content span.idiff,
+.code.dark:not(.js-render-math) .line_holder .line_content.old.line_content span.idiff {
     background: rgba(255, 51, 51, 0.25)
 }
 
-.code.dark .line_holder .diff-line-num.old.diff-line-num, .code.dark .line_holder .line_content.old.diff-line-num {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.old.diff-line-num, .code.dark:not(.js-render-math) .line_holder .line_content.old.diff-line-num {
     border-color: #808080
 }
 
-.code.dark .line_holder .diff-line-num.old::before, .code.dark .line_holder .diff-line-num.old a,
-.code.dark .line_holder .line_content.old::before, .code.dark .line_holder .line_content.old a {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.old::before, .code.dark:not(.js-render-math) .line_holder .diff-line-num.old a,
+.code.dark:not(.js-render-math) .line_holder .line_content.old::before, .code.dark:not(.js-render-math) .line_holder .line_content.old a {
     color: #806565
 }
 
-.code.dark .line_holder .diff-line-num.is-over, .code.dark .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.is-over, .code.dark:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
     background-color: #9f9ab5;
     border-color: #918baa
 }
 
-.code.dark .line_holder .diff-line-num.is-over a, .code.dark .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
+.code.dark:not(.js-render-math) .line_holder .diff-line-num.is-over a, .code.dark:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
     color: #756e95
 }
 
-.code.dark .line_holder .line_content.match {
+.code.dark:not(.js-render-math) .line_holder .line_content.match {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.dark .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
-.code.dark .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
-.code.dark .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
-.code.dark .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
+.code.dark:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
+.code.dark:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
+.code.dark:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
+.code.dark:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
     border-top: 1px solid #000
 }
 
-.code.dark .line_holder.diff-expanded > .diff-line-num, .code.dark .line_holder.diff-expanded > .line_content {
+.code.dark:not(.js-render-math) .line_holder.diff-expanded > .diff-line-num, .code.dark:not(.js-render-math) .line_holder.diff-expanded > .line_content {
     background: #3e3e3e;
     border-color: #3e3e3e
 }
 
-.code.dark pre .hll {
+.code.dark:not(.js-render-math) pre .hll {
     background-color: #373b41 !important
 }
 
-.code.dark span.highlight_word {
+.code.dark:not(.js-render-math) span.highlight_word {
     background-color: #ffe792 !important;
     color: #000 !important
 }
 
-.code.dark .line a {
+.code.dark:not(.js-render-math) .line a {
     color: #81a2be
 }
 
-.code.dark .hll {
+.code.dark:not(.js-render-math) .hll {
     background-color: #373b41
 }
 
-.code.dark .c {
+.code.dark:not(.js-render-math) .c {
     color: #969896
 }
 
-.code.dark .err {
+.code.dark:not(.js-render-math) .err {
     color: #c66
 }
 
-.code.dark .k {
+.code.dark:not(.js-render-math) .k {
     color: #b294bb
 }
 
-.code.dark .l {
+.code.dark:not(.js-render-math) .l {
     color: #de935f
 }
 
-.code.dark .n {
+.code.dark:not(.js-render-math) .n {
     color: #c5c8c6
 }
 
-.code.dark .o {
+.code.dark:not(.js-render-math) .o {
     color: #8abeb7
 }
 
-.code.dark .p {
+.code.dark:not(.js-render-math) .p {
     color: #c5c8c6
 }
 
-.code.dark .cm {
+.code.dark:not(.js-render-math) .cm {
     color: #969896
 }
 
-.code.dark .cp {
+.code.dark:not(.js-render-math) .cp {
     color: #969896
 }
 
-.code.dark .c1 {
+.code.dark:not(.js-render-math) .c1 {
     color: #969896
 }
 
-.code.dark .cs {
+.code.dark:not(.js-render-math) .cs {
     color: #969896
 }
 
-.code.dark .gd {
+.code.dark:not(.js-render-math) .gd {
     color: #c66
 }
 
-.code.dark .ge {
+.code.dark:not(.js-render-math) .ge {
     font-style: italic
 }
 
-.code.dark .gh {
+.code.dark:not(.js-render-math) .gh {
     color: #c5c8c6;
     font-weight: 600
 }
 
-.code.dark .gi {
+.code.dark:not(.js-render-math) .gi {
     color: #b5bd68
 }
 
-.code.dark .gp {
+.code.dark:not(.js-render-math) .gp {
     color: #969896;
     font-weight: 600
 }
 
-.code.dark .gs {
+.code.dark:not(.js-render-math) .gs {
     font-weight: 600
 }
 
-.code.dark .gu {
+.code.dark:not(.js-render-math) .gu {
     color: #8abeb7;
     font-weight: 600
 }
 
-.code.dark .kc {
+.code.dark:not(.js-render-math) .kc {
     color: #b294bb
 }
 
-.code.dark .kd {
+.code.dark:not(.js-render-math) .kd {
     color: #b294bb
 }
 
-.code.dark .kn {
+.code.dark:not(.js-render-math) .kn {
     color: #8abeb7
 }
 
-.code.dark .kp {
+.code.dark:not(.js-render-math) .kp {
     color: #b294bb
 }
 
-.code.dark .kr {
+.code.dark:not(.js-render-math) .kr {
     color: #b294bb
 }
 
-.code.dark .kt {
+.code.dark:not(.js-render-math) .kt {
     color: #f0c674
 }
 
-.code.dark .ld {
+.code.dark:not(.js-render-math) .ld {
     color: #b5bd68
 }
 
-.code.dark .m {
+.code.dark:not(.js-render-math) .m {
     color: #de935f
 }
 
-.code.dark .s {
+.code.dark:not(.js-render-math) .s {
     color: #b5bd68
 }
 
-.code.dark .na {
+.code.dark:not(.js-render-math) .na {
     color: #81a2be
 }
 
-.code.dark .nb {
+.code.dark:not(.js-render-math) .nb {
     color: #c5c8c6
 }
 
-.code.dark .nc {
+.code.dark:not(.js-render-math) .nc {
     color: #f0c674
 }
 
-.code.dark .no {
+.code.dark:not(.js-render-math) .no {
     color: #c66
 }
 
-.code.dark .nd {
+.code.dark:not(.js-render-math) .nd {
     color: #8abeb7
 }
 
-.code.dark .ni {
+.code.dark:not(.js-render-math) .ni {
     color: #c5c8c6
 }
 
-.code.dark .ne {
+.code.dark:not(.js-render-math) .ne {
     color: #c66
 }
 
-.code.dark .nf {
+.code.dark:not(.js-render-math) .nf {
     color: #81a2be
 }
 
-.code.dark .nl {
+.code.dark:not(.js-render-math) .nl {
     color: #c5c8c6
 }
 
-.code.dark .nn {
+.code.dark:not(.js-render-math) .nn {
     color: #f0c674
 }
 
-.code.dark .nx {
+.code.dark:not(.js-render-math) .nx {
     color: #81a2be
 }
 
-.code.dark .py {
+.code.dark:not(.js-render-math) .py {
     color: #c5c8c6
 }
 
-.code.dark .nt {
+.code.dark:not(.js-render-math) .nt {
     color: #8abeb7
 }
 
-.code.dark .nv {
+.code.dark:not(.js-render-math) .nv {
     color: #c66
 }
 
-.code.dark .ow {
+.code.dark:not(.js-render-math) .ow {
     color: #8abeb7
 }
 
-.code.dark .w {
+.code.dark:not(.js-render-math) .w {
     color: #c5c8c6
 }
 
-.code.dark .mf {
+.code.dark:not(.js-render-math) .mf {
     color: #de935f
 }
 
-.code.dark .mh {
+.code.dark:not(.js-render-math) .mh {
     color: #de935f
 }
 
-.code.dark .mi {
+.code.dark:not(.js-render-math) .mi {
     color: #de935f
 }
 
-.code.dark .mo {
+.code.dark:not(.js-render-math) .mo {
     color: #de935f
 }
 
-.code.dark .sb {
+.code.dark:not(.js-render-math) .sb {
     color: #b5bd68
 }
 
-.code.dark .sc {
+.code.dark:not(.js-render-math) .sc {
     color: #c5c8c6
 }
 
-.code.dark .sd {
+.code.dark:not(.js-render-math) .sd {
     color: #969896
 }
 
-.code.dark .s2 {
+.code.dark:not(.js-render-math) .s2 {
     color: #b5bd68
 }
 
-.code.dark .se {
+.code.dark:not(.js-render-math) .se {
     color: #de935f
 }
 
-.code.dark .sh {
+.code.dark:not(.js-render-math) .sh {
     color: #b5bd68
 }
 
-.code.dark .si {
+.code.dark:not(.js-render-math) .si {
     color: #de935f
 }
 
-.code.dark .sx {
+.code.dark:not(.js-render-math) .sx {
     color: #b5bd68
 }
 
-.code.dark .sr {
+.code.dark:not(.js-render-math) .sr {
     color: #b5bd68
 }
 
-.code.dark .s1 {
+.code.dark:not(.js-render-math) .s1 {
     color: #b5bd68
 }
 
-.code.dark .ss {
+.code.dark:not(.js-render-math) .ss {
     color: #b5bd68
 }
 
-.code.dark .bp {
+.code.dark:not(.js-render-math) .bp {
     color: #c5c8c6
 }
 
-.code.dark .vc {
+.code.dark:not(.js-render-math) .vc {
     color: #c66
 }
 
-.code.dark .vg {
+.code.dark:not(.js-render-math) .vg {
     color: #c66
 }
 
-.code.dark .vi {
+.code.dark:not(.js-render-math) .vi {
     color: #c66
 }
 
-.code.dark .il {
+.code.dark:not(.js-render-math) .il {
     color: #de935f
 }
 
-.code.monokai .line-numbers, .code.monokai .diff-line-num {
+.code.monokai:not(.js-render-math) .line-numbers, .code.monokai:not(.js-render-math) .diff-line-num {
     background-color: #272822
 }
 
-.code.monokai .diff-line-num, .code.monokai .diff-line-num a {
+.code.monokai:not(.js-render-math) .diff-line-num, .code.monokai:not(.js-render-math) .diff-line-num a {
     color: rgba(255, 255, 255, 0.3)
 }
 
-.code.monokai pre.code, .code.monokai .diff-line-num {
+.code.monokai:not(.js-render-math) pre.code, .code.monokai:not(.js-render-math) .diff-line-num {
     border-color: #555
 }
 
-.code.monokai, .code.monokai pre.code, .code.monokai .line_holder .line_content {
+.code.monokai:not(.js-render-math), .code.monokai:not(.js-render-math) pre.code, .code.monokai:not(.js-render-math) .line_holder .line_content {
     background-color: #272822;
     color: #f8f8f2
 }
 
-.code.monokai .line_holder.match .line_content {
+.code.monokai:not(.js-render-math) .line_holder.match .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.monokai .line_holder td.diff-line-num.hll:not(.empty-cell),
-.code.monokai .line_holder td.line_content.hll:not(.empty-cell) {
+.code.monokai:not(.js-render-math) .line_holder td.diff-line-num.hll:not(.empty-cell),
+.code.monokai:not(.js-render-math) .line_holder td.line_content.hll:not(.empty-cell) {
     background-color: #49483e;
     border-color: #201f1b
 }
 
-.code.monokai .line_holder .diff-line-num.new, .code.monokai .line_holder .line_content.new {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.new, .code.monokai:not(.js-render-math) .line_holder .line_content.new {
     background: rgba(166, 226, 46, 0.1)
 }
 
-.code.monokai .line_holder .diff-line-num.new.line_content span.idiff,
-.code.monokai .line_holder .line_content.new.line_content span.idiff {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.new.line_content span.idiff,
+.code.monokai:not(.js-render-math) .line_holder .line_content.new.line_content span.idiff {
     background: rgba(166, 226, 46, 0.15)
 }
 
-.code.monokai .line_holder .diff-line-num.new.diff-line-num, .code.monokai .line_holder .line_content.new.diff-line-num {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.new.diff-line-num, .code.monokai:not(.js-render-math) .line_holder .line_content.new.diff-line-num {
     border-color: #808080
 }
 
-.code.monokai .line_holder .diff-line-num.new::before, .code.monokai .line_holder .diff-line-num.new a,
-.code.monokai .line_holder .line_content.new::before, .code.monokai .line_holder .line_content.new a {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.new::before, .code.monokai:not(.js-render-math) .line_holder .diff-line-num.new a,
+.code.monokai:not(.js-render-math) .line_holder .line_content.new::before, .code.monokai:not(.js-render-math) .line_holder .line_content.new a {
     color: #707565
 }
 
-.code.monokai .line_holder .diff-line-num.old, .code.monokai .line_holder .line_content.old {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.old, .code.monokai:not(.js-render-math) .line_holder .line_content.old {
     background: rgba(254, 147, 140, 0.15)
 }
 
-.code.monokai .line_holder .diff-line-num.old.line_content span.idiff,
-.code.monokai .line_holder .line_content.old.line_content span.idiff {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.old.line_content span.idiff,
+.code.monokai:not(.js-render-math) .line_holder .line_content.old.line_content span.idiff {
     background: rgba(254, 147, 140, 0.2)
 }
 
-.code.monokai .line_holder .diff-line-num.old.diff-line-num, .code.monokai .line_holder .line_content.old.diff-line-num {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.old.diff-line-num, .code.monokai:not(.js-render-math) .line_holder .line_content.old.diff-line-num {
     border-color: #808080
 }
 
-.code.monokai .line_holder .diff-line-num.old::before, .code.monokai .line_holder .diff-line-num.old a,
-.code.monokai .line_holder .line_content.old::before, .code.monokai .line_holder .line_content.old a {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.old::before, .code.monokai:not(.js-render-math) .line_holder .diff-line-num.old a,
+.code.monokai:not(.js-render-math) .line_holder .line_content.old::before, .code.monokai:not(.js-render-math) .line_holder .line_content.old a {
     color: #7e736f
 }
 
-.code.monokai .line_holder .diff-line-num.is-over, .code.monokai .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.is-over, .code.monokai:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
     background-color: #9f9ab5;
     border-color: #918baa
 }
 
-.code.monokai .line_holder .diff-line-num.is-over a, .code.monokai .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
+.code.monokai:not(.js-render-math) .line_holder .diff-line-num.is-over a, .code.monokai:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
     color: #756e95
 }
 
-.code.monokai .line_holder .line_content.match {
+.code.monokai:not(.js-render-math) .line_holder .line_content.match {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.monokai .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
-.code.monokai .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
-.code.monokai .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
-.code.monokai .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
+.code.monokai:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
+.code.monokai:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
+.code.monokai:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
+.code.monokai:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
     border-top: 1px solid #000
 }
 
-.code.monokai .line_holder.diff-expanded > .diff-line-num, .code.monokai .line_holder.diff-expanded > .line_content {
+.code.monokai:not(.js-render-math) .line_holder.diff-expanded > .diff-line-num, .code.monokai:not(.js-render-math) .line_holder.diff-expanded > .line_content {
     background: #3e3e3e;
     border-color: #3e3e3e
 }
 
-.code.monokai pre .hll {
+.code.monokai:not(.js-render-math) pre .hll {
     background-color: #49483e !important
 }
 
-.code.monokai span.highlight_word {
+.code.monokai:not(.js-render-math) span.highlight_word {
     background-color: #ffe792 !important;
     color: #000 !important
 }
 
-.code.monokai .line a {
+.code.monokai:not(.js-render-math) .line a {
     color: #66d9ef
 }
 
-.code.monokai .hll {
+.code.monokai:not(.js-render-math) .hll {
     background-color: #49483e
 }
 
-.code.monokai .c {
+.code.monokai:not(.js-render-math) .c {
     color: #75715e
 }
 
-.code.monokai .err {
+.code.monokai:not(.js-render-math) .err {
     color: #960050;
     background-color: #1e0010
 }
 
-.code.monokai .k {
+.code.monokai:not(.js-render-math) .k {
     color: #66d9ef
 }
 
-.code.monokai .l {
+.code.monokai:not(.js-render-math) .l {
     color: #ae81ff
 }
 
-.code.monokai .n {
+.code.monokai:not(.js-render-math) .n {
     color: #f8f8f2
 }
 
-.code.monokai .o {
+.code.monokai:not(.js-render-math) .o {
     color: #f92672
 }
 
-.code.monokai .p {
+.code.monokai:not(.js-render-math) .p {
     color: #f8f8f2
 }
 
-.code.monokai .cm {
+.code.monokai:not(.js-render-math) .cm {
     color: #75715e
 }
 
-.code.monokai .cp {
+.code.monokai:not(.js-render-math) .cp {
     color: #75715e
 }
 
-.code.monokai .c1 {
+.code.monokai:not(.js-render-math) .c1 {
     color: #75715e
 }
 
-.code.monokai .cs {
+.code.monokai:not(.js-render-math) .cs {
     color: #75715e
 }
 
-.code.monokai .ge {
+.code.monokai:not(.js-render-math) .ge {
     font-style: italic
 }
 
-.code.monokai .gs {
+.code.monokai:not(.js-render-math) .gs {
     font-weight: 600
 }
 
-.code.monokai .kc {
+.code.monokai:not(.js-render-math) .kc {
     color: #66d9ef
 }
 
-.code.monokai .kd {
+.code.monokai:not(.js-render-math) .kd {
     color: #66d9ef
 }
 
-.code.monokai .kn {
+.code.monokai:not(.js-render-math) .kn {
     color: #f92672
 }
 
-.code.monokai .kp {
+.code.monokai:not(.js-render-math) .kp {
     color: #66d9ef
 }
 
-.code.monokai .kr {
+.code.monokai:not(.js-render-math) .kr {
     color: #66d9ef
 }
 
-.code.monokai .kt {
+.code.monokai:not(.js-render-math) .kt {
     color: #66d9ef
 }
 
-.code.monokai .ld {
+.code.monokai:not(.js-render-math) .ld {
     color: #e6db74
 }
 
-.code.monokai .m {
+.code.monokai:not(.js-render-math) .m {
     color: #ae81ff
 }
 
-.code.monokai .s {
+.code.monokai:not(.js-render-math) .s {
     color: #e6db74
 }
 
-.code.monokai .na {
+.code.monokai:not(.js-render-math) .na {
     color: #a6e22e
 }
 
-.code.monokai .nb {
+.code.monokai:not(.js-render-math) .nb {
     color: #f8f8f2
 }
 
-.code.monokai .nc {
+.code.monokai:not(.js-render-math) .nc {
     color: #a6e22e
 }
 
-.code.monokai .no {
+.code.monokai:not(.js-render-math) .no {
     color: #66d9ef
 }
 
-.code.monokai .nd {
+.code.monokai:not(.js-render-math) .nd {
     color: #a6e22e
 }
 
-.code.monokai .ni {
+.code.monokai:not(.js-render-math) .ni {
     color: #f8f8f2
 }
 
-.code.monokai .ne {
+.code.monokai:not(.js-render-math) .ne {
     color: #a6e22e
 }
 
-.code.monokai .nf {
+.code.monokai:not(.js-render-math) .nf {
     color: #a6e22e
 }
 
-.code.monokai .nl {
+.code.monokai:not(.js-render-math) .nl {
     color: #f8f8f2
 }
 
-.code.monokai .nn {
+.code.monokai:not(.js-render-math) .nn {
     color: #f8f8f2
 }
 
-.code.monokai .nx {
+.code.monokai:not(.js-render-math) .nx {
     color: #a6e22e
 }
 
-.code.monokai .py {
+.code.monokai:not(.js-render-math) .py {
     color: #f8f8f2
 }
 
-.code.monokai .nt {
+.code.monokai:not(.js-render-math) .nt {
     color: #f92672
 }
 
-.code.monokai .nv {
+.code.monokai:not(.js-render-math) .nv {
     color: #f8f8f2
 }
 
-.code.monokai .ow {
+.code.monokai:not(.js-render-math) .ow {
     color: #f92672
 }
 
-.code.monokai .w {
+.code.monokai:not(.js-render-math) .w {
     color: #f8f8f2
 }
 
-.code.monokai .mf {
+.code.monokai:not(.js-render-math) .mf {
     color: #ae81ff
 }
 
-.code.monokai .mh {
+.code.monokai:not(.js-render-math) .mh {
     color: #ae81ff
 }
 
-.code.monokai .mi {
+.code.monokai:not(.js-render-math) .mi {
     color: #ae81ff
 }
 
-.code.monokai .mo {
+.code.monokai:not(.js-render-math) .mo {
     color: #ae81ff
 }
 
-.code.monokai .sb {
+.code.monokai:not(.js-render-math) .sb {
     color: #e6db74
 }
 
-.code.monokai .sc {
+.code.monokai:not(.js-render-math) .sc {
     color: #e6db74
 }
 
-.code.monokai .sd {
+.code.monokai:not(.js-render-math) .sd {
     color: #e6db74
 }
 
-.code.monokai .s2 {
+.code.monokai:not(.js-render-math) .s2 {
     color: #e6db74
 }
 
-.code.monokai .se {
+.code.monokai:not(.js-render-math) .se {
     color: #ae81ff
 }
 
-.code.monokai .sh {
+.code.monokai:not(.js-render-math) .sh {
     color: #e6db74
 }
 
-.code.monokai .si {
+.code.monokai:not(.js-render-math) .si {
     color: #e6db74
 }
 
-.code.monokai .sx {
+.code.monokai:not(.js-render-math) .sx {
     color: #e6db74
 }
 
-.code.monokai .sr {
+.code.monokai:not(.js-render-math) .sr {
     color: #e6db74
 }
 
-.code.monokai .s1 {
+.code.monokai:not(.js-render-math) .s1 {
     color: #e6db74
 }
 
-.code.monokai .ss {
+.code.monokai:not(.js-render-math) .ss {
     color: #e6db74
 }
 
-.code.monokai .bp {
+.code.monokai:not(.js-render-math) .bp {
     color: #f8f8f2
 }
 
-.code.monokai .vc {
+.code.monokai:not(.js-render-math) .vc {
     color: #f8f8f2
 }
 
-.code.monokai .vg {
+.code.monokai:not(.js-render-math) .vg {
     color: #f8f8f2
 }
 
-.code.monokai .vi {
+.code.monokai:not(.js-render-math) .vi {
     color: #f8f8f2
 }
 
-.code.monokai .il {
+.code.monokai:not(.js-render-math) .il {
     color: #ae81ff
 }
 
-.code.monokai .gu {
+.code.monokai:not(.js-render-math) .gu {
     color: #75715e
 }
 
-.code.monokai .gd {
+.code.monokai:not(.js-render-math) .gd {
     color: #f92672
 }
 
-.code.monokai .gi {
+.code.monokai:not(.js-render-math) .gi {
     color: #a6e22e
 }
 
-.code.solarized-dark .line-numbers, .code.solarized-dark .diff-line-num {
+.code.solarized-dark:not(.js-render-math) .line-numbers, .code.solarized-dark:not(.js-render-math) .diff-line-num {
     background-color: #002b36
 }
 
-.code.solarized-dark .diff-line-num, .code.solarized-dark .diff-line-num a {
+.code.solarized-dark:not(.js-render-math) .diff-line-num, .code.solarized-dark:not(.js-render-math) .diff-line-num a {
     color: rgba(255, 255, 255, 0.3)
 }
 
-.code.solarized-dark pre.code, .code.solarized-dark .diff-line-num {
+.code.solarized-dark:not(.js-render-math) pre.code, .code.solarized-dark:not(.js-render-math) .diff-line-num {
     border-color: #113b46
 }
 
-.code.solarized-dark, .code.solarized-dark pre.code, .code.solarized-dark .line_holder .line_content {
+.code.solarized-dark:not(.js-render-math), .code.solarized-dark:not(.js-render-math) pre.code, .code.solarized-dark:not(.js-render-math) .line_holder .line_content {
     background-color: #002b36;
     color: #93a1a1
 }
 
-.code.solarized-dark .line_holder.match .line_content {
+.code.solarized-dark:not(.js-render-math) .line_holder.match .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.solarized-dark .line_holder td.diff-line-num.hll:not(.empty-cell),
-.code.solarized-dark .line_holder td.line_content.hll:not(.empty-cell) {
+.code.solarized-dark:not(.js-render-math) .line_holder td.diff-line-num.hll:not(.empty-cell),
+.code.solarized-dark:not(.js-render-math) .line_holder td.line_content.hll:not(.empty-cell) {
     background-color: #174652;
     border-color: #061316
 }
 
-.code.solarized-dark .line_holder .diff-line-num.new, .code.solarized-dark .line_holder .line_content.new {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.new, .code.solarized-dark:not(.js-render-math) .line_holder .line_content.new {
     background: rgba(133, 153, 0, 0.15)
 }
 
-.code.solarized-dark .line_holder .diff-line-num.new.line_content span.idiff,
-.code.solarized-dark .line_holder .line_content.new.line_content span.idiff {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.new.line_content span.idiff,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.new.line_content span.idiff {
     background: rgba(133, 153, 0, 0.25)
 }
 
-.code.solarized-dark .line_holder .diff-line-num.new.diff-line-num,
-.code.solarized-dark .line_holder .line_content.new.diff-line-num {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.new.diff-line-num,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.new.diff-line-num {
     border-color: #113b46
 }
 
-.code.solarized-dark .line_holder .diff-line-num.new::before, .code.solarized-dark .line_holder .diff-line-num.new a,
-.code.solarized-dark .line_holder .line_content.new::before, .code.solarized-dark .line_holder .line_content.new a {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.new::before, .code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.new a,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.new::before, .code.solarized-dark:not(.js-render-math) .line_holder .line_content.new a {
     color: #5a766c
 }
 
-.code.solarized-dark .line_holder .diff-line-num.old, .code.solarized-dark .line_holder .line_content.old {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.old, .code.solarized-dark:not(.js-render-math) .line_holder .line_content.old {
     background: rgba(220, 50, 47, 0.3)
 }
 
-.code.solarized-dark .line_holder .diff-line-num.old.line_content span.idiff,
-.code.solarized-dark .line_holder .line_content.old.line_content span.idiff {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.old.line_content span.idiff,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.old.line_content span.idiff {
     background: rgba(220, 50, 47, 0.25)
 }
 
-.code.solarized-dark .line_holder .diff-line-num.old.diff-line-num,
-.code.solarized-dark .line_holder .line_content.old.diff-line-num {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.old.diff-line-num,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.old.diff-line-num {
     border-color: #113b46
 }
 
-.code.solarized-dark .line_holder .diff-line-num.old::before, .code.solarized-dark .line_holder .diff-line-num.old a,
-.code.solarized-dark .line_holder .line_content.old::before, .code.solarized-dark .line_holder .line_content.old a {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.old::before, .code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.old a,
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.old::before, .code.solarized-dark:not(.js-render-math) .line_holder .line_content.old a {
     color: #7a6c71
 }
 
-.code.solarized-dark .line_holder .diff-line-num.is-over, .code.solarized-dark .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.is-over, .code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
     background-color: #9f9ab5;
     border-color: #918baa
 }
 
-.code.solarized-dark .line_holder .diff-line-num.is-over a, .code.solarized-dark .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
+.code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.is-over a, .code.solarized-dark:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
     color: #756e95
 }
 
-.code.solarized-dark .line_holder .line_content.match {
+.code.solarized-dark:not(.js-render-math) .line_holder .line_content.match {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
 
-.code.solarized-dark .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
-.code.solarized-dark .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
-.code.solarized-dark .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
-.code.solarized-dark .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
+.code.solarized-dark:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
+.code.solarized-dark:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
+.code.solarized-dark:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
+.code.solarized-dark:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
     border-top: 1px solid #000
 }
 
-.code.solarized-dark .line_holder.diff-expanded > .diff-line-num,
-.code.solarized-dark .line_holder.diff-expanded > .line_content {
+.code.solarized-dark:not(.js-render-math) .line_holder.diff-expanded > .diff-line-num,
+.code.solarized-dark:not(.js-render-math) .line_holder.diff-expanded > .line_content {
     background: #010d10;
     border-color: #010d10
 }
 
-.code.solarized-dark pre .hll {
+.code.solarized-dark:not(.js-render-math) pre .hll {
     background-color: #174652 !important
 }
 
-.code.solarized-dark span.highlight_word {
+.code.solarized-dark:not(.js-render-math) span.highlight_word {
     background-color: #094554 !important
 }
 
-.code.solarized-dark .line a {
+.code.solarized-dark:not(.js-render-math) .line a {
     color: #268bd2
 }
 
-.code.solarized-dark .c {
+.code.solarized-dark:not(.js-render-math) .c {
     color: #586e75
 }
 
-.code.solarized-dark .err {
+.code.solarized-dark:not(.js-render-math) .err {
     color: #93a1a1
 }
 
-.code.solarized-dark .g {
+.code.solarized-dark:not(.js-render-math) .g {
     color: #93a1a1
 }
 
-.code.solarized-dark .k {
+.code.solarized-dark:not(.js-render-math) .k {
     color: #859900
 }
 
-.code.solarized-dark .l {
+.code.solarized-dark:not(.js-render-math) .l {
     color: #93a1a1
 }
 
-.code.solarized-dark .n {
+.code.solarized-dark:not(.js-render-math) .n {
     color: #93a1a1
 }
 
-.code.solarized-dark .o {
+.code.solarized-dark:not(.js-render-math) .o {
     color: #859900
 }
 
-.code.solarized-dark .x {
+.code.solarized-dark:not(.js-render-math) .x {
     color: #cb4b16
 }
 
-.code.solarized-dark .p {
+.code.solarized-dark:not(.js-render-math) .p {
     color: #93a1a1
 }
 
-.code.solarized-dark .cm {
+.code.solarized-dark:not(.js-render-math) .cm {
     color: #586e75
 }
 
-.code.solarized-dark .cp {
+.code.solarized-dark:not(.js-render-math) .cp {
     color: #859900
 }
 
-.code.solarized-dark .c1 {
+.code.solarized-dark:not(.js-render-math) .c1 {
     color: #586e75
 }
 
-.code.solarized-dark .cs {
+.code.solarized-dark:not(.js-render-math) .cs {
     color: #859900
 }
 
-.code.solarized-dark .gd {
+.code.solarized-dark:not(.js-render-math) .gd {
     color: #2aa198
 }
 
-.code.solarized-dark .ge {
+.code.solarized-dark:not(.js-render-math) .ge {
     color: #93a1a1;
     font-style: italic
 }
 
-.code.solarized-dark .gr {
+.code.solarized-dark:not(.js-render-math) .gr {
     color: #dc322f
 }
 
-.code.solarized-dark .gh {
+.code.solarized-dark:not(.js-render-math) .gh {
     color: #cb4b16
 }
 
-.code.solarized-dark .gi {
+.code.solarized-dark:not(.js-render-math) .gi {
     color: #859900
 }
 
-.code.solarized-dark .go {
+.code.solarized-dark:not(.js-render-math) .go {
     color: #93a1a1
 }
 
-.code.solarized-dark .gp {
+.code.solarized-dark:not(.js-render-math) .gp {
     color: #93a1a1
 }
 
-.code.solarized-dark .gs {
+.code.solarized-dark:not(.js-render-math) .gs {
     color: #93a1a1;
     font-weight: 600
 }
 
-.code.solarized-dark .gu {
+.code.solarized-dark:not(.js-render-math) .gu {
     color: #cb4b16
 }
 
-.code.solarized-dark .gt {
+.code.solarized-dark:not(.js-render-math) .gt {
     color: #93a1a1
 }
 
-.code.solarized-dark .kc {
+.code.solarized-dark:not(.js-render-math) .kc {
     color: #cb4b16
 }
 
-.code.solarized-dark .kd {
+.code.solarized-dark:not(.js-render-math) .kd {
     color: #268bd2
 }
 
-.code.solarized-dark .kn {
+.code.solarized-dark:not(.js-render-math) .kn {
     color: #859900
 }
 
-.code.solarized-dark .kp {
+.code.solarized-dark:not(.js-render-math) .kp {
     color: #859900
 }
 
-.code.solarized-dark .kr {
+.code.solarized-dark:not(.js-render-math) .kr {
     color: #268bd2
 }
 
-.code.solarized-dark .kt {
+.code.solarized-dark:not(.js-render-math) .kt {
     color: #dc322f
 }
 
-.code.solarized-dark .ld {
+.code.solarized-dark:not(.js-render-math) .ld {
     color: #93a1a1
 }
 
-.code.solarized-dark .m {
+.code.solarized-dark:not(.js-render-math) .m {
     color: #2aa198
 }
 
-.code.solarized-dark .s {
+.code.solarized-dark:not(.js-render-math) .s {
     color: #2aa198
 }
 
-.code.solarized-dark .na {
+.code.solarized-dark:not(.js-render-math) .na {
     color: #93a1a1
 }
 
-.code.solarized-dark .nb {
+.code.solarized-dark:not(.js-render-math) .nb {
     color: #b58900
 }
 
-.code.solarized-dark .nc {
+.code.solarized-dark:not(.js-render-math) .nc {
     color: #268bd2
 }
 
-.code.solarized-dark .no {
+.code.solarized-dark:not(.js-render-math) .no {
     color: #cb4b16
 }
 
-.code.solarized-dark .nd {
+.code.solarized-dark:not(.js-render-math) .nd {
     color: #268bd2
 }
 
-.code.solarized-dark .ni {
+.code.solarized-dark:not(.js-render-math) .ni {
     color: #cb4b16
 }
 
-.code.solarized-dark .ne {
+.code.solarized-dark:not(.js-render-math) .ne {
     color: #cb4b16
 }
 
-.code.solarized-dark .nf {
+.code.solarized-dark:not(.js-render-math) .nf {
     color: #268bd2
 }
 
-.code.solarized-dark .nl {
+.code.solarized-dark:not(.js-render-math) .nl {
     color: #93a1a1
 }
 
-.code.solarized-dark .nn {
+.code.solarized-dark:not(.js-render-math) .nn {
     color: #93a1a1
 }
 
-.code.solarized-dark .nx {
+.code.solarized-dark:not(.js-render-math) .nx {
     color: #93a1a1
 }
 
-.code.solarized-dark .py {
+.code.solarized-dark:not(.js-render-math) .py {
     color: #93a1a1
 }
 
-.code.solarized-dark .nt {
+.code.solarized-dark:not(.js-render-math) .nt {
     color: #268bd2
 }
 
-.code.solarized-dark .nv {
+.code.solarized-dark:not(.js-render-math) .nv {
     color: #268bd2
 }
 
-.code.solarized-dark .ow {
+.code.solarized-dark:not(.js-render-math) .ow {
     color: #859900
 }
 
-.code.solarized-dark .w {
+.code.solarized-dark:not(.js-render-math) .w {
     color: #93a1a1
 }
 
-.code.solarized-dark .mf {
+.code.solarized-dark:not(.js-render-math) .mf {
     color: #2aa198
 }
 
-.code.solarized-dark .mh {
+.code.solarized-dark:not(.js-render-math) .mh {
     color: #2aa198
 }
 
-.code.solarized-dark .mi {
+.code.solarized-dark:not(.js-render-math) .mi {
     color: #2aa198
 }
 
-.code.solarized-dark .mo {
+.code.solarized-dark:not(.js-render-math) .mo {
     color: #2aa198
 }
 
-.code.solarized-dark .sb {
+.code.solarized-dark:not(.js-render-math) .sb {
     color: #586e75
 }
 
-.code.solarized-dark .sc {
+.code.solarized-dark:not(.js-render-math) .sc {
     color: #2aa198
 }
 
-.code.solarized-dark .sd {
+.code.solarized-dark:not(.js-render-math) .sd {
     color: #93a1a1
 }
 
-.code.solarized-dark .s2 {
+.code.solarized-dark:not(.js-render-math) .s2 {
     color: #2aa198
 }
 
-.code.solarized-dark .se {
+.code.solarized-dark:not(.js-render-math) .se {
     color: #cb4b16
 }
 
-.code.solarized-dark .sh {
+.code.solarized-dark:not(.js-render-math) .sh {
     color: #93a1a1
 }
 
-.code.solarized-dark .si {
+.code.solarized-dark:not(.js-render-math) .si {
     color: #2aa198
 }
 
-.code.solarized-dark .sx {
+.code.solarized-dark:not(.js-render-math) .sx {
     color: #2aa198
 }
 
-.code.solarized-dark .sr {
+.code.solarized-dark:not(.js-render-math) .sr {
     color: #dc322f
 }
 
-.code.solarized-dark .s1 {
+.code.solarized-dark:not(.js-render-math) .s1 {
     color: #2aa198
 }
 
-.code.solarized-dark .ss {
+.code.solarized-dark:not(.js-render-math) .ss {
     color: #2aa198
 }
 
-.code.solarized-dark .bp {
+.code.solarized-dark:not(.js-render-math) .bp {
     color: #268bd2
 }
 
-.code.solarized-dark .vc {
+.code.solarized-dark:not(.js-render-math) .vc {
     color: #268bd2
 }
 
-.code.solarized-dark .vg {
+.code.solarized-dark:not(.js-render-math) .vg {
     color: #268bd2
 }
 
-.code.solarized-dark .vi {
+.code.solarized-dark:not(.js-render-math) .vi {
     color: #268bd2
 }
 
-.code.solarized-dark .il {
+.code.solarized-dark:not(.js-render-math) .il {
     color: #2aa198
 }
 
-.code.solarized-light .line-numbers, .code.solarized-light .diff-line-num {
+.code.solarized-light:not(.js-render-math) .line-numbers, .code.solarized-light:not(.js-render-math) .diff-line-num {
     background-color: #fdf6e3
 }
 
-.code.solarized-light .diff-line-num, .code.solarized-light .diff-line-num a {
+.code.solarized-light:not(.js-render-math) .diff-line-num, .code.solarized-light:not(.js-render-math) .diff-line-num a {
     color: rgba(0, 0, 0, 0.3)
 }
 
-.code.solarized-light pre.code, .code.solarized-light .diff-line-num {
+.code.solarized-light:not(.js-render-math) pre.code, .code.solarized-light:not(.js-render-math) .diff-line-num {
     border-color: #c5d0d4
 }
 
-.code.solarized-light, .code.solarized-light pre.code, .code.solarized-light .line_holder .line_content {
+.code.solarized-light:not(.js-render-math), .code.solarized-light:not(.js-render-math) pre.code, .code.solarized-light:not(.js-render-math) .line_holder .line_content {
     background-color: #fdf6e3;
     color: #586e75
 }
 
-.code.solarized-light .line_holder.match .line_content {
+.code.solarized-light:not(.js-render-math) .line_holder.match .line_content {
     color: rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.4)
 }
 
-.code.solarized-light .line_holder td.diff-line-num.hll:not(.empty-cell),
-.code.solarized-light .line_holder td.line_content.hll:not(.empty-cell) {
+.code.solarized-light:not(.js-render-math) .line_holder td.diff-line-num.hll:not(.empty-cell),
+.code.solarized-light:not(.js-render-math) .line_holder td.line_content.hll:not(.empty-cell) {
     background-color: #ddd8c5;
     border-color: #c1b895
 }
 
-.code.solarized-light .line_holder .diff-line-num.new, .code.solarized-light .line_holder .line_content.new {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.new, .code.solarized-light:not(.js-render-math) .line_holder .line_content.new {
     background: rgba(133, 153, 0, 0.2)
 }
 
-.code.solarized-light .line_holder .diff-line-num.new.line_content span.idiff,
-.code.solarized-light .line_holder .line_content.new.line_content span.idiff {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.new.line_content span.idiff,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.new.line_content span.idiff {
     background: rgba(133, 153, 0, 0.25)
 }
 
-.code.solarized-light .line_holder .diff-line-num.new.diff-line-num,
-.code.solarized-light .line_holder .line_content.new.diff-line-num {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.new.diff-line-num,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.new.diff-line-num {
     border-color: #c5d0d4
 }
 
-.code.solarized-light .line_holder .diff-line-num.new::before,
-.code.solarized-light .line_holder .diff-line-num.new a, .code.solarized-light .line_holder .line_content.new::before,
-.code.solarized-light .line_holder .line_content.new a {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.new::before,
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.new a, .code.solarized-light:not(.js-render-math) .line_holder .line_content.new::before,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.new a {
     color: #a1a080
 }
 
-.code.solarized-light .line_holder .diff-line-num.old, .code.solarized-light .line_holder .line_content.old {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.old, .code.solarized-light:not(.js-render-math) .line_holder .line_content.old {
     background: rgba(220, 50, 47, 0.2)
 }
 
-.code.solarized-light .line_holder .diff-line-num.old.line_content span.idiff,
-.code.solarized-light .line_holder .line_content.old.line_content span.idiff {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.old.line_content span.idiff,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.old.line_content span.idiff {
     background: rgba(220, 50, 47, 0.25)
 }
 
-.code.solarized-light .line_holder .diff-line-num.old.diff-line-num,
-.code.solarized-light .line_holder .line_content.old.diff-line-num {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.old.diff-line-num,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.old.diff-line-num {
     border-color: #c5d0d4
 }
 
-.code.solarized-light .line_holder .diff-line-num.old::before,
-.code.solarized-light .line_holder .diff-line-num.old a, .code.solarized-light .line_holder .line_content.old::before,
-.code.solarized-light .line_holder .line_content.old a {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.old::before,
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.old a, .code.solarized-light:not(.js-render-math) .line_holder .line_content.old::before,
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.old a {
     color: #ad9186
 }
 
-.code.solarized-light .line_holder .diff-line-num.is-over, .code.solarized-light .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.is-over, .code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
     background-color: #ded7fc;
     border-color: #cabffa
 }
 
-.code.solarized-light .line_holder .diff-line-num.is-over a, .code.solarized-light .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
+.code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.is-over a, .code.solarized-light:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
     color: #a390f7
 }
 
-.code.solarized-light .line_holder .line_content.match {
+.code.solarized-light:not(.js-render-math) .line_holder .line_content.match {
     color: rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.4)
 }
 
-.code.solarized-light .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
-.code.solarized-light .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
-.code.solarized-light .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
-.code.solarized-light .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
+.code.solarized-light:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
+.code.solarized-light:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
+.code.solarized-light:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
+.code.solarized-light:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
     border-top: 1px solid #d2cdbd
 }
 
-.code.solarized-light .line_holder.diff-expanded > .diff-line-num,
-.code.solarized-light .line_holder.diff-expanded > .line_content {
+.code.solarized-light:not(.js-render-math) .line_holder.diff-expanded > .diff-line-num,
+.code.solarized-light:not(.js-render-math) .line_holder.diff-expanded > .line_content {
     background: #ece6d4;
     border-color: #ece6d4
 }
 
-.code.solarized-light pre .hll {
+.code.solarized-light:not(.js-render-math) pre .hll {
     background-color: #ddd8c5 !important
 }
 
-.code.solarized-light span.highlight_word {
+.code.solarized-light:not(.js-render-math) span.highlight_word {
     background-color: #eee8d5 !important
 }
 
-.code.solarized-light .line a {
+.code.solarized-light:not(.js-render-math) .line a {
     color: #268bd2
 }
 
-.code.solarized-light .c {
+.code.solarized-light:not(.js-render-math) .c {
     color: #93a1a1
 }
 
-.code.solarized-light .err {
+.code.solarized-light:not(.js-render-math) .err {
     color: #586e75
 }
 
-.code.solarized-light .g {
+.code.solarized-light:not(.js-render-math) .g {
     color: #586e75
 }
 
-.code.solarized-light .k {
+.code.solarized-light:not(.js-render-math) .k {
     color: #859900
 }
 
-.code.solarized-light .l {
+.code.solarized-light:not(.js-render-math) .l {
     color: #586e75
 }
 
-.code.solarized-light .n {
+.code.solarized-light:not(.js-render-math) .n {
     color: #586e75
 }
 
-.code.solarized-light .o {
+.code.solarized-light:not(.js-render-math) .o {
     color: #859900
 }
 
-.code.solarized-light .x {
+.code.solarized-light:not(.js-render-math) .x {
     color: #cb4b16
 }
 
-.code.solarized-light .p {
+.code.solarized-light:not(.js-render-math) .p {
     color: #586e75
 }
 
-.code.solarized-light .cm {
+.code.solarized-light:not(.js-render-math) .cm {
     color: #93a1a1
 }
 
-.code.solarized-light .cp {
+.code.solarized-light:not(.js-render-math) .cp {
     color: #859900
 }
 
-.code.solarized-light .c1 {
+.code.solarized-light:not(.js-render-math) .c1 {
     color: #93a1a1
 }
 
-.code.solarized-light .cs {
+.code.solarized-light:not(.js-render-math) .cs {
     color: #859900
 }
 
-.code.solarized-light .gd {
+.code.solarized-light:not(.js-render-math) .gd {
     color: #2aa198
 }
 
-.code.solarized-light .ge {
+.code.solarized-light:not(.js-render-math) .ge {
     color: #586e75;
     font-style: italic
 }
 
-.code.solarized-light .gr {
+.code.solarized-light:not(.js-render-math) .gr {
     color: #dc322f
 }
 
-.code.solarized-light .gh {
+.code.solarized-light:not(.js-render-math) .gh {
     color: #cb4b16
 }
 
-.code.solarized-light .gi {
+.code.solarized-light:not(.js-render-math) .gi {
     color: #859900
 }
 
-.code.solarized-light .go {
+.code.solarized-light:not(.js-render-math) .go {
     color: #586e75
 }
 
-.code.solarized-light .gp {
+.code.solarized-light:not(.js-render-math) .gp {
     color: #586e75
 }
 
-.code.solarized-light .gs {
+.code.solarized-light:not(.js-render-math) .gs {
     color: #586e75;
     font-weight: 600
 }
 
-.code.solarized-light .gu {
+.code.solarized-light:not(.js-render-math) .gu {
     color: #cb4b16
 }
 
-.code.solarized-light .gt {
+.code.solarized-light:not(.js-render-math) .gt {
     color: #586e75
 }
 
-.code.solarized-light .kc {
+.code.solarized-light:not(.js-render-math) .kc {
     color: #cb4b16
 }
 
-.code.solarized-light .kd {
+.code.solarized-light:not(.js-render-math) .kd {
     color: #268bd2
 }
 
-.code.solarized-light .kn {
+.code.solarized-light:not(.js-render-math) .kn {
     color: #859900
 }
 
-.code.solarized-light .kp {
+.code.solarized-light:not(.js-render-math) .kp {
     color: #859900
 }
 
-.code.solarized-light .kr {
+.code.solarized-light:not(.js-render-math) .kr {
     color: #268bd2
 }
 
-.code.solarized-light .kt {
+.code.solarized-light:not(.js-render-math) .kt {
     color: #dc322f
 }
 
-.code.solarized-light .ld {
+.code.solarized-light:not(.js-render-math) .ld {
     color: #586e75
 }
 
-.code.solarized-light .m {
+.code.solarized-light:not(.js-render-math) .m {
     color: #2aa198
 }
 
-.code.solarized-light .s {
+.code.solarized-light:not(.js-render-math) .s {
     color: #2aa198
 }
 
-.code.solarized-light .na {
+.code.solarized-light:not(.js-render-math) .na {
     color: #586e75
 }
 
-.code.solarized-light .nb {
+.code.solarized-light:not(.js-render-math) .nb {
     color: #b58900
 }
 
-.code.solarized-light .nc {
+.code.solarized-light:not(.js-render-math) .nc {
     color: #268bd2
 }
 
-.code.solarized-light .no {
+.code.solarized-light:not(.js-render-math) .no {
     color: #cb4b16
 }
 
-.code.solarized-light .nd {
+.code.solarized-light:not(.js-render-math) .nd {
     color: #268bd2
 }
 
-.code.solarized-light .ni {
+.code.solarized-light:not(.js-render-math) .ni {
     color: #cb4b16
 }
 
-.code.solarized-light .ne {
+.code.solarized-light:not(.js-render-math) .ne {
     color: #cb4b16
 }
 
-.code.solarized-light .nf {
+.code.solarized-light:not(.js-render-math) .nf {
     color: #268bd2
 }
 
-.code.solarized-light .nl {
+.code.solarized-light:not(.js-render-math) .nl {
     color: #586e75
 }
 
-.code.solarized-light .nn {
+.code.solarized-light:not(.js-render-math) .nn {
     color: #586e75
 }
 
-.code.solarized-light .nx {
+.code.solarized-light:not(.js-render-math) .nx {
     color: #586e75
 }
 
-.code.solarized-light .py {
+.code.solarized-light:not(.js-render-math) .py {
     color: #586e75
 }
 
-.code.solarized-light .nt {
+.code.solarized-light:not(.js-render-math) .nt {
     color: #268bd2
 }
 
-.code.solarized-light .nv {
+.code.solarized-light:not(.js-render-math) .nv {
     color: #268bd2
 }
 
-.code.solarized-light .ow {
+.code.solarized-light:not(.js-render-math) .ow {
     color: #859900
 }
 
-.code.solarized-light .w {
+.code.solarized-light:not(.js-render-math) .w {
     color: #586e75
 }
 
-.code.solarized-light .mf {
+.code.solarized-light:not(.js-render-math) .mf {
     color: #2aa198
 }
 
-.code.solarized-light .mh {
+.code.solarized-light:not(.js-render-math) .mh {
     color: #2aa198
 }
 
-.code.solarized-light .mi {
+.code.solarized-light:not(.js-render-math) .mi {
     color: #2aa198
 }
 
-.code.solarized-light .mo {
+.code.solarized-light:not(.js-render-math) .mo {
     color: #2aa198
 }
 
-.code.solarized-light .sb {
+.code.solarized-light:not(.js-render-math) .sb {
     color: #93a1a1
 }
 
-.code.solarized-light .sc {
+.code.solarized-light:not(.js-render-math) .sc {
     color: #2aa198
 }
 
-.code.solarized-light .sd {
+.code.solarized-light:not(.js-render-math) .sd {
     color: #586e75
 }
 
-.code.solarized-light .s2 {
+.code.solarized-light:not(.js-render-math) .s2 {
     color: #2aa198
 }
 
-.code.solarized-light .se {
+.code.solarized-light:not(.js-render-math) .se {
     color: #cb4b16
 }
 
-.code.solarized-light .sh {
+.code.solarized-light:not(.js-render-math) .sh {
     color: #586e75
 }
 
-.code.solarized-light .si {
+.code.solarized-light:not(.js-render-math) .si {
     color: #2aa198
 }
 
-.code.solarized-light .sx {
+.code.solarized-light:not(.js-render-math) .sx {
     color: #2aa198
 }
 
-.code.solarized-light .sr {
+.code.solarized-light:not(.js-render-math) .sr {
     color: #dc322f
 }
 
-.code.solarized-light .s1 {
+.code.solarized-light:not(.js-render-math) .s1 {
     color: #2aa198
 }
 
-.code.solarized-light .ss {
+.code.solarized-light:not(.js-render-math) .ss {
     color: #2aa198
 }
 
-.code.solarized-light .bp {
+.code.solarized-light:not(.js-render-math) .bp {
     color: #268bd2
 }
 
-.code.solarized-light .vc {
+.code.solarized-light:not(.js-render-math) .vc {
     color: #268bd2
 }
 
-.code.solarized-light .vg {
+.code.solarized-light:not(.js-render-math) .vg {
     color: #268bd2
 }
 
-.code.solarized-light .vi {
+.code.solarized-light:not(.js-render-math) .vi {
     color: #268bd2
 }
 
-.code.solarized-light .il {
+.code.solarized-light:not(.js-render-math) .il {
     color: #2aa198
 }
 
-.code.white .line-numbers, .code.white .diff-line-num {
+.code.white:not(.js-render-math) .line-numbers, .code.white:not(.js-render-math) .diff-line-num {
     background-color: #fafafa
 }
 
-.code.white .diff-line-num, .code.white .diff-line-num a {
+.code.white:not(.js-render-math) .diff-line-num, .code.white:not(.js-render-math) .diff-line-num a {
     color: rgba(0, 0, 0, 0.3)
 }
 
-.code.white pre.code, .code.white .diff-line-num {
+.code.white:not(.js-render-math) pre.code, .code.white:not(.js-render-math) .diff-line-num {
     border-color: #f0f0f0
 }
 
-.code.white, .code.white pre.code, .code.white .line_holder .line_content {
+.code.white:not(.js-render-math), .code.white:not(.js-render-math) pre.code, .code.white:not(.js-render-math) .line_holder .line_content {
     background-color: #fff;
     color: #2e2e2e
 }
 
-.code.white .line_holder.match .line_content {
+.code.white:not(.js-render-math) .line_holder.match .line_content {
     color: rgba(0, 0, 0, 0.3);
     background-color: #fafafa
 }
 
-.code.white .line_holder .diff-line-num.old {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.old {
     background-color: #f9d7dc;
     border-color: #fac5cd
 }
 
-.code.white .line_holder .diff-line-num.old a {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.old a {
     color: #ae979a
 }
 
-.code.white .line_holder .diff-line-num.new {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.new {
     background-color: #ddfbe6;
     border-color: #c7f0d2
 }
 
-.code.white .line_holder .diff-line-num.new a {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.new a {
     color: #9bb0a1
 }
 
-.code.white .line_holder .diff-line-num.is-over, .code.white .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.is-over, .code.white:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over {
     background-color: #ded7fc;
     border-color: #cabffa
 }
 
-.code.white .line_holder .diff-line-num.is-over a, .code.white .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.is-over a, .code.white:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell).is-over a {
     color: #a390f7
 }
 
-.code.white .line_holder .diff-line-num.hll:not(.empty-cell) {
+.code.white:not(.js-render-math) .line_holder .diff-line-num.hll:not(.empty-cell) {
     background-color: #fbf2da;
     border-color: #f0e2bd
 }
 
-.code.white .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
-.code.white .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
-.code.white .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
-.code.white .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
+.code.white:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .diff-line-num,
+.code.white:not(.js-render-math) .line_holder:not(.diff-expanded) + .diff-expanded > .line_content,
+.code.white:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .diff-line-num,
+.code.white:not(.js-render-math) .line_holder.diff-expanded + .line_holder:not(.diff-expanded) > .line_content {
     border-top: 1px solid #e0e0e0
 }
 
-.code.white .line_holder.diff-expanded > .diff-line-num, .code.white .line_holder.diff-expanded > .line_content {
+.code.white:not(.js-render-math) .line_holder.diff-expanded > .diff-line-num, .code.white:not(.js-render-math) .line_holder.diff-expanded > .line_content {
     background: #f7f7f7;
     border-color: #f7f7f7
 }
 
-.code.white .line_holder .line_content.old {
+.code.white:not(.js-render-math) .line_holder .line_content.old {
     background-color: #fbe9eb
 }
 
-.code.white .line_holder .line_content.old::before {
+.code.white:not(.js-render-math) .line_holder .line_content.old::before {
     color: #ae979a
 }
 
-.code.white .line_holder .line_content.old span.idiff {
+.code.white:not(.js-render-math) .line_holder .line_content.old span.idiff {
     background-color: #fac5cd
 }
 
-.code.white .line_holder .line_content.new {
+.code.white:not(.js-render-math) .line_holder .line_content.new {
     background-color: #ecfdf0
 }
 
-.code.white .line_holder .line_content.new::before {
+.code.white:not(.js-render-math) .line_holder .line_content.new::before {
     color: #9bb0a1
 }
 
-.code.white .line_holder .line_content.new span.idiff {
+.code.white:not(.js-render-math) .line_holder .line_content.new span.idiff {
     background-color: #c7f0d2
 }
 
-.code.white .line_holder .line_content.match {
+.code.white:not(.js-render-math) .line_holder .line_content.match {
     color: rgba(0, 0, 0, 0.3);
     background-color: #fafafa
 }
 
-.code.white .line_holder .line_content.hll:not(.empty-cell) {
+.code.white:not(.js-render-math) .line_holder .line_content.hll:not(.empty-cell) {
     background-color: #fcf8e7
 }
 
-.code.white pre .hll {
+.code.white:not(.js-render-math) pre .hll {
     background-color: #f8eec7 !important
 }
 
-.code.white span.highlight_word {
+.code.white:not(.js-render-math) span.highlight_word {
     background-color: #fafe3d !important
 }
 
-.code.white .line a {
+.code.white:not(.js-render-math) .line a {
     color: #0086b3
 }
 
-.code.white .hll {
+.code.white:not(.js-render-math) .hll {
     background-color: #f8f8f8
 }
 
-.code.white .c {
+.code.white:not(.js-render-math) .c {
     color: #998;
     font-style: italic
 }
 
-.code.white .err {
+.code.white:not(.js-render-math) .err {
     color: #a61717;
     background-color: #e3d2d2
 }
 
-.code.white .k {
+.code.white:not(.js-render-math) .k {
     font-weight: 600
 }
 
-.code.white .o {
+.code.white:not(.js-render-math) .o {
     font-weight: 600
 }
 
-.code.white .cm {
+.code.white:not(.js-render-math) .cm {
     color: #998;
     font-style: italic
 }
 
-.code.white .cp {
+.code.white:not(.js-render-math) .cp {
     color: #999;
     font-weight: 600
 }
 
-.code.white .c1 {
+.code.white:not(.js-render-math) .c1 {
     color: #998;
     font-style: italic
 }
 
-.code.white .cs {
+.code.white:not(.js-render-math) .cs {
     color: #999;
     font-weight: 600;
     font-style: italic
 }
 
-.code.white .gd {
+.code.white:not(.js-render-math) .gd {
     color: #000;
     background-color: #fdd
 }
 
-.code.white .gd .x {
+.code.white:not(.js-render-math) .gd .x {
     color: #000;
     background-color: #faa
 }
 
-.code.white .ge {
+.code.white:not(.js-render-math) .ge {
     font-style: italic
 }
 
-.code.white .gr {
+.code.white:not(.js-render-math) .gr {
     color: #a00
 }
 
-.code.white .gh {
+.code.white:not(.js-render-math) .gh {
     color: #999
 }
 
-.code.white .gi {
+.code.white:not(.js-render-math) .gi {
     color: #000;
     background-color: #dfd
 }
 
-.code.white .gi .x {
+.code.white:not(.js-render-math) .gi .x {
     color: #000;
     background-color: #afa
 }
 
-.code.white .go {
+.code.white:not(.js-render-math) .go {
     color: #888
 }
 
-.code.white .gp {
+.code.white:not(.js-render-math) .gp {
     color: #555
 }
 
-.code.white .gs {
+.code.white:not(.js-render-math) .gs {
     font-weight: 600
 }
 
-.code.white .gu {
+.code.white:not(.js-render-math) .gu {
     color: #800080;
     font-weight: 600
 }
 
-.code.white .gt {
+.code.white:not(.js-render-math) .gt {
     color: #a00
 }
 
-.code.white .kc {
+.code.white:not(.js-render-math) .kc {
     font-weight: 600
 }
 
-.code.white .kd {
+.code.white:not(.js-render-math) .kd {
     font-weight: 600
 }
 
-.code.white .kn {
+.code.white:not(.js-render-math) .kn {
     font-weight: 600
 }
 
-.code.white .kp {
+.code.white:not(.js-render-math) .kp {
     font-weight: 600
 }
 
-.code.white .kr {
+.code.white:not(.js-render-math) .kr {
     font-weight: 600
 }
 
-.code.white .kt {
+.code.white:not(.js-render-math) .kt {
     color: #458;
     font-weight: 600
 }
 
-.code.white .m {
+.code.white:not(.js-render-math) .m {
     color: #099
 }
 
-.code.white .s {
+.code.white:not(.js-render-math) .s {
     color: #d14
 }
 
-.code.white .n {
+.code.white:not(.js-render-math) .n {
     color: #333
 }
 
-.code.white .na {
+.code.white:not(.js-render-math) .na {
     color: teal
 }
 
-.code.white .nb {
+.code.white:not(.js-render-math) .nb {
     color: #0086b3
 }
 
-.code.white .nc {
+.code.white:not(.js-render-math) .nc {
     color: #458;
     font-weight: 600
 }
 
-.code.white .no {
+.code.white:not(.js-render-math) .no {
     color: teal
 }
 
-.code.white .ni {
+.code.white:not(.js-render-math) .ni {
     color: purple
 }
 
-.code.white .ne {
+.code.white:not(.js-render-math) .ne {
     color: #900;
     font-weight: 600
 }
 
-.code.white .nf {
+.code.white:not(.js-render-math) .nf {
     color: #900;
     font-weight: 600
 }
 
-.code.white .nn {
+.code.white:not(.js-render-math) .nn {
     color: #555
 }
 
-.code.white .nt {
+.code.white:not(.js-render-math) .nt {
     color: navy
 }
 
-.code.white .nv {
+.code.white:not(.js-render-math) .nv {
     color: teal
 }
 
-.code.white .ow {
+.code.white:not(.js-render-math) .ow {
     font-weight: 600
 }
 
-.code.white .w {
+.code.white:not(.js-render-math) .w {
     color: #bbb
 }
 
-.code.white .mf {
+.code.white:not(.js-render-math) .mf {
     color: #099
 }
 
-.code.white .mh {
+.code.white:not(.js-render-math) .mh {
     color: #099
 }
 
-.code.white .mi {
+.code.white:not(.js-render-math) .mi {
     color: #099
 }
 
-.code.white .mo {
+.code.white:not(.js-render-math) .mo {
     color: #099
 }
 
-.code.white .sb {
+.code.white:not(.js-render-math) .sb {
     color: #d14
 }
 
-.code.white .sc {
+.code.white:not(.js-render-math) .sc {
     color: #d14
 }
 
-.code.white .sd {
+.code.white:not(.js-render-math) .sd {
     color: #d14
 }
 
-.code.white .s2 {
+.code.white:not(.js-render-math) .s2 {
     color: #d14
 }
 
-.code.white .se {
+.code.white:not(.js-render-math) .se {
     color: #d14
 }
 
-.code.white .sh {
+.code.white:not(.js-render-math) .sh {
     color: #d14
 }
 
-.code.white .si {
+.code.white:not(.js-render-math) .si {
     color: #d14
 }
 
-.code.white .sx {
+.code.white:not(.js-render-math) .sx {
     color: #d14
 }
 
-.code.white .sr {
+.code.white:not(.js-render-math) .sr {
     color: #009926
 }
 
-.code.white .s1 {
+.code.white:not(.js-render-math) .s1 {
     color: #d14
 }
 
-.code.white .ss {
+.code.white:not(.js-render-math) .ss {
     color: #990073
 }
 
-.code.white .bp {
+.code.white:not(.js-render-math) .bp {
     color: #999
 }
 
-.code.white .vc {
+.code.white:not(.js-render-math) .vc {
     color: teal
 }
 
-.code.white .vg {
+.code.white:not(.js-render-math) .vg {
     color: teal
 }
 
-.code.white .vi {
+.code.white:not(.js-render-math) .vi {
     color: teal
 }
 
-.code.white .il {
+.code.white:not(.js-render-math) .il {
     color: #099
 }
 
-.code.white .gc {
+.code.white:not(.js-render-math) .gc {
     color: #999;
     background-color: #eaf2f5
 }

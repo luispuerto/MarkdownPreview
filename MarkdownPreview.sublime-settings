@@ -225,6 +225,13 @@
     "js": [],
 
     /*
+        Sets syntax highlighting theme for blocks of code.
+
+        Currently, one of "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai".
+    */
+    "gitlab_highlight_theme": "white",
+
+    /*
         Enable auto-reloaded on save. Will not work if GitHub parser is used without oauth key specified.
     */
     "enable_autoreload": true,
