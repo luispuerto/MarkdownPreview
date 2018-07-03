@@ -732,10 +732,10 @@ class GitlabCompiler(OnlineCompiler):
 
     default_css = [
         "css/gitlab.css",
-        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css",
-        "css/katex_eqnum.css"
+        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css"
     ]
     compiler_js = [
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
         "res://MarkdownPreview/js/gitlab_config.js"
     ]

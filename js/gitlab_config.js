@@ -1,38 +1,43 @@
-(function () {
 'use strict';
 
-var katexMath = (function () {
-    var maths = document.querySelectorAll('.js-render-math');
-    for (var i = 0; i < maths.length; i++) {
-      katex.render(maths[i].textContent || maths[i].innerText, maths[i], {'displayMode': false});
-    }
-});
+// Loop over all math elements and render math
+function renderWithKaTeX(elements, katex) {
+  elements.each(function katexElementsLoop() {
+    const mathNode = $('<span></span>');
+    const $this = $(this);
 
-var addHighlightTheme = (function () {
-    document.querySelectorAll('.highlight').forEach(
-      block => block.className += " " + HIGHLIGHT_THEME
-    );
-});
-
-(function () {
-  var onReady = function onReady(fn) {
-    if (document.addEventListener) {
-      document.addEventListener("DOMContentLoaded", fn);
-    } else {
-      document.attachEvent("onreadystatechange", function () {
-        if (document.readyState === "interactive") {
-          fn();
-        }
-      });
-    }
-  };
-
-  onReady(function () {
-    addHighlightTheme();
-    if (typeof katex !== "undefined") {
-      katexMath();
+    const display = $this.attr('data-math-style') === 'display';
+    try {
+      katex.render($this.text(), mathNode.get(0), { displayMode: display, throwOnError: false });
+      mathNode.insertAfter($this);
+      $this.remove();
+    } catch (err) {
+      throw err;
     }
   });
-})();
+}
 
-}());
+function renderMath($els) {
+  renderWithKaTeX($els, katex);
+}
+
+function syntaxHighlight(el) {
+  if ($(el).hasClass('js-syntax-highlight')) {
+    // Given the element itself, apply highlighting
+    return $(el).addClass(HIGHLIGHT_THEME);
+  } else {
+    // Given a parent element, recurse to any of its applicable children
+    const $children = $(el).find('.js-syntax-highlight');
+    if ($children.length) {
+      return syntaxHighlight($children);
+    }
+  }
+}
+
+$.fn.renderGFM = function renderGFM() {
+  syntaxHighlight(this.find('.js-syntax-highlight'));
+  renderMath(this.find('.js-render-math'));
+  return this;
+};
+
+$(() => $('body').renderGFM());
