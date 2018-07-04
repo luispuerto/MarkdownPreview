@@ -630,7 +630,6 @@ class OnlineCompiler(Compiler):
             if token:
                 headers[self.authentication_api_key] = "%s %s" % (self.authentication_api_type, token)
             sublime.status_message(self.url)
-            print(headers)
             request = request_url(self.url, data, headers)
             markdown_html = self.unpack_data(urlopen(request).read())
         except HTTPError as e:
