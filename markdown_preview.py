@@ -166,12 +166,13 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
     def on_post_save(self, view):
         """Handle auto-reload on save."""
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
-        github_auth_provided = settings.get('github_oauth_token') is not None
-        gitlab_auth_provided = settings.get('gitlab_oauth_token') is not None
+        github_auth_provided = settings.get(GithubCompiler.authentication_settings_key) is not None
+        gitlab_token_provided = settings.get(GitlabCompiler.authentication_settings_key) is not None
         parser = view.settings().get('parser')
-        if settings.get('enable_autoreload', True) and (parser not in ['github', 'gitlab'] or
-                                                        (parser is 'github' and github_auth_provided) or
-                                                        (parser is 'gitlab' and gitlab_auth_provided)):
+        if (settings.get('enable_autoreload', True) and
+                (parser not in [GithubCompiler.compiler_name, GitlabCompiler.compiler_name] or
+                    (parser is GithubCompiler.compiler_name and github_auth_provided) or
+                    (parser is GitlabCompiler.compiler_name and gitlab_token_provided))):
             filetypes = settings.get('markdown_filetypes')
             file_name = view.file_name()
             if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
@@ -548,6 +549,9 @@ class OnlineCompiler(Compiler):
     compiler_name = ""
     content_type = "application/json"
     url = ""
+    authentication_settings_key = ""
+    authentication_api_key = "Authorization"
+    authentication_api_type = "token"
 
     def curl_convert(self, data):
         """Use curl to send Markdown content through API."""
@@ -567,11 +571,11 @@ class OnlineCompiler(Compiler):
                 self.url
             ]
 
-            oauth_token = self.settings.get('%s_oauth_token', self.compiler_name)
-            if oauth_token:
+            token = self.settings.get(self.authentication_settings_key)
+            if token:
                 curl_args[1:1] = [
-                    '-u',
-                    oauth_token
+                    '-H',
+                    '%s: %s %s' % (self.authentication_api_key, self.authentication_api_type, token)
                 ]
 
             markdown_html = self.unpack_data(subprocess.Popen(curl_args, stdout=subprocess.PIPE).communicate()[0])
@@ -611,7 +615,7 @@ class OnlineCompiler(Compiler):
     def parser_specific_convert(self, markdown_text):
         """Convert input markdown to HTML with online compiler parser."""
         markdown_html = _CANNOT_CONVERT
-        oauth_token = self.settings.get('%s_oauth_token' % self.compiler_name)
+        token = self.settings.get(self.authentication_settings_key)
 
         # use the online compiler API
         sublime.status_message('converting markdown with %s API...' % self.compiler_name)
@@ -623,16 +627,18 @@ class OnlineCompiler(Compiler):
             headers = {
                 'Content-Type': self.content_type
             }
-            if oauth_token:
-                headers['Authorization'] = "token %s" % oauth_token
+            if token:
+                headers[self.authentication_api_key] = "%s %s" % (self.authentication_api_type, token)
             sublime.status_message(self.url)
+            print(headers)
             request = request_url(self.url, data, headers)
             markdown_html = self.unpack_data(urlopen(request).read())
         except HTTPError as e:
             if e.code == 401:
                 sublime.error_message(
-                    ("%s API authentication failed. Please check your OAuth token.\n\n" % self.compiler_name) +
-                    self.get_response_from_exception(e)
+                    ("%s API authentication failed. Please check your %s's token.\n\n" % (
+                        self.compiler_name, self.compiler_name
+                    )) + self.get_response_from_exception(e)
                 )
             elif e.code == 403:  # Forbidden
                 sublime.error_message(
@@ -643,13 +649,13 @@ class OnlineCompiler(Compiler):
                         To continue using %s's markdown format with this package, log in to \
                         %s, then generate a new token, \
                         copy the token's value, and paste it in this package's user settings under the key \
-                        '%s_oauth_token'. Example:
+                        '%s'. Example:
 
                         {
-                            "%s_oauth_token": "xxxx...."
+                            "%s": "xxxx...."
                         }
 
-                        """ % tuple(self.compiler_name for i in range(5))
+                        """ % tuple(self.authentication_settings_key for i in range(5))
                     ) + self.get_response_from_exception(e)
                 )
             else:
@@ -682,6 +688,9 @@ class GithubCompiler(OnlineCompiler):
     compiler_name = "github"
     content_type = "application/json"
     url = "https://api.github.com/markdown"
+    authentication_settings_key = "github_oauth_token"
+    authentication_api_key = "Authorization"
+    authentication_api_type = "token"
 
     def get_server_exception_message(self, body):
         """Extract server exception message from body of API response."""
@@ -744,10 +753,13 @@ class GitlabCompiler(OnlineCompiler):
     compiler_name = "gitlab"
     content_type = "application/json"
     url = "https://gitlab.com/api/v4/markdown"
+    authentication_settings_key = "gitlab_personal_token"
+    authentication_api_key = "Private-Token"
+    authentication_api_type = ""
 
     def get_server_exception_message(self, body):
         """Extract server exception message from body of API response."""
-        return body['message']
+        return body.get('message', '') + body.get('error', '')
 
     def pack_data(self, markdown_text, github_mode):
         """Prepare data to send to API."""
@@ -949,8 +961,8 @@ class MarkdownPreviewSelectCommand(sublime_plugin.TextCommand):
         md_map = settings.get('markdown_binary_map', {})
         parsers = [
             "markdown",
-            "github",
-            "gitlab"
+            GithubCompiler.compiler_name,
+            GitlabCompiler.compiler_name
         ]
 
         # Add external markdown binaries.
@@ -960,7 +972,8 @@ class MarkdownPreviewSelectCommand(sublime_plugin.TextCommand):
         self.target = target
 
         enabled_parsers = set()
-        for p in settings.get("enabled_parsers", ["markdown", "github", "GitLab"]):
+        for p in settings.get("enabled_parsers", ["markdown",
+                              GithubCompiler.compiler_name, GitlabCompiler.compiler_name]):
             if p in parsers:
                 enabled_parsers.add(p)
 
@@ -1009,13 +1022,14 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
         self.parser = parser
         self.target = target
 
-        if parser == "github":
+        if parser == GithubCompiler.compiler_name:
             compiler = GithubCompiler()
-        elif parser == "gitlab":
+        elif parser == GitlabCompiler.compiler_name:
             compiler = GitlabCompiler()
         elif parser == 'markdown':
             compiler = MarkdownCompiler()
-        elif parser in self.settings.get("enabled_parsers", ("markdown", "github", "gitlab")):
+        elif parser in self.settings.get("enabled_parsers",
+                                         ("markdown", GithubCompiler.compiler_name, GitlabCompiler.compiler_name)):
             compiler = ExternalMarkdownCompiler(parser)
         else:
             # Fallback to Python Markdown
@@ -1041,11 +1055,12 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
     def to_disk(self, html, open_in_browser):
         """Save to disk and open in browser if desired."""
         # do not use LiveReload unless autoreload is enabled
-        github_auth_provided = self.settings.get('github_oauth_token') is not None
-        gitlab_auth_provided = self.settings.get('gitlab_oauth_token') is not None
-        if self.settings.get('enable_autoreload', True) and (self.parser not in ['github', 'gitlab'] or
-                                                             (self.parser is 'github' and github_auth_provided) or
-                                                             (self.parser is 'gitlab' and gitlab_auth_provided)):
+        github_auth_provided = self.settings.get(GithubCompiler.authentication_settings_key) is not None
+        gitlab_token_provided = self.settings.get(GitlabCompiler.authentication_settings_key) is not None
+        if (self.settings.get('enable_autoreload', True) and
+                (self.parser not in [GithubCompiler.compiler_name, GitlabCompiler.compiler_name] or
+                    (self.parser is GithubCompiler.compiler_name and github_auth_provided) or
+                    (self.parser is GitlabCompiler.compiler_name and gitlab_token_provided))):
             # check if LiveReload ST2 extension installed and add its script to the resulting HTML
             if 'LiveReload' in os.listdir(sublime.packages_path()):
                 port = sublime.load_settings('LiveReload.sublime-settings').get('port', 35729)
@@ -1170,13 +1185,14 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
 
         self.puts("Compiling %s..." % mdfile)
 
-        if parser == "github":
+        if parser == GithubCompiler.compiler_name:
             compiler = GithubCompiler()
-        elif parser == "gitlab":
+        elif parser == GitlabCompiler.compiler_name:
             compiler = GitlabCompiler()
         elif parser == 'markdown':
             compiler = MarkdownCompiler()
-        elif parser in settings.get("enabled_parsers", ("markdown", "github", "gitlab")):
+        elif parser in settings.get("enabled_parsers", ("markdown",
+                                    GithubCompiler.compiler_name, GitlabCompiler.compiler_name)):
             compiler = ExternalMarkdownCompiler(parser)
         else:
             compiler = MarkdownCompiler()
