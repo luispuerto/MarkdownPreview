@@ -774,33 +774,19 @@ class GitlabCompiler(OnlineCompiler):
 
     def parser_specific_postprocess(self, html):
         """Run GitLab specific postprocesses."""
-        if self.settings.get("github_inject_header_ids", False):  # TODO: should be ranamed in settings and etc?
-            html = self.postprocess_inject_header_id(html)
+        if self.settings.get('%s_mode' % self.compiler_name, 'gfm') == 'gfm':
+            html = self.fix_ids(html)
         if not self.settings.get('html_simple', False):
             html += '<script>const HIGHLIGHT_THEME = "%s";</script>' % (
                 self.settings.get('gitlab_highlight_theme', 'white'))
         return html
 
-    def postprocess_inject_header_id(self, html):
-        """Insert header ids when no anchors are present."""
-        from pymdownx.slugs import uslugify
-        unique = {}
-        re_header = re.compile(r'(?P<open><h([1-6])>)(?P<text>.*?)(?P<close></h\2>)', re.DOTALL)
-
-        def inject_id(m):
-            header_id = uslugify(m.group('text'), '-')
-            if header_id == '':
-                return m.group(0)
-            # Append a dash and number for uniqueness if needed
-            value = unique.get(header_id, None)
-            if value is None:
-                unique[header_id] = 1
-            else:
-                unique[header_id] += 1
-                header_id += "-%d" % value
-            return m.group('open')[:-1] + (' id="%s">' % header_id) + m.group('text') + m.group('close')
-
-        return re_header.sub(inject_id, html)
+    def fix_ids(self, html):
+        """Fix id of head tags to be compatible with href of links."""
+        re_header = re.compile(r'(?P<open><a)(?P<text1>.*?)(?P<id>id="user-content-)(?P<text2>.*?)(?P<close>>)',
+                               re.DOTALL)
+        return re_header.sub(
+            lambda m: m.group('open') + m.group('text1') + 'id="' + m.group('text2') + m.group('close'), html)
 
 
 class ExternalMarkdownCompiler(Compiler):
