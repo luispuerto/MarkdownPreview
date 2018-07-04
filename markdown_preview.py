@@ -601,11 +601,11 @@ class OnlineCompiler(Compiler):
         return '%s\'s original response: (HTTP Status Code %s) "%s"' % (
             self.compiler_name, e.code, self.get_server_exception_message(body))
 
-    def pack_data(self, markdown_text, github_mode):  # TODO: should `github_mode` be ranamed in settings and etc?
+    def pack_data(self, markdown_text, mode):
         """Prepare data to send to API."""
         return {
             "text": markdown_text,
-            "mode": github_mode
+            "mode": mode
         }
 
     def unpack_data(self, raw_data):
@@ -619,8 +619,8 @@ class OnlineCompiler(Compiler):
 
         # use the online compiler API
         sublime.status_message('converting markdown with %s API...' % self.compiler_name)
-        github_mode = self.settings.get('github_mode', 'gfm')  # TODO: should be ranamed in settings and etc?
-        data = self.pack_data(markdown_text, github_mode)
+        mode = self.settings.get('%s_mode' % self.compiler_name, 'gfm')
+        data = self.pack_data(markdown_text, mode)
         data = json.dumps(data).encode('utf-8')
 
         try:
@@ -696,12 +696,12 @@ class GithubCompiler(OnlineCompiler):
         """Extract server exception message from body of API response."""
         return body['message']
 
-    def pack_data(self, markdown_text, github_mode):
+    def pack_data(self, markdown_text, mode):
         """Prepare data to send to API."""
         return {
             "text": markdown_text,
             # "context": "group_example/project_example",  # TODO: add `context` parameter?
-            "mode": github_mode
+            "mode": mode
         }
 
     def unpack_data(self, raw_data):
@@ -761,12 +761,12 @@ class GitlabCompiler(OnlineCompiler):
         """Extract server exception message from body of API response."""
         return body.get('message', '') + body.get('error', '')
 
-    def pack_data(self, markdown_text, github_mode):
+    def pack_data(self, markdown_text, mode):
         """Prepare data to send to API."""
         return {
             "text": markdown_text,
             # "project": "group_example/project_example",  # TODO: add `project` parameter?
-            "gfm": github_mode == 'gfm'
+            "gfm": mode == 'gfm'
         }
 
     def unpack_data(self, raw_data):

@@ -450,14 +450,14 @@ GitLab Flavored Markdown (GFM) is a popular markdown, too.  Markdown Preview can
 
 ### Online
 
-Parsing GFM using the online method requires using the GitLab API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.
+Parsing GFM using the online method requires using the GitLab API as the parser.  It may also require setting `gitlab_mode` to `gfm` (default) to get things like tasklists to render properly.
 
 ```js
     /*
-        Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
-        see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
+        Default mode for the gitlab Markdown parser : markdown (documents) or gfm (comments)
+        see https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
     */
-    "github_mode": "markdown",
+    "gitlab_mode": "markdown",
 ```
 
 You can set your personal token in the settings as follows:

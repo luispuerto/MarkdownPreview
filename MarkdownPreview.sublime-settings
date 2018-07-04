@@ -160,11 +160,16 @@
     },
 
     /*
-        Default mode for the github or gitlab Markdown parser : markdown (documents) or gfm (comments)
+        Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
         see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
-        and https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
     */
     "github_mode": "markdown",
+
+    /*
+        Default mode for the gitlab Markdown parser : markdown (documents) or gfm (comments)
+        see https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
+    */
+    "gitlab_mode": "gfm",
 
     /*
         Enables a post process to inject header ids to ensure hrefs to headers work
