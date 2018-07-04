@@ -763,7 +763,6 @@ class GitlabCompiler(OnlineCompiler):
         """Prepare data to send to API."""
         return {
             "text": markdown_text,
-            # "project": "group_example/project_example",  # TODO: add `project` parameter?
             "gfm": mode == 'gfm'
         }
 
