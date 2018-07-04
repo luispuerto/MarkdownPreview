@@ -1,5 +1,14 @@
 'use strict';
 
+mermaid.initialize({
+  // mermaid core options
+  mermaid: {
+    startOnLoad: false,
+  },
+  // mermaidAPI options
+  theme: 'neutral',
+});
+
 // Loop over all math elements and render math
 function renderWithKaTeX(elements, katex) {
   elements.each(function katexElementsLoop() {
@@ -37,16 +46,6 @@ function syntaxHighlight(el) {
 
 function renderMermaid($els) {
   if (!$els.length) return;
-  
-  mermaid.initialize({
-    // mermaid core options
-    mermaid: {
-      startOnLoad: false,
-    },
-    // mermaidAPI options
-    theme: 'neutral',
-  });
-
   $els.each((i, el) => {
     const source = el.textContent;
 
