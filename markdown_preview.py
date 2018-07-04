@@ -699,7 +699,6 @@ class GithubCompiler(OnlineCompiler):
         """Prepare data to send to API."""
         return {
             "text": markdown_text,
-            # "context": "group_example/project_example",  # TODO: add `context` parameter?
             "mode": mode
         }
 
