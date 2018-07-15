@@ -173,7 +173,7 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
             auth_provided = settings.get(external_parser_classes[
                 [parser_class.compiler_name for parser_class in external_parser_classes].index(parser)
             ].authentication_settings_key) is not None
-        if settings.get('enable_autoreload', True) and (external_parser_used and auth_provided):
+        if settings.get('enable_autoreload', True) and (not external_parser_used or auth_provided):
             filetypes = settings.get('markdown_filetypes')
             file_name = view.file_name()
             if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
@@ -1050,7 +1050,7 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             auth_provided = self.settings.get(external_parser_classes[
                 [parser_class.compiler_name for parser_class in external_parser_classes].index(self.parser)
             ].authentication_settings_key) is not None
-        if self.settings.get('enable_autoreload', True) and (external_parser_used and auth_provided):
+        if self.settings.get('enable_autoreload', True) and (not external_parser_used or auth_provided):
             # check if LiveReload ST2 extension installed and add its script to the resulting HTML
             if 'LiveReload' in os.listdir(sublime.packages_path()):
                 port = sublime.load_settings('LiveReload.sublime-settings').get('port', 35729)
