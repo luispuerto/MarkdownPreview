@@ -213,7 +213,7 @@ class MarkdownCheatsheetCommand(sublime_plugin.TextCommand):
 class Compiler(object):
     """Base compiler that does the markdown converting."""
 
-    default_css = ["css/markdown.css"]
+    default_css = ["res://MarkdownPreview/css/markdown.css"]
     default_js = []
 
     def isurl(self, css_name):
@@ -230,6 +230,11 @@ class Compiler(object):
         if not isinstance(css_list, list):
             css_list = [css_list]
 
+        if 'default' in css_list:
+            print(self.default_css)
+            i = css_list.index('default')
+            css_list[i:i + 1] = self.default_css
+
         css_text = []
         for css_name in css_list:
             if css_name.startswith('res://'):
@@ -244,13 +249,6 @@ class Compiler(object):
             elif os.path.isfile(os.path.expanduser(css_name)):
                 # use custom CSS file
                 css_text.append("<style>%s</style>" % load_utf8(os.path.expanduser(css_name)))
-            elif css_name == 'default':
-                # use parser CSS file
-                for css in self.default_css:
-                    if css.startswith("http://") or css.startswith("https://"):
-                        css_text.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"%s\">" % css)
-                    else:
-                        css_text.append("<style>%s</style>" % load_resource(css))
 
         return '\n'.join(css_text)
 
@@ -692,7 +690,7 @@ class OnlineCompiler(Compiler):
 class GithubCompiler(OnlineCompiler):
     """GitHub compiler."""
 
-    default_css = ["css/github.css"]
+    default_css = ["res://MarkdownPreview/css/github.css"]
     compiler_name = "github"
     content_type = "application/json"
     url = "https://api.github.com/markdown"
@@ -747,7 +745,7 @@ class GitlabCompiler(OnlineCompiler):
     """GitLab compiler."""
 
     default_css = [
-        "css/gitlab.css",
+        "res://MarkdownPreview/css/gitlab.css",
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css"
     ]
     default_js = [
@@ -798,7 +796,7 @@ class GitlabCompiler(OnlineCompiler):
 class ExternalMarkdownCompiler(Compiler):
     """Compiler for other, external Markdown parsers."""
 
-    default_css = ["css/markdown.css"]
+    default_css = ["res://MarkdownPreview/css/markdown.css"]
 
     def __init__(self, parser):
         """Initialize."""
@@ -844,7 +842,7 @@ class ExternalMarkdownCompiler(Compiler):
 class MarkdownCompiler(Compiler):
     """Python Markdown compiler."""
 
-    default_css = ["css/markdown.css"]
+    default_css = ["res://MarkdownPreview/css/markdown.css"]
 
     def set_highlight(self, pygments_style, css_class):
         """Set the Pygments css."""
