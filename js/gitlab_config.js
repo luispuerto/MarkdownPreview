@@ -20,75 +20,54 @@ mermaid.initialize({
   theme: 'neutral',
 });
 
-// Loop over all math elements and render math
-function renderWithKaTeX(elements, katex) {
-  elements.each(function katexElementsLoop() {
-    const mathNode = $('<span></span>');
-    const $this = $(this);
-
-    const display = $this.attr('data-math-style') === 'display';
-    try {
-      katex.render($this.text(), mathNode.get(0), { displayMode: display, throwOnError: false });
-      mathNode.insertAfter($this);
-      $this.remove();
-    } catch (err) {
-      throw err;
-    }
-  });
-}
-
-function renderMath($els) {
-  if (!$els.length) return;
-  renderWithKaTeX($els, katex);
-}
-
-function syntaxHighlight(el) {
-  if ($(el).hasClass('js-syntax-highlight')) {
-    // Given the element itself, apply highlighting
-    return $(el).addClass(HIGHLIGHT_THEME);
-  } else {
-    // Given a parent element, recurse to any of its applicable children
-    const $children = $(el).find('.js-syntax-highlight');
-    if ($children.length) {
-      return syntaxHighlight($children);
-    }
+function renderMath(el) {
+  let mathNode = document.createElement('span');
+  let display = el.getAttribute('data-math-style') === 'display';
+  try {
+    katex.render(el.textContent, mathNode, { displayMode: display, throwOnError: false });
+    el.parentNode.replaceChild(mathNode, el);
+  } catch (err) {
+    console.log(err);
   }
 }
 
-function renderMermaid($els) {
-  if (!$els.length) return;
-  $els.each((i, el) => {
-    const source = el.textContent;
+function syntaxHighlight(el) {
+  el.classList.add(HIGHLIGHT_THEME);
+}
 
-    // Remove any extra spans added by the backend syntax highlighting.
-    Object.assign(el, { textContent: source });
+function renderMermaid(el) {
+  const source = el.textContent;
 
-    mermaid.init(undefined, el, (id) => {
-      const svg = document.getElementById(id);
+  // Remove any extra spans added by the backend syntax highlighting.
+  Object.assign(el, { textContent: source });
 
-      svg.classList.add('mermaid');
+  mermaid.init(undefined, el, (id) => {
+    const svg = document.getElementById(id);
 
-      // pre > code > svg
-      svg.closest('pre').replaceWith(svg);
+    svg.classList.add('mermaid');
 
-      // We need to add the original source into the DOM to allow Copy-as-GFM
-      // to access it.
-      const sourceEl = document.createElement('text');
-      sourceEl.classList.add('source');
-      sourceEl.setAttribute('display', 'none');
-      sourceEl.textContent = source;
+    // pre > code > svg
+    svg.closest('pre').replaceWith(svg);
 
-      svg.appendChild(sourceEl);
-    });
+    // We need to add the original source into the DOM to allow Copy-as-GFM
+    // to access it.
+    const sourceEl = document.createElement('text');
+    sourceEl.classList.add('source');
+    sourceEl.setAttribute('display', 'none');
+    sourceEl.textContent = source;
+
+    svg.appendChild(sourceEl);
   });
 }
 
-
-$.fn.renderGFM = function renderGFM() {
-  syntaxHighlight(this.find('.js-syntax-highlight'));
-  renderMath(this.find('.js-render-math'));
-  renderMermaid(this.find('.js-render-mermaid'));
-  return this;
+function renderGFM(el) {
+  el.querySelectorAll('.js-syntax-highlight').forEach(syntaxHighlight);
+  el.querySelectorAll('.js-render-math').forEach(renderMath);
+  el.querySelectorAll('.js-render-mermaid').forEach(renderMermaid);
+  return el;
 };
 
-$(() => $('body').renderGFM());
+document.addEventListener("DOMContentLoaded", () => {
+  let body = document.getElementsByTagName('body')[0];
+  body.parentNode.replaceChild(renderGFM(body), body);
+});

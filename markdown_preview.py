@@ -747,7 +747,6 @@ class GitlabCompiler(OnlineCompiler):
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css"
     ]
     default_js = [
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
         "https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js",
         # Calling `mermaid.initialize` at the first lines of gitlab_config.js should come immediately after mermaid.js.
