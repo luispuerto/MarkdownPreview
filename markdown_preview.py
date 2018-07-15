@@ -214,7 +214,7 @@ class Compiler(object):
     """Base compiler that does the markdown converting."""
 
     default_css = ["css/markdown.css"]
-    compiler_js = []
+    default_js = []
 
     def isurl(self, css_name):
         """Check if URL."""
@@ -273,9 +273,13 @@ class Compiler(object):
         """Return the correct CSS file based on parser and settings."""
         return self.get_default_css() + self.get_override_css()
 
-    def get_javascript(self, defaults=[]):
+    def get_javascript(self):
         """Return JavaScript."""
-        js_files = defaults + self.settings.get('js')
+        js_files = self.settings.get('js', ['default'])
+        if 'default' in js_files:
+            js_files.remove('default')
+            js_files += self.default_js
+
         scripts = ''
 
         if js_files is not None:
@@ -519,7 +523,7 @@ class Compiler(object):
             head = ''
             head += self.get_meta()
             head += self.get_stylesheet()
-            head += self.get_javascript(self.compiler_js)
+            head += self.get_javascript()
             head += self.get_highlight()
             head += self.get_title()
 
@@ -531,7 +535,7 @@ class Compiler(object):
             html += '<html><head><meta charset="utf-8">'
             html += self.get_meta()
             html += self.get_stylesheet()
-            html += self.get_javascript(self.compiler_js)
+            html += self.get_javascript()
             html += self.get_highlight()
             html += self.get_title()
             html += '</head><body>'
@@ -742,7 +746,7 @@ class GitlabCompiler(OnlineCompiler):
         "css/gitlab.css",
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css"
     ]
-    compiler_js = [
+    default_js = [
         "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
         "https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js",

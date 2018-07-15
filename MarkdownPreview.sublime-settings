@@ -191,7 +191,7 @@
     /*
         Sets the default css file to embed in the HTML
 
-        default - Use the builtin CSS or github CSS, depending on parser config (markdown.css, github.css or gitlab.css)
+        default - Use the builtin CSS or github/gitlab CSS, depending on parser config (markdown.css, github.css or gitlab.css)
         other - Set an absolute path or url to any css file
 
         Should be an array, but will take a single string to support legacy convention.
@@ -226,8 +226,10 @@
         Set an array of URLs or filepaths to JavaScript files. Absolute filepaths will be loaded
         into the script tag; others will be set as the `src` attribute. The order of files in the
         array is the order in which they are embedded.
+
+        default - Use the builtin js or github/gitlab js, depending on parser config
     */
-    "js": [],
+    "js": ["default"],
 
     /*
         Sets syntax highlighting theme for blocks of code.
