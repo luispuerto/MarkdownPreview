@@ -277,8 +277,8 @@ class Compiler(object):
         """Return JavaScript."""
         js_files = self.settings.get('js', ['default'])
         if 'default' in js_files:
-            js_files.remove('default')
-            js_files += self.default_js
+            i = js_files.index('default')
+            js_files[i:i + 1] += self.default_js
 
         scripts = ''
 
