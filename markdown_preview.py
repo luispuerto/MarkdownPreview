@@ -276,6 +276,10 @@ class Compiler(object):
     def get_javascript(self):
         """Return JavaScript."""
         js_files = self.settings.get('js', ['default'])
+
+        if not isinstance(js_files, list):
+            js_files = [js_files]
+
         if 'default' in js_files:
             i = js_files.index('default')
             js_files[i:i + 1] += self.default_js

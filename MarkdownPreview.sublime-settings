@@ -227,7 +227,10 @@
         into the script tag; others will be set as the `src` attribute. The order of files in the
         array is the order in which they are embedded.
 
-        default - Use the builtin js or github/gitlab js, depending on parser config
+        default - Use the builtin javascripts or github/gitlab javascripts, depending on parser config
+        other - Set an absolute path or url to any javascripts file
+
+        Should be an array, but will take a single string to stay consistent with "css".
     */
     "js": ["default"],
 
