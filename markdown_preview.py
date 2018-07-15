@@ -166,13 +166,14 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
     def on_post_save(self, view):
         """Handle auto-reload on save."""
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
-        github_auth_provided = settings.get(GithubCompiler.authentication_settings_key) is not None
-        gitlab_token_provided = settings.get(GitlabCompiler.authentication_settings_key) is not None
         parser = view.settings().get('parser')
-        if (settings.get('enable_autoreload', True) and
-                (parser not in [GithubCompiler.compiler_name, GitlabCompiler.compiler_name] or
-                    (parser is GithubCompiler.compiler_name and github_auth_provided) or
-                    (parser is GitlabCompiler.compiler_name and gitlab_token_provided))):
+        external_parser_classes = [GithubCompiler, GitlabCompiler]
+        external_parser_used = parser in external_parser_classes
+        if external_parser_used:
+            auth_provided = settings.get(external_parser_classes[
+                [parser_class.compiler_name for parser_class in external_parser_classes].index(parser)
+            ].authentication_settings_key) is not None
+        if settings.get('enable_autoreload', True) and (external_parser_used and auth_provided):
             filetypes = settings.get('markdown_filetypes')
             file_name = view.file_name()
             if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
@@ -1038,12 +1039,13 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
     def to_disk(self, html, open_in_browser):
         """Save to disk and open in browser if desired."""
         # do not use LiveReload unless autoreload is enabled
-        github_auth_provided = self.settings.get(GithubCompiler.authentication_settings_key) is not None
-        gitlab_token_provided = self.settings.get(GitlabCompiler.authentication_settings_key) is not None
-        if (self.settings.get('enable_autoreload', True) and
-                (self.parser not in [GithubCompiler.compiler_name, GitlabCompiler.compiler_name] or
-                    (self.parser is GithubCompiler.compiler_name and github_auth_provided) or
-                    (self.parser is GitlabCompiler.compiler_name and gitlab_token_provided))):
+        external_parser_classes = [GithubCompiler, GitlabCompiler]
+        external_parser_used = self.parser in external_parser_classes
+        if external_parser_used:
+            auth_provided = self.settings.get(external_parser_classes[
+                [parser_class.compiler_name for parser_class in external_parser_classes].index(self.parser)
+            ].authentication_settings_key) is not None
+        if self.settings.get('enable_autoreload', True) and (external_parser_used and auth_provided):
             # check if LiveReload ST2 extension installed and add its script to the resulting HTML
             if 'LiveReload' in os.listdir(sublime.packages_path()):
                 port = sublime.load_settings('LiveReload.sublime-settings').get('port', 35729)
