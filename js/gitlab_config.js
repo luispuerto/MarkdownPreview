@@ -64,10 +64,8 @@ function renderGFM(el) {
   el.querySelectorAll('.js-syntax-highlight').forEach(syntaxHighlight);
   el.querySelectorAll('.js-render-math').forEach(renderMath);
   el.querySelectorAll('.js-render-mermaid').forEach(renderMermaid);
-  return el;
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  let body = document.getElementsByTagName('body')[0];
-  body.parentNode.replaceChild(renderGFM(body), body);
+  renderGFM(document.getElementsByTagName('body')[0])
 });
