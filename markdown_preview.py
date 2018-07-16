@@ -782,6 +782,7 @@ class GitlabCompiler(OnlineCompiler):
         if not self.settings.get('html_simple', False):
             html += '<script>const HIGHLIGHT_THEME = "%s";</script>' % (
                 self.settings.get('gitlab_highlight_theme', 'white'))
+        html = self.fix_images_src(html)
         return html
 
     def fix_ids(self, html):
@@ -790,6 +791,14 @@ class GitlabCompiler(OnlineCompiler):
                                re.DOTALL)
         return re_header.sub(
             lambda m: m.group('open') + m.group('text1') + 'id="' + m.group('text2') + m.group('close'), html)
+
+    def fix_images_src(self, html):
+        """Fix src of images tag which is replaced with a placeholder for lazy loading."""
+        re_header = re.compile(r'(?P<open><img)(?P<text1>.*?)(?P<src>src=".*")(?P<text2>.*?)' +
+                               '(?P<data_src>data-src=".*")(?P<text3>.*?)(?P<close>>)', re.DOTALL)
+        return re_header.sub(
+            lambda m: m.group('open') + m.group('text1') + m.group('data_src')[5:] + m.group('text2') +
+            m.group('text3') + m.group('close'), html)
 
 
 class ExternalMarkdownCompiler(Compiler):
