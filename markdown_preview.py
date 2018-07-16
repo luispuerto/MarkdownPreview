@@ -231,7 +231,6 @@ class Compiler(object):
             css_list = [css_list]
 
         if 'default' in css_list:
-            print(self.default_css)
             i = css_list.index('default')
             css_list[i:i + 1] = self.default_css
 
