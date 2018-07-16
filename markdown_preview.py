@@ -279,7 +279,7 @@ class Compiler(object):
 
         if 'default' in js_files:
             i = js_files.index('default')
-            js_files[i:i + 1] += self.default_js
+            js_files[i:i + 1] = self.default_js
 
         scripts = ''
 
