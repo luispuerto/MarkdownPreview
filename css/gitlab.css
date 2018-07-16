@@ -15,8 +15,8 @@
 
 body {
     width: 980px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 .atwho-view {
@@ -950,12 +950,6 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     border-radius: 3px
 }
 
-/*!
- * Bootstrap v4.1.1 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -1010,7 +1004,7 @@ section {
 }
 
 body {
-    /*margin: 0;*/
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: 400;
@@ -1427,7 +1421,7 @@ mark, .mark {
 }
 
 code {
-    font-size: 12px;
+    font-size: 90%;
     color: #e83e8c;
     word-break: break-word
 }
@@ -1438,7 +1432,7 @@ a > code {
 
 kbd {
     padding: 0.2rem 0.4rem;
-    font-size: 12px;
+    font-size: 90%;
     color: #fff;
     background-color: #212529;
     border-radius: 0.2rem
@@ -1452,7 +1446,7 @@ kbd kbd {
 
 pre {
     display: block;
-    font-size: 12px;
+    font-size: 90%;
     color: #212529
 }
 
@@ -2446,37 +2440,37 @@ pre code {
     }
 }
 
-.table, table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
+.table, .markdown-body table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
     background-color: transparent
 }
 
-.table th, table th, .markdown-body table th, .md table th, ul.notes > li .note-body .note-text table th,
-.table td, table td, .markdown-body table td, .md table td, ul.notes > li .note-body .note-text table td {
+.table th, .markdown-body table th, .markdown-body table th, .md table th, ul.notes > li .note-body .note-text table th,
+.table td, .markdown-body table td, .markdown-body table td, .md table td, ul.notes > li .note-body .note-text table td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6
 }
 
-.table thead th, table thead th, .markdown-body table thead th, .md table thead th,
+.table thead th, .markdown-body table thead th, .markdown-body table thead th, .md table thead th,
 ul.notes > li .note-body .note-text table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6
 }
 
-.table tbody + tbody, table tbody + tbody, .markdown-body table tbody + tbody,
+.table tbody + tbody, .markdown-body table tbody + tbody, .markdown-body table tbody + tbody,
 .md table tbody + tbody, ul.notes > li .note-body .note-text table tbody + tbody {
     border-top: 2px solid #dee2e6
 }
 
-.table .table, table .table, .markdown-body table .table, .md table .table,
-ul.notes > li .note-body .note-text table .table, .table table,
-.table table, table table, .table .markdown-body table,
+.table .table, .markdown-body table .table, .markdown-body table .table, .md table .table,
+ul.notes > li .note-body .note-text table .table, .table .markdown-body table,
+.markdown-body .table table, .markdown-body table table, .table .markdown-body table,
 .markdown-body .table table, .markdown-body table table, .table .md table, .md .table table,
 .md table table, .table ul.notes > li .note-body .note-text table, ul.notes > li .note-body .note-text .table table,
-table ul.notes > li .note-body .note-text table, .markdown-body table ul.notes > li .note-body .note-text table,
+.markdown-body table ul.notes > li .note-body .note-text table, .markdown-body table ul.notes > li .note-body .note-text table,
 .md table ul.notes > li .note-body .note-text table, ul.notes > li .note-body .note-text table table {
     background-color: #fff
 }
@@ -2620,14 +2614,14 @@ table ul.notes > li .note-body .note-text table, .markdown-body table ul.notes >
     background-color: rgba(0, 0, 0, 0.075)
 }
 
-.table .thead-dark th, table .thead-dark th, .markdown-body table .thead-dark th,
+.table .thead-dark th, .markdown-body table .thead-dark th, .markdown-body table .thead-dark th,
 .md table .thead-dark th, ul.notes > li .note-body .note-text table .thead-dark th {
     color: #fff;
     background-color: #212529;
     border-color: #32383e
 }
 
-.table .thead-light th, table .thead-light th, .markdown-body table .thead-light th,
+.table .thead-light th, .markdown-body table .thead-light th, .markdown-body table .thead-light th,
 .md table .thead-light th, ul.notes > li .note-body .note-text table .thead-light th {
     color: #495057;
     background-color: #e9ecef;
@@ -5650,25 +5644,6 @@ input[type="button"].btn-block, .login-page input[type="button"][type="submit"] 
     background-color: #1d2124
 }
 
-.jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: 0.3rem
-}
-
-@media (min-width: 576px) {
-    .jumbotron {
-        padding: 4rem 2rem
-    }
-}
-
-.jumbotron-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    border-radius: 0
-}
-
 .alert, .flash-container .flash-notice, .flash-container .flash-warning,
 .flash-container .flash-alert, .flash-container .flash-success {
     position: relative;
@@ -6528,207 +6503,6 @@ button.close {
 .popover-body {
     padding: 0.5rem 0.75rem;
     color: #212529
-}
-
-.carousel {
-    position: relative
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden
-}
-
-.carousel-item {
-    position: relative;
-    display: none;
-    align-items: center;
-    width: 100%;
-    transition: transform 0.6s ease;
-    backface-visibility: hidden;
-    perspective: 1000px
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-    .carousel-item {
-        transition: none
-    }
-}
-
-.carousel-item.active, .carousel-item-next, .carousel-item-prev {
-    display: block
-}
-
-.carousel-item-next, .carousel-item-prev {
-    position: absolute;
-    top: 0
-}
-
-.carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
-    transform: translateX(0)
-}
-
-@supports (transform-style: preserve-3d) {
-    .carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
-        transform: translate3d(0, 0, 0)
-    }
-}
-
-.carousel-item-next, .active.carousel-item-right {
-    transform: translateX(100%)
-}
-
-@supports (transform-style: preserve-3d) {
-    .carousel-item-next, .active.carousel-item-right {
-        transform: translate3d(100%, 0, 0)
-    }
-}
-
-.carousel-item-prev, .active.carousel-item-left {
-    transform: translateX(-100%)
-}
-
-@supports (transform-style: preserve-3d) {
-    .carousel-item-prev, .active.carousel-item-left {
-        transform: translate3d(-100%, 0, 0)
-    }
-}
-
-.carousel-fade .carousel-item {
-    opacity: 0;
-    transition-duration: .6s;
-    transition-property: opacity
-}
-
-.carousel-fade .carousel-item.active, .carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-    opacity: 1
-}
-
-.carousel-fade .active.carousel-item-left, .carousel-fade .active.carousel-item-right {
-    opacity: 0
-}
-
-.carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item.active, .carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-prev {
-    transform: translateX(0)
-}
-
-@supports (transform-style: preserve-3d) {
-    .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev,
-    .carousel-fade .carousel-item.active, .carousel-fade .active.carousel-item-left,
-    .carousel-fade .active.carousel-item-prev {
-        transform: translate3d(0, 0, 0)
-    }
-}
-
-.carousel-control-prev, .carousel-control-next {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
-    color: #fff;
-    text-align: center;
-    opacity: 0.5
-}
-
-.carousel-control-prev:hover, .carousel-control-prev:focus, .carousel-control-next:hover,
-.carousel-control-next:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    opacity: .9
-}
-
-.carousel-control-prev {
-    left: 0
-}
-
-.carousel-control-next {
-    right: 0
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: transparent no-repeat center center;
-    background-size: 100% 100%
-}
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
-}
-
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none
-}
-
-.carousel-indicators li {
-    position: relative;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.5)
-}
-
-.carousel-indicators li::before {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 10px;
-    content: ""
-}
-
-.carousel-indicators li::after {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 10px;
-    content: ""
-}
-
-.carousel-indicators .active {
-    background-color: #fff
-}
-
-.carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center
 }
 
 .align-baseline {
@@ -9696,12 +9470,12 @@ a.text-dark:hover, .participants-more .text-dark.btn-link:hover,
         border: 1px solid #000
     }
 
-    .table, table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
+    .table, .markdown-body table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
         border-collapse: collapse !important
     }
 
-    .table td, table td, .markdown-body table td, .md table td, ul.notes > li .note-body .note-text table td,
-    .table th, table th, .markdown-body table th, .md table th, ul.notes > li .note-body .note-text table th {
+    .table td, .markdown-body table td, .markdown-body table td, .md table td, ul.notes > li .note-body .note-text table td,
+    .table th, .markdown-body table th, .markdown-body table th, .md table th, ul.notes > li .note-body .note-text table th {
         background-color: #fff !important
     }
 
@@ -9718,7 +9492,7 @@ a.text-dark:hover, .participants-more .text-dark.btn-link:hover,
         border-color: #dee2e6
     }
 
-    .table .thead-dark th, table .thead-dark th, .markdown-body table .thead-dark th,
+    .table .thead-dark th, .markdown-body table .thead-dark th, .markdown-body table .thead-dark th,
     .md table .thead-dark th, ul.notes > li .note-body .note-text table .thead-dark th {
         color: inherit;
         border-color: #dee2e6
@@ -9807,6 +9581,10 @@ code {
 
 table {
     border-spacing: 0
+}
+
+.tooltip {
+    pointer-events: none
 }
 
 .popover {
@@ -9899,6 +9677,11 @@ h3.popover-header {
 
 .info-well .well-segment:not(:last-of-type) {
     border-bottom: 1px solid #eef0f2
+}
+
+.info-well .well-segment p:last-of-type, .info-well .well-segment ol:last-of-type,
+.info-well .well-segment ul:last-of-type, .info-well .well-segment .form-group:last-of-type {
+    margin-bottom: 0
 }
 
 .info-well .badge.badge-gray {
@@ -10041,10 +9824,6 @@ body.board-card-content .content-wrapper .container-fluid, body.board-card-conte
 
 .container-limited.limit-container-width {
     max-width: 990px
-}
-
-.container-limited.limit-container-width-sm {
-    max-width: 790px
 }
 
 .alert-wrapper .alert, .alert-wrapper .flash-container .flash-notice,
@@ -10411,6 +10190,14 @@ a {
     }
 }
 
+.slide-down-enter-active {
+    transition: transform 0.2s
+}
+
+.slide-down-enter, .slide-down-leave-to {
+    transform: translateY(-30%)
+}
+
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.3s linear
 }
@@ -10739,7 +10526,8 @@ a {
 }
 
 .nothing-here-block.diff-collapsed {
-    padding: 5px
+    padding: 5px;
+    line-height: 34px
 }
 
 .nothing-here-block.diff-collapsed .click-to-expand {
@@ -11070,11 +10858,6 @@ a {
     }
 }
 
-.flex-container-block {
-    display: -webkit-flex;
-    display: flex
-}
-
 .flex-right {
     margin-left: auto
 }
@@ -11116,10 +10899,6 @@ a {
     padding: 4px 10px;
     font-size: 13px;
     line-height: 18px
-}
-
-.btn.btn-xs {
-    padding: 2px 5px
 }
 
 .btn.btn-success, .btn.btn-new, .btn.btn-create, .btn.comment-btn,
@@ -11395,10 +11174,6 @@ a {
     margin-left: 7px
 }
 
-.btn.btn-grouped.btn-xs {
-    margin-left: 5px
-}
-
 .btn .fa-caret-down, .btn .fa-chevron-down {
     margin-left: 5px
 }
@@ -11475,10 +11250,6 @@ a {
 
 .btn-group.btn-grouped.btn-sm, .btn-group-sm > .btn-group.btn-grouped.btn {
     margin-left: 7px
-}
-
-.btn-group.btn-grouped.btn-xs {
-    margin-left: 5px
 }
 
 .btn-clipboard {
@@ -11880,7 +11651,7 @@ fieldset[disabled] .btn:hover i, .dropdown-toggle[disabled]:hover i,
 }
 
 .text-tertiary {
-    color: #949494
+    color: #919191
 }
 
 .text-primary, .text-primary:hover {
@@ -12066,7 +11837,7 @@ li.note .note-title li {
     max-width: 100%
 }
 
-.markdown-body_content code, .readme code {
+.markdown-body content code, .readme code {
     background-color: inherit
 }
 
@@ -12128,12 +11899,7 @@ li.note .note-title li {
     margin-right: 30px
 }
 
-.milestone.milestone-closed {
-    background: #fafafa
-}
-
 .milestone .progress {
-    margin-bottom: 0;
     margin-top: 4px;
     box-shadow: none;
     background-color: #ededed
@@ -12160,10 +11926,6 @@ img.emoji {
 
 .description-block {
     margin-bottom: 10px
-}
-
-.available-groups form {
-    margin: 5px 0
 }
 
 .side-filters fieldset {
@@ -12455,7 +12217,7 @@ img.emoji {
     }
 }
 
-.show.dropdown .dropdown-menu.projects-dropdown-menu, .show.dropdown .dropdown-menu.projects-dropdown-menu {
+.show.dropdown .dropdown-menu.frequent-items-dropdown-menu, .show.dropdown .dropdown-menu.frequent-items-dropdown-menu {
     padding: 0;
     overflow-y: initial;
     max-height: initial
@@ -13380,8 +13142,8 @@ img.emoji {
 }
 
 @media (max-width: 575.98px) {
-    .navbar-gitlab li.header-projects, .navbar-gitlab li.header-more,
-    .navbar-gitlab li.header-new, .navbar-gitlab li.header-user {
+    .navbar-gitlab li.header-projects, .navbar-gitlab li.header-groups,
+    .navbar-gitlab li.header-more, .navbar-gitlab li.header-new, .navbar-gitlab li.header-user {
         position: static
     }
 
@@ -13396,122 +13158,132 @@ img.emoji {
     }
 }
 
-header.header-content .dropdown-menu.projects-dropdown-menu {
+header.header-content .dropdown-menu.frequent-items-dropdown-menu {
     padding: 0
 }
 
-.projects-dropdown-container {
+.frequent-items-dropdown-container {
     display: flex;
     flex-direction: row;
     width: 500px;
     height: 334px
 }
 
-.projects-dropdown-container .project-dropdown-sidebar, .projects-dropdown-container .project-dropdown-content {
+.frequent-items-dropdown-container .frequent-items-dropdown-sidebar,
+.frequent-items-dropdown-container .frequent-items-dropdown-content {
     padding: 8px 0
 }
 
-.projects-dropdown-container .loading-animation {
+.frequent-items-dropdown-container .loading-animation {
     color: #242424
 }
 
-.projects-dropdown-container .project-dropdown-sidebar {
+.frequent-items-dropdown-container .frequent-items-dropdown-sidebar {
     width: 30%;
     border-right: 1px solid #e5e5e5
 }
 
-.projects-dropdown-container .project-dropdown-content {
+.frequent-items-dropdown-container .frequent-items-dropdown-content {
     position: relative;
     width: 70%
 }
 
 @media (max-width: 575.98px) {
-    .projects-dropdown-container {
+    .frequent-items-dropdown-container {
         flex-direction: column;
         width: 100%;
         height: auto;
         flex: 1
     }
 
-    .projects-dropdown-container .project-dropdown-sidebar, .projects-dropdown-container .project-dropdown-content {
+    .frequent-items-dropdown-container .frequent-items-dropdown-sidebar,
+    .frequent-items-dropdown-container .frequent-items-dropdown-content {
         width: 100%
     }
 
-    .projects-dropdown-container .project-dropdown-sidebar {
+    .frequent-items-dropdown-container .frequent-items-dropdown-sidebar {
         border-bottom: 1px solid #e5e5e5;
         border-right: 0
     }
 }
 
-.projects-dropdown-container .projects-list-frequent-container,
-.projects-dropdown-container .projects-list-search-container {
-    padding: 8px 0;
-    overflow-y: auto
-}
-
-.projects-dropdown-container .projects-list-frequent-container li.section-empty.section-failure,
-.projects-dropdown-container .projects-list-search-container li.section-empty.section-failure {
-    color: #a62d19
-}
-
-.projects-dropdown-container .section-header, .projects-dropdown-container .projects-list-frequent-container li.section-empty,
-.projects-dropdown-container .projects-list-search-container li.section-empty {
-    padding: 0 15px;
+.frequent-items-dropdown-container .section-header, .frequent-items-dropdown-container .frequent-items-list-container li.section-empty {
+    padding: 0 16px;
     color: #707070;
     font-size: 14px
 }
 
-.projects-dropdown-container .search-input-container {
+.frequent-items-dropdown-container .frequent-items-list-container {
+    padding: 8px 0;
+    overflow-y: auto
+}
+
+.frequent-items-dropdown-container .frequent-items-list-container li.section-empty.section-failure {
+    color: #a62d19
+}
+
+.frequent-items-dropdown-container .frequent-items-list-container .frequent-items-list-item-container a {
+    display: flex
+}
+
+.frequent-items-dropdown-container .search-input-container {
     position: relative;
     padding: 4px 16px
 }
 
-.projects-dropdown-container .search-input-container .search-icon {
+.frequent-items-dropdown-container .search-input-container .search-icon {
     position: absolute;
     top: 13px;
     right: 25px;
     color: #ddd
 }
 
-.projects-dropdown-container .section-header {
+.frequent-items-dropdown-container .section-header {
     font-weight: 700;
     margin-top: 8px
 }
 
-.projects-dropdown-container .projects-list-search-container {
+.frequent-items-dropdown-container .frequent-items-search-container {
     height: 284px
 }
 
 @media (max-width: 575.98px) {
-    .projects-dropdown-container .projects-list-frequent-container {
+    .frequent-items-dropdown-container .frequent-items-list-container {
         width: auto;
         height: auto;
         padding-bottom: 0
     }
 }
 
-.projects-list-item-container .project-item-avatar-container .project-item-metadata-container {
+.frequent-items-list-item-container .frequent-items-item-avatar-container,
+.frequent-items-list-item-container .frequent-items-item-metadata-container {
     float: left
 }
 
-.projects-list-item-container .project-title, .projects-list-item-container .project-namespace {
+.frequent-items-list-item-container .frequent-items-item-metadata-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.frequent-items-list-item-container .frequent-items-item-title,
+.frequent-items-list-item-container .frequent-items-item-namespace {
     max-width: 250px;
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.projects-list-item-container:hover .project-item-avatar-container .avatar {
+.frequent-items-list-item-container:hover .frequent-items-item-avatar-container .avatar {
     border-color: #ddd
 }
 
-.projects-list-item-container .project-title {
+.frequent-items-list-item-container .frequent-items-item-title {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px
 }
 
-.projects-list-item-container .project-namespace {
+.frequent-items-list-item-container .frequent-items-item-namespace {
     margin-top: 4px;
     font-size: 12px;
     line-height: 12px;
@@ -13519,7 +13291,7 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
 }
 
 @media (max-width: 575.98px) {
-    .projects-list-item-container .project-item-metadata-container {
+    .frequent-items-list-item-container .frequent-items-item-metadata-container {
         float: none
     }
 }
@@ -13554,25 +13326,25 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     border-radius: 4px
 }
 
-.markdown-body.markdown-body-no-border {
+.markdown-body file-holder-no-border {
     border: 0
 }
 
-.markdown-body.markdown-body-bottom-radius {
+.markdown-body file-holder-bottom-radius {
     border-radius: 0 0 2px 2px
 }
 
-.markdown-body {
+.markdown-body readme-holder {
     margin: 16px 0
 }
 
-.readme-holder.limited-width-container .markdown-body {
+.markdown-body readme-holder.limited-width-container .file-content {
     max-width: 990px;
     margin-left: auto;
     margin-right: auto
 }
 
-.file-title {
+.markdown-body .file-title {
     position: relative;
     background-color: #fafafa;
     border-bottom: 1px solid #e5e5e5;
@@ -13583,37 +13355,37 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     border-radius: 4px 4px 0 0
 }
 
-.file-title.file-title-clear {
+.markdown-body .file-title.file-title-clear {
     padding-left: 0;
     padding-right: 0;
     background-color: transparent
 }
 
-.file-title.file-title-clear .file-actions {
+.markdown-body .file-title.file-title-clear .file-actions {
     right: 0
 }
 
-.file-title .file-actions {
+.markdown-body .file-title .file-actions {
     position: absolute;
     top: 5px;
     right: 15px
 }
 
-.file-title .file-actions .btn {
+.markdown-body .file-title .file-actions .btn {
     padding: 0 10px;
     font-size: 13px;
     line-height: 28px
 }
 
-.file-title a:not(.btn) {
+.markdown-body .file-title a:not(.btn) {
     color: #2e2e2e
 }
 
-.file-title .left-options {
+.markdown-body .file-title .left-options {
     margin-top: -3px
 }
 
-.file-blame-legend {
+.markdown-body .file-blame-legend {
     background-color: #fafafa;
     text-align: right;
     padding: 8px 16px;
@@ -13621,63 +13393,63 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
 }
 
 @media (max-width: 575.98px) {
-    .file-blame-legend {
+    .markdown-body .file-blame-legend {
         text-align: left
     }
 }
 
-.file-blame-legend .left-label {
+.markdown-body .file-blame-legend .left-label {
     padding-right: 5px
 }
 
-.file-blame-legend .right-label {
+.markdown-body .file-blame-legend .right-label {
     padding-left: 5px
 }
 
-.file-blame-legend .legend-box {
+.markdown-body .file-blame-legend .legend-box {
     display: inline-block;
     width: 10px;
     height: 10px;
     padding: 0 2px
 }
 
-.file-blame-legend .legend-box-0 {
+.markdown-body .file-blame-legend .legend-box-0 {
     background-color: #254e77
 }
 
-.file-blame-legend .legend-box-1 {
+.markdown-body .file-blame-legend .legend-box-1 {
     background-color: #406990
 }
 
-.file-blame-legend .legend-box-2 {
+.markdown-body .file-blame-legend .legend-box-2 {
     background-color: #5b84a8
 }
 
-.file-blame-legend .legend-box-3 {
+.markdown-body .file-blame-legend .legend-box-3 {
     background-color: #769fc1
 }
 
-.file-blame-legend .legend-box-4 {
+.markdown-body .file-blame-legend .legend-box-4 {
     background-color: #91bad9
 }
 
-.file-blame-legend .legend-box-5 {
+.markdown-body .file-blame-legend .legend-box-5 {
     background-color: #acd5f2
 }
 
-.file-blame-legend .legend-box-6 {
+.markdown-body .file-blame-legend .legend-box-6 {
     background-color: #bcdbf1
 }
 
-.file-blame-legend .legend-box-7 {
+.markdown-body .file-blame-legend .legend-box-7 {
     background-color: #cde1f0
 }
 
-.file-blame-legend .legend-box-8 {
+.markdown-body .file-blame-legend .legend-box-8 {
     background-color: #dde7ee
 }
 
-.file-blame-legend .legend-box-9 {
+.markdown-body .file-blame-legend .legend-box-9 {
     background-color: #ededed
 }
 
@@ -13685,60 +13457,60 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     background: #fff
 }
 
-.markdown-body.image_file, .markdown-body.video {
+.markdown-body .image_file, .markdown-body .video {
     background: #eee;
     text-align: center;
     padding: 30px
 }
 
-.markdown-body.image_file img, .markdown-body.image_file video,
-.markdown-body.video img, .markdown-body.video video {
+.markdown-body .image_file img, .markdown-body .image_file video,
+.markdown-body .video img, .markdown-body .video video {
     max-width: 80%
 }
 
-.markdown-body.markdown-body {
+.markdown-body {
     padding: 16px
 }
 
 @media (min-width: 768px) {
-    .markdown-body.markdown-body {
+    .markdown-body {
         padding: 32px
     }
 }
 
-.markdown-body.blob-no-preview {
+.markdown-body .blob-no-preview {
     background: #eee;
     text-shadow: 0 1px 2px #fff;
     padding: 100px 0
 }
 
-.markdown-body.blame table {
+.markdown-body .blame table {
     border: 0;
     margin: 0
 }
 
-.markdown-body.blame tr {
+.markdown-body .blame tr {
     border-bottom: 1px solid #eee
 }
 
-.markdown-body.blame tr:last-child {
+.markdown-body .blame tr:last-child {
     border-bottom: 0
 }
 
-.markdown-body.blame td {
+.markdown-body .blame td {
     border-top: 0;
     border-bottom: 0
 }
 
-.markdown-body.blame td:first-child {
+.markdown-body .blame td:first-child {
     border-left: 0
 }
 
-.markdown-body.blame td:last-child {
+.markdown-body .blame td:last-child {
     border-right: 0
 }
 
-.markdown-body.blame td.blame-commit {
+.markdown-body .blame td.blame-commit {
     padding: 5px 10px;
     min-width: 400px;
     max-width: 400px;
@@ -13746,76 +13518,76 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     border-left: 3px solid
 }
 
-.markdown-body.blame td.blame-commit .commit-row-title {
+.markdown-body .blame td.blame-commit .commit-row-title {
     display: flex
 }
 
-.markdown-body.blame td.blame-commit .item-title {
+.markdown-body .blame td.blame-commit .item-title {
     flex: 1;
     margin-right: 0.5em
 }
 
-.markdown-body.blame td.line-numbers {
+.markdown-body .blame td.line-numbers {
     float: none;
     border-left: 1px solid #ddd
 }
 
-.markdown-body.blame td.line-numbers i {
+.markdown-body .blame td.line-numbers i {
     float: none;
     margin-right: 0
 }
 
-.markdown-body.blame td.lines {
+.markdown-body .blame td.lines {
     padding: 0
 }
 
-.markdown-body.blame td.blame-commit-age-0 {
+.markdown-body .blame td.blame-commit-age-0 {
     border-left-color: #254e77
 }
 
-.markdown-body.blame td.blame-commit-age-1 {
+.markdown-body .blame td.blame-commit-age-1 {
     border-left-color: #406990
 }
 
-.markdown-body.blame td.blame-commit-age-2 {
+.markdown-body .blame td.blame-commit-age-2 {
     border-left-color: #5b84a8
 }
 
-.markdown-body.blame td.blame-commit-age-3 {
+.markdown-body .blame td.blame-commit-age-3 {
     border-left-color: #769fc1
 }
 
-.markdown-body.blame td.blame-commit-age-4 {
+.markdown-body .blame td.blame-commit-age-4 {
     border-left-color: #91bad9
 }
 
-.markdown-body.blame td.blame-commit-age-5 {
+.markdown-body .blame td.blame-commit-age-5 {
     border-left-color: #acd5f2
 }
 
-.markdown-body.blame td.blame-commit-age-6 {
+.markdown-body .blame td.blame-commit-age-6 {
     border-left-color: #bcdbf1
 }
 
-.markdown-body.blame td.blame-commit-age-7 {
+.markdown-body .blame td.blame-commit-age-7 {
     border-left-color: #cde1f0
 }
 
-.markdown-body.blame td.blame-commit-age-8 {
+.markdown-body .blame td.blame-commit-age-8 {
     border-left-color: #dde7ee
 }
 
-.markdown-body.blame td.blame-commit-age-9 {
+.markdown-body .blame td.blame-commit-age-9 {
     border-left-color: #ededed
 }
 
-.markdown-body.logs {
+.markdown-body .logs {
     background: #eee;
     max-height: 700px;
     overflow-y: auto
 }
 
-.markdown-body.logs ol {
+.markdown-body .logs ol {
     margin-left: 40px;
     padding: 10px 0;
     border-left: 1px solid #e5e5e5;
@@ -13823,26 +13595,26 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     background: #fff
 }
 
-.markdown-body.logs ol li {
+.markdown-body .logs ol li {
     color: #888
 }
 
-.markdown-body.logs ol li p {
+.markdown-body .logs ol li p {
     margin: 0;
     color: #333;
     line-height: 24px;
     padding-left: 10px
 }
 
-.markdown-body.logs ol li:hover {
+.markdown-body .logs ol li:hover {
     background: #f6fafe
 }
 
-.markdown-body.code {
+.markdown-body .code {
     padding: 0
 }
 
-.markdown-body .list-inline.previews {
+.markdown-body  .list-inline.previews {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13850,7 +13622,7 @@ header.header-content .dropdown-menu.projects-dropdown-menu {
     align-items: baseline
 }
 
-.markdown-body .list-inline.previews .preview {
+.markdown-body  .list-inline.previews .preview {
     padding: 16px
 }
 
@@ -13903,7 +13675,7 @@ span.idiff.right {
     color: #a62d19
 }
 
-.file-title-flex-parent {
+.file-title-flex-parent, .markdown-body .file-title-flex-parent {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13919,7 +13691,18 @@ span.idiff.right {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 30px;
-    position: relative
+    position: relative;
+    width: auto
+}
+
+@media (max-width: 575px) {
+    .file-title-flex-parent .file-header-content {
+        width: 100%
+    }
+}
+
+.markdown-body .file-title-flex-parent .file-actions {
+    position: static
 }
 
 .file-title-flex-parent .btn-clipboard {
@@ -13981,6 +13764,53 @@ span.idiff.right {
 .label-lfs {
     color: #bbb;
     border: 1px solid #bbb
+}
+
+.preview-container {
+    height: 100%;
+    overflow: auto
+}
+
+.preview-container .file-container {
+    background-color: #eee;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.preview-container .file-container .file-content {
+    padding: 16px;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.preview-container .file-container .file-content img {
+    max-width: 90%;
+    max-height: 70vh
+}
+
+.preview-container .file-container .file-content .is-zoomable {
+    cursor: pointer;
+    cursor: zoom-in
+}
+
+.preview-container .file-container .file-content .is-zoomable.is-zoomed {
+    cursor: pointer;
+    cursor: zoom-out;
+    max-width: none;
+    max-height: none;
+    margin-right: 16px
+}
+
+.preview-container .file-container .file-info {
+    font-size: 12px;
+    color: grey
+}
+
+.preview-container .md-previewer {
+    padding: 16px
 }
 
 .filter-item {
@@ -14422,6 +14252,24 @@ span.idiff.right {
     margin: 0
 }
 
+.flash-container .flash-notice.flash-notice-persistent {
+    background-color: #e4f0fb;
+    color: #2e2e2e
+}
+
+.flash-container .flash-notice.flash-notice-persistent a {
+    color: #1b69b6
+}
+
+.flash-container .flash-notice.flash-notice-persistent a:hover,
+.flash-container .flash-notice.flash-notice-persistent .participants-more .btn-link:hover,
+.participants-more .flash-container .flash-notice.flash-notice-persistent .btn-link:hover,
+.flash-container .flash-notice.flash-notice-persistent .user-list-more .btn-link:hover,
+.user-list-more .flash-container .flash-notice.flash-notice-persistent .btn-link:hover {
+    color: #134a81;
+    text-decoration: none
+}
+
 .flash-container .flash-warning {
     background-color: #fc9403;
     margin: 0
@@ -14436,17 +14284,14 @@ span.idiff.right {
     display: inline-block
 }
 
-.flash-container .flash-alert a.flash-action {
+.flash-container .flash-alert .flash-action {
     margin-left: 5px;
     text-decoration: none;
     font-weight: 400;
     border-bottom: 1px solid
 }
 
-.flash-container .flash-alert a.flash-action:hover, .flash-container .flash-alert .participants-more .flash-action.btn-link:hover,
-.participants-more .flash-container .flash-alert .flash-action.btn-link:hover,
-.flash-container .flash-alert .user-list-more .flash-action.btn-link:hover,
-.user-list-more .flash-container .flash-alert .flash-action.btn-link:hover {
+.flash-container .flash-alert .flash-action:hover {
     border-color: transparent
 }
 
@@ -14641,7 +14486,7 @@ label.label-light {
     display: inline
 }
 
-.markdown-body-content {
+.wiki-content {
     margin-top: 35px
 }
 
@@ -14650,7 +14495,7 @@ label.label-light {
 }
 
 .form-control::-webkit-input-placeholder, .search form::-webkit-input-placeholder {
-    color: #707070
+    color: #919191
 }
 
 .input-group .select2-container {
@@ -14718,6 +14563,23 @@ label.label-light {
     }
 }
 
+.input-icon-wrapper {
+    position: relative
+}
+
+.input-icon-wrapper .input-icon-right {
+    position: absolute;
+    right: 0.8em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #919191
+}
+
+.input-lg {
+    max-width: 320px;
+    width: 100%
+}
+
 .gfm-project_member {
     padding: 0 2px;
     border-radius: 2px;
@@ -14767,17 +14629,22 @@ body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-indigo .na
 .participants-more body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-indigo .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-indigo .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-indigo .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-indigo .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-indigo .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-indigo .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-indigo .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-indigo .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-indigo .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-indigo .navbar-gitlab .navbar-nav > li > a:focus, body.ui-indigo .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-indigo .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(209, 209, 240, 0.2)
 }
 
-body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-indigo .navbar-gitlab .navbar-nav > li.active > a, body.ui-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-indigo .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-indigo .navbar-gitlab .navbar-nav > li.active > a, body.ui-indigo .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #292961;
     background-color: #fff
 }
@@ -14911,10 +14778,6 @@ body.ui-indigo .branch-header-title {
     color: #4b4ba3
 }
 
-body.ui-indigo .ide-file-list .file.file-active {
-    color: #4b4ba3
-}
-
 body.ui-indigo .ide-sidebar-link.active {
     color: #4b4ba3;
     box-shadow: inset 3px 0 #4b4ba3
@@ -14942,17 +14805,24 @@ body.ui-light-indigo .navbar-gitlab .participants-more .navbar-sub-nav > li > .b
 body.ui-light-indigo .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li > a:focus,
+body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li > button:focus,
 body.ui-light-indigo .navbar-gitlab .navbar-nav > li > a:hover, body.ui-light-indigo .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-light-indigo .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-light-indigo .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-indigo .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-light-indigo .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-light-indigo .navbar-gitlab .navbar-nav > li > a:focus, body.ui-light-indigo .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-light-indigo .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(209, 209, 240, 0.2)
 }
 
 body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li.active > a,
+body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li.active > button,
 body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-light-indigo .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-light-indigo .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-light-indigo .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-indigo .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-light-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > a,
+body.ui-light-indigo .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #4b4ba3;
     background-color: #fff
 }
@@ -15090,10 +14960,6 @@ body.ui-light-indigo .branch-header-title {
     color: #6666c4
 }
 
-body.ui-light-indigo .ide-file-list .file.file-active {
-    color: #6666c4
-}
-
 body.ui-light-indigo .ide-sidebar-link.active {
     color: #6666c4;
     box-shadow: inset 3px 0 #6666c4
@@ -15119,17 +14985,22 @@ body.ui-blue .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-blue .navbar
 .participants-more body.ui-blue .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-blue .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-blue .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-blue .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-blue .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-blue .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-blue .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-blue .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-blue .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-blue .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-blue .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-blue .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-blue .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-blue .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-blue .navbar-gitlab .navbar-nav > li > a:focus, body.ui-blue .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-blue .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(200, 215, 230, 0.2)
 }
 
-body.ui-blue .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-blue .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-blue .navbar-gitlab .navbar-nav > li.active > a, body.ui-blue .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-blue .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-blue .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-blue .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-blue .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-blue .navbar-gitlab .navbar-nav > li.active > a, body.ui-blue .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-blue .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-blue .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #1a3652;
     background-color: #fff
 }
@@ -15261,10 +15132,6 @@ body.ui-blue .branch-header-title {
     color: #305c88
 }
 
-body.ui-blue .ide-file-list .file.file-active {
-    color: #305c88
-}
-
 body.ui-blue .ide-sidebar-link.active {
     color: #305c88;
     box-shadow: inset 3px 0 #305c88
@@ -15290,18 +15157,24 @@ body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-light-
 .participants-more body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-light-blue .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-blue .navbar-gitlab .navbar-nav > li > a:hover,
-body.ui-light-blue .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
+body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li > button:focus,
+body.ui-light-blue .navbar-gitlab .navbar-nav > li > a:hover, body.ui-light-blue .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-light-blue .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-light-blue .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-blue .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-light-blue .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-light-blue .navbar-gitlab .navbar-nav > li > a:focus, body.ui-light-blue .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-light-blue .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(201, 220, 242, 0.2)
 }
 
 body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li.active > a,
+body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li.active > button,
 body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-light-blue .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-blue .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-light-blue .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-light-blue .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-blue .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-light-blue .navbar-gitlab .navbar-nav > li.dropdown.show > a,
+body.ui-light-blue .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #2261a1;
     background-color: #fff
 }
@@ -15438,10 +15311,6 @@ body.ui-light-blue .branch-header-title {
     color: #367cc2
 }
 
-body.ui-light-blue .ide-file-list .file.file-active {
-    color: #367cc2
-}
-
 body.ui-light-blue .ide-sidebar-link.active {
     color: #367cc2;
     box-shadow: inset 3px 0 #367cc2
@@ -15467,17 +15336,22 @@ body.ui-green .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-green .navb
 .participants-more body.ui-green .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-green .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-green .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-green .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-green .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-green .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-green .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-green .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-green .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-green .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-green .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-green .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-green .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-green .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-green .navbar-gitlab .navbar-nav > li > a:focus, body.ui-green .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-green .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(192, 223, 205, 0.2)
 }
 
-body.ui-green .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-green .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-green .navbar-gitlab .navbar-nav > li.active > a, body.ui-green .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-green .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-green .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-green .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-green .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-green .navbar-gitlab .navbar-nav > li.active > a, body.ui-green .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-green .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-green .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #0d4524;
     background-color: #fff
 }
@@ -15610,10 +15484,6 @@ body.ui-green .branch-header-title {
     color: #1c7441
 }
 
-body.ui-green .ide-file-list .file.file-active {
-    color: #1c7441
-}
-
 body.ui-green .ide-sidebar-link.active {
     color: #1c7441;
     box-shadow: inset 3px 0 #1c7441
@@ -15640,18 +15510,24 @@ body.ui-light-green .navbar-gitlab .participants-more .navbar-sub-nav > li > .bt
 .participants-more body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-light-green .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-green .navbar-gitlab .navbar-nav > li > a:hover,
-body.ui-light-green .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
+body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-light-green .navbar-gitlab .navbar-sub-nav > li > button:focus,
+body.ui-light-green .navbar-gitlab .navbar-nav > li > a:hover, body.ui-light-green .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-light-green .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-light-green .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-green .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-light-green .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-light-green .navbar-gitlab .navbar-nav > li > a:focus, body.ui-light-green .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-light-green .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(192, 223, 205, 0.2)
 }
 
 body.ui-light-green .navbar-gitlab .navbar-sub-nav > li.active > a,
+body.ui-light-green .navbar-gitlab .navbar-sub-nav > li.active > button,
 body.ui-light-green .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-light-green .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-green .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-light-green .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-light-green .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-green .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-light-green .navbar-gitlab .navbar-nav > li.dropdown.show > a,
+body.ui-light-green .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #156b39;
     background-color: #fff
 }
@@ -15788,10 +15664,6 @@ body.ui-light-green .branch-header-title {
     color: #35935c
 }
 
-body.ui-light-green .ide-file-list .file.file-active {
-    color: #35935c
-}
-
 body.ui-light-green .ide-sidebar-link.active {
     color: #35935c;
     box-shadow: inset 3px 0 #35935c
@@ -15817,17 +15689,21 @@ body.ui-red .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-red .navbar-g
 .participants-more body.ui-red .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-red .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-red .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-red .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-red .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-red .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-red .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-red .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-red .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-red .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-red .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-red .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-red .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-red .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-red .navbar-gitlab .navbar-nav > li > a:focus, body.ui-red .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-red .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(235, 202, 197, 0.2)
 }
 
-body.ui-red .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-red .navbar-gitlab .navbar-nav > li.active > a, body.ui-red .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-red .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-red .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a, body.ui-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-red .navbar-gitlab .navbar-nav > li.active > a, body.ui-red .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-red .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-red .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #691a16;
     background-color: #fff
 }
@@ -15958,10 +15834,6 @@ body.ui-red .branch-header-title {
     color: #912f20
 }
 
-body.ui-red .ide-file-list .file.file-active {
-    color: #912f20
-}
-
 body.ui-red .ide-sidebar-link.active {
     color: #912f20;
     box-shadow: inset 3px 0 #912f20
@@ -15987,17 +15859,23 @@ body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-light-r
 .participants-more body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-light-red .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-red .navbar-gitlab .navbar-nav > li > a:hover,
-body.ui-light-red .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
+body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-light-red .navbar-gitlab .navbar-sub-nav > li > button:focus,
+body.ui-light-red .navbar-gitlab .navbar-nav > li > a:hover, body.ui-light-red .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-light-red .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-light-red .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-light-red .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-light-red .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-light-red .navbar-gitlab .navbar-nav > li > a:focus, body.ui-light-red .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-light-red .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(247, 213, 208, 0.2)
 }
 
-body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-light-red .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-red .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-light-red .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-light-red .navbar-gitlab .navbar-nav > li.active > a, body.ui-light-red .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-light-red .navbar-gitlab .navbar-nav > li.dropdown.show > a,
+body.ui-light-red .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #a62e21;
     background-color: #fff
 }
@@ -16133,10 +16011,6 @@ body.ui-light-red .branch-header-title {
     color: #c24b38
 }
 
-body.ui-light-red .ide-file-list .file.file-active {
-    color: #c24b38
-}
-
 body.ui-light-red .ide-sidebar-link.active {
     color: #c24b38;
     box-shadow: inset 3px 0 #c24b38
@@ -16162,17 +16036,22 @@ body.ui-dark .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-dark .navbar
 .participants-more body.ui-dark .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-dark .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-dark .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-dark .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-dark .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-dark .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-dark .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-dark .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-dark .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-dark .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-dark .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-dark .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-dark .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-dark .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-dark .navbar-gitlab .navbar-nav > li > a:focus, body.ui-dark .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-dark .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(223, 223, 223, 0.2)
 }
 
-body.ui-dark .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-dark .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-dark .navbar-gitlab .navbar-nav > li.active > a, body.ui-dark .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-dark .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-dark .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-dark .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-dark .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-dark .navbar-gitlab .navbar-nav > li.active > a, body.ui-dark .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-dark .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-dark .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #2e2e2e;
     background-color: #fff
 }
@@ -16304,10 +16183,6 @@ body.ui-dark .branch-header-title {
     color: #707070
 }
 
-body.ui-dark .ide-file-list .file.file-active {
-    color: #707070
-}
-
 body.ui-dark .ide-sidebar-link.active {
     color: #707070;
     box-shadow: inset 3px 0 #707070
@@ -16333,17 +16208,22 @@ body.ui-light .navbar-gitlab .navbar-sub-nav > li > a:hover, body.ui-light .navb
 .participants-more body.ui-light .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
 body.ui-light .navbar-gitlab .user-list-more .navbar-sub-nav > li > .btn-link:hover,
 .user-list-more body.ui-light .navbar-gitlab .navbar-sub-nav > li > .btn-link:hover,
-body.ui-light .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light .navbar-gitlab .navbar-nav > li > a:hover,
+body.ui-light .navbar-gitlab .navbar-sub-nav > li > a:focus, body.ui-light .navbar-gitlab .navbar-sub-nav > li > button:hover,
+body.ui-light .navbar-gitlab .navbar-sub-nav > li > button:focus, body.ui-light .navbar-gitlab .navbar-nav > li > a:hover,
 body.ui-light .navbar-gitlab .participants-more .navbar-nav > li > .btn-link:hover,
 .participants-more body.ui-light .navbar-gitlab .navbar-nav > li > .btn-link:hover,
 body.ui-light .navbar-gitlab .user-list-more .navbar-nav > li > .btn-link:hover,
 .user-list-more body.ui-light .navbar-gitlab .navbar-nav > li > .btn-link:hover,
-body.ui-light .navbar-gitlab .navbar-nav > li > a:focus {
+body.ui-light .navbar-gitlab .navbar-nav > li > a:focus, body.ui-light .navbar-gitlab .navbar-nav > li > button:hover,
+body.ui-light .navbar-gitlab .navbar-nav > li > button:focus {
     background-color: rgba(112, 112, 112, 0.2)
 }
 
-body.ui-light .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-light .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
-body.ui-light .navbar-gitlab .navbar-nav > li.active > a, body.ui-light .navbar-gitlab .navbar-nav > li.dropdown.show > a {
+body.ui-light .navbar-gitlab .navbar-sub-nav > li.active > a, body.ui-light .navbar-gitlab .navbar-sub-nav > li.active > button,
+body.ui-light .navbar-gitlab .navbar-sub-nav > li.dropdown.show > a,
+body.ui-light .navbar-gitlab .navbar-sub-nav > li.dropdown.show > button,
+body.ui-light .navbar-gitlab .navbar-nav > li.active > a, body.ui-light .navbar-gitlab .navbar-nav > li.active > button,
+body.ui-light .navbar-gitlab .navbar-nav > li.dropdown.show > a, body.ui-light .navbar-gitlab .navbar-nav > li.dropdown.show > button {
     color: #f2f2f2;
     background-color: #707070
 }
@@ -16473,10 +16353,6 @@ body.ui-light .nav-links li a.active .shortcut-mappings .key, .shortcut-mappings
 }
 
 body.ui-light .branch-header-title {
-    color: #707070
-}
-
-body.ui-light .ide-file-list .file.file-active {
     color: #707070
 }
 
@@ -16838,20 +16714,8 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     font-size: 20px
 }
 
-.navbar-sub-nav, .navbar-nav {
-    align-items: center
-}
-
-.navbar-sub-nav > li > a:hover, .participants-more .navbar-sub-nav > li > .btn-link:hover,
-.user-list-more .navbar-sub-nav > li > .btn-link:hover, .navbar-sub-nav > li > a:focus,
-.navbar-nav > li > a:hover, .participants-more .navbar-nav > li > .btn-link:hover,
-.user-list-more .navbar-nav > li > .btn-link:hover, .navbar-nav > li > a:focus {
-    text-decoration: none;
-    outline: 0;
-    color: #fff
-}
-
-.navbar-sub-nav > li > a, .navbar-nav > li > a {
+.navbar-sub-nav > li > a, .navbar-sub-nav > li > button, .navbar-nav > li > a,
+.navbar-nav > li > button {
     display: -webkit-flex;
     display: flex;
     align-items: center;
@@ -16863,6 +16727,22 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     border-radius: 4px;
     height: 32px;
     font-weight: 600
+}
+
+.navbar-sub-nav > li > a:hover, .participants-more .navbar-sub-nav > li > .btn-link:hover,
+.user-list-more .navbar-sub-nav > li > .btn-link:hover, .navbar-sub-nav > li > a:focus,
+.navbar-sub-nav > li > button:hover, .navbar-sub-nav > li > button:focus,
+.navbar-nav > li > a:hover, .participants-more .navbar-nav > li > .btn-link:hover,
+.user-list-more .navbar-nav > li > .btn-link:hover, .navbar-nav > li > a:focus,
+.navbar-nav > li > button:hover, .navbar-nav > li > button:focus {
+    text-decoration: none;
+    outline: 0;
+    color: #fff
+}
+
+.navbar-sub-nav > li > button, .navbar-nav > li > button {
+    background: transparent;
+    border: 0
 }
 
 .navbar-sub-nav > li.line-separator, .navbar-nav > li.line-separator {
@@ -16885,7 +16765,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     font-size: 10px
 }
 
-.navbar-sub-nav .project-item-select-holder {
+.navbar-sub-nav .frequent-items-item-select-holder {
     display: inline
 }
 
@@ -17003,7 +16883,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     position: absolute;
     right: 7px;
     top: 50%;
-    color: #949494;
+    color: #919191;
     transform: translateY(-50%)
 }
 
@@ -17040,10 +16920,6 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     .btn-sign-in {
         margin-top: 4px
     }
-}
-
-.with-performance-bar header.navbar-gitlab {
-    top: 35px
 }
 
 .navbar-nav li .badge.badge-pill, .navbar-nav li .shortcut-mappings .key,
@@ -17111,7 +16987,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
 
 .header-user .dropdown-menu {
     width: auto;
-    min-width: 160px;
+    min-width: unset;
     margin-top: 4px;
     color: #2e2e2e;
     left: auto
@@ -17123,6 +16999,10 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
 
 .header-user .dropdown-menu li.current-user .user-name {
     display: block
+}
+
+.header-user .dropdown-menu svg {
+    vertical-align: text-top
 }
 
 .header-user-avatar {
@@ -17151,7 +17031,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     height: 36px
 }
 
-.markdown-body.code {
+.file-content.code {
     border: 0;
     box-shadow: none;
     margin: 0;
@@ -17159,12 +17039,12 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     table-layout: fixed
 }
 
-.markdown-body.code pre {
+.file-content.code pre {
     padding: 10px 0;
     border: 0;
     border-radius: 0;
     font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
-    font-size: 12px;
+    font-size: 90%;
     line-height: 19px;
     margin: 0;
     overflow: auto;
@@ -17174,7 +17054,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     border-left: 1px solid
 }
 
-.markdown-body.code pre code {
+.file-content.code pre code {
     display: inline-block;
     min-width: 100%;
     font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
@@ -17183,7 +17063,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     padding: 0
 }
 
-.markdown-body.code pre code .line {
+.file-content.code pre code .line {
     display: block;
     width: 100%;
     min-height: 19px;
@@ -17192,40 +17072,40 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     white-space: pre
 }
 
-.markdown-body.code .line-numbers {
+.file-content.code .line-numbers {
     padding: 10px;
     text-align: right;
     float: left
 }
 
-.markdown-body.code .line-numbers a {
+.file-content.code .line-numbers a {
     font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
     display: block;
-    font-size: 12px !important;
+    font-size: 90% !important;
     min-height: 19px;
     white-space: nowrap
 }
 
-.markdown-body.code .line-numbers a i {
+.file-content.code .line-numbers a i {
     float: left;
     margin-top: 3px;
     margin-right: 5px;
     visibility: hidden
 }
 
-.markdown-body.code .line-numbers a:hover, .markdown-body.code .line-numbers .participants-more .btn-link:hover,
-.participants-more .markdown-body.code .line-numbers .btn-link:hover,
-.markdown-body.code .line-numbers .user-list-more .btn-link:hover,
-.user-list-more .markdown-body.code .line-numbers .btn-link:hover,
-.markdown-body.code .line-numbers a:focus {
+.file-content.code .line-numbers a:hover, .file-content.code .line-numbers .participants-more .btn-link:hover,
+.participants-more .file-content.code .line-numbers .btn-link:hover,
+.file-content.code .line-numbers .user-list-more .btn-link:hover,
+.user-list-more .file-content.code .line-numbers .btn-link:hover,
+.file-content.code .line-numbers a:focus {
     outline: none
 }
 
-.markdown-body.code .line-numbers a:hover i, .markdown-body.code .line-numbers .participants-more .btn-link:hover i,
-.participants-more .markdown-body.code .line-numbers .btn-link:hover i,
-.markdown-body.code .line-numbers .user-list-more .btn-link:hover i,
-.user-list-more .markdown-body.code .line-numbers .btn-link:hover i,
-.markdown-body.code .line-numbers a:focus i {
+.file-content.code .line-numbers a:hover i, .file-content.code .line-numbers .participants-more .btn-link:hover i,
+.participants-more .file-content.code .line-numbers .btn-link:hover i,
+.file-content.code .line-numbers .user-list-more .btn-link:hover i,
+.user-list-more .file-content.code .line-numbers .btn-link:hover i,
+.file-content.code .line-numbers a:focus i {
     visibility: visible
 }
 
@@ -17268,6 +17148,11 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
     background: #707070
 }
 
+.status-box.status-box-milestone {
+    color: #2e2e2e;
+    background: #eee
+}
+
 .ui-widget {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem
@@ -17305,7 +17190,7 @@ body.ui-light .sidebar-top-level-items > li.active .shortcut-mappings .key,
 }
 
 .hover-list > li.disabled {
-    color: #949494
+    color: #919191
 }
 
 .hover-list > li:not(.ui-sort-disabled):hover {
@@ -18534,17 +18419,17 @@ body.modal-open {
     color: #000
 }
 
-.top-area, .markdown-body-page-header {
+.top-area, .wiki-page-header {
     border-bottom: 1px solid #e5e5e5
 }
 
-.top-area::after, .markdown-body-page-header::after {
+.top-area::after, .wiki-page-header::after {
     display: block;
     clear: both;
     content: ""
 }
 
-.top-area .nav-text, .markdown-body-page-header .nav-text {
+.top-area .nav-text, .wiki-page-header .nav-text {
     padding-top: 16px;
     padding-bottom: 11px;
     display: inline-block;
@@ -18553,41 +18438,41 @@ body.modal-open {
 }
 
 @media (max-width: 575.98px) {
-    .top-area .nav-text, .markdown-body-page-header .nav-text {
+    .top-area .nav-text, .wiki-page-header .nav-text {
         width: 100%
     }
 }
 
-.top-area .nav-links, .markdown-body-page-header .nav-links {
+.top-area .nav-links, .wiki-page-header .nav-links {
     margin-bottom: 0;
     border-bottom: 0;
     float: left
 }
 
-.top-area .nav-links.wide, .markdown-body-page-header .nav-links.wide {
+.top-area .nav-links.wide, .wiki-page-header .nav-links.wide {
     width: 100%;
     display: block
 }
 
-.top-area .nav-links.scrolling-tabs, .markdown-body-page-header .nav-links.scrolling-tabs {
+.top-area .nav-links.scrolling-tabs, .wiki-page-header .nav-links.scrolling-tabs {
     float: left
 }
 
-.top-area .nav-links li a, .markdown-body-page-header .nav-links li a {
+.top-area .nav-links li a, .wiki-page-header .nav-links li a {
     padding: 16px 15px 11px
 }
 
 @media (max-width: 575.98px) {
-    .top-area .nav-links, .markdown-body-page-header .nav-links {
+    .top-area .nav-links, .wiki-page-header .nav-links {
         width: 100%
     }
 
-    .top-area .nav-links.mobile-separator, .markdown-body-page-header .nav-links.mobile-separator {
+    .top-area .nav-links.mobile-separator, .wiki-page-header .nav-links.mobile-separator {
         border-bottom: 1px solid #e5e5e5
     }
 }
 
-.top-area .nav-controls, .markdown-body-page-header .nav-controls {
+.top-area .nav-controls, .wiki-page-header .nav-controls {
     display: inline-block;
     float: right;
     text-align: right;
@@ -18595,156 +18480,156 @@ body.modal-open {
     margin-bottom: 0
 }
 
-.top-area .nav-controls > .btn, .markdown-body-page-header .nav-controls > .btn,
-.top-area .nav-controls > .btn-container, .markdown-body-page-header .nav-controls > .btn-container,
-.top-area .nav-controls > .dropdown, .markdown-body-page-header .nav-controls > .dropdown,
-.top-area .nav-controls > input, .markdown-body-page-header .nav-controls > input,
-.top-area .nav-controls > form, .markdown-body-page-header .nav-controls > form {
+.top-area .nav-controls > .btn, .wiki-page-header .nav-controls > .btn,
+.top-area .nav-controls > .btn-container, .wiki-page-header .nav-controls > .btn-container,
+.top-area .nav-controls > .dropdown, .wiki-page-header .nav-controls > .dropdown,
+.top-area .nav-controls > input, .wiki-page-header .nav-controls > input,
+.top-area .nav-controls > form, .wiki-page-header .nav-controls > form {
     margin-right: 10px;
     display: inline-block;
     vertical-align: top
 }
 
-.top-area .nav-controls > .btn:last-child, .markdown-body-page-header .nav-controls > .btn:last-child,
-.top-area .nav-controls > .btn-container:last-child, .markdown-body-page-header .nav-controls > .btn-container:last-child,
-.top-area .nav-controls > .dropdown:last-child, .markdown-body-page-header .nav-controls > .dropdown:last-child,
-.top-area .nav-controls > input:last-child, .markdown-body-page-header .nav-controls > input:last-child,
-.top-area .nav-controls > form:last-child, .markdown-body-page-header .nav-controls > form:last-child {
+.top-area .nav-controls > .btn:last-child, .wiki-page-header .nav-controls > .btn:last-child,
+.top-area .nav-controls > .btn-container:last-child, .wiki-page-header .nav-controls > .btn-container:last-child,
+.top-area .nav-controls > .dropdown:last-child, .wiki-page-header .nav-controls > .dropdown:last-child,
+.top-area .nav-controls > input:last-child, .wiki-page-header .nav-controls > input:last-child,
+.top-area .nav-controls > form:last-child, .wiki-page-header .nav-controls > form:last-child {
     margin-right: 0;
     float: right
 }
 
-.top-area .nav-controls > .btn-grouped, .markdown-body-page-header .nav-controls > .btn-grouped {
+.top-area .nav-controls > .btn-grouped, .wiki-page-header .nav-controls > .btn-grouped {
     float: none
 }
 
-.top-area .nav-controls .icon-label, .markdown-body-page-header .nav-controls .icon-label {
+.top-area .nav-controls .icon-label, .wiki-page-header .nav-controls .icon-label {
     display: none
 }
 
-.top-area .nav-controls input, .markdown-body-page-header .nav-controls input {
+.top-area .nav-controls input, .wiki-page-header .nav-controls input {
     display: inline-block;
     position: relative
 }
 
 @media (min-width: 768px) {
-    .top-area .nav-controls input, .markdown-body-page-header .nav-controls input {
+    .top-area .nav-controls input, .wiki-page-header .nav-controls input {
         width: 200px
     }
 }
 
 @media (min-width: 992px) {
-    .top-area .nav-controls input, .markdown-body-page-header .nav-controls input {
+    .top-area .nav-controls input, .wiki-page-header .nav-controls input {
         width: 250px
     }
 }
 
 @media (max-width: 575.98px) {
-    .top-area .nav-controls, .markdown-body-page-header .nav-controls {
+    .top-area .nav-controls, .wiki-page-header .nav-controls {
         padding-bottom: 0;
         width: 100%
     }
 
-    .top-area .nav-controls .btn, .markdown-body-page-header .nav-controls .btn,
-    .top-area .nav-controls form, .markdown-body-page-header .nav-controls form,
-    .top-area .nav-controls .dropdown, .markdown-body-page-header .nav-controls .dropdown,
-    .top-area .nav-controls .dropdown-toggle, .markdown-body-page-header .nav-controls .dropdown-toggle,
-    .top-area .nav-controls .dropdown-menu-toggle, .markdown-body-page-header .nav-controls .dropdown-menu-toggle,
-    .top-area .nav-controls .dropdown-menu-toggle, .markdown-body-page-header .nav-controls .dropdown-menu-toggle,
-    .top-area .nav-controls .form-control, .markdown-body-page-header .nav-controls .form-control,
+    .top-area .nav-controls .btn, .wiki-page-header .nav-controls .btn,
+    .top-area .nav-controls form, .wiki-page-header .nav-controls form,
+    .top-area .nav-controls .dropdown, .wiki-page-header .nav-controls .dropdown,
+    .top-area .nav-controls .dropdown-toggle, .wiki-page-header .nav-controls .dropdown-toggle,
+    .top-area .nav-controls .dropdown-menu-toggle, .wiki-page-header .nav-controls .dropdown-menu-toggle,
+    .top-area .nav-controls .dropdown-menu-toggle, .wiki-page-header .nav-controls .dropdown-menu-toggle,
+    .top-area .nav-controls .form-control, .wiki-page-header .nav-controls .form-control,
     .top-area .nav-controls .search form, .search .top-area .nav-controls form,
-    .markdown-body-page-header .nav-controls .search form, .search .markdown-body-page-header .nav-controls form {
+    .wiki-page-header .nav-controls .search form, .search .wiki-page-header .nav-controls form {
         margin: 0 0 10px;
         display: block;
         width: 100%
     }
 
-    .top-area .nav-controls form, .markdown-body-page-header .nav-controls form {
+    .top-area .nav-controls form, .wiki-page-header .nav-controls form {
         display: block;
         height: auto;
         margin-bottom: 14px
     }
 
-    .top-area .nav-controls form input, .markdown-body-page-header .nav-controls form input {
+    .top-area .nav-controls form input, .wiki-page-header .nav-controls form input {
         width: 100%;
         margin: 0 0 10px
     }
 
-    .top-area .nav-controls .icon-label, .markdown-body-page-header .nav-controls .icon-label {
+    .top-area .nav-controls .icon-label, .wiki-page-header .nav-controls .icon-label {
         display: inline-block
     }
 
-    .top-area .nav-controls .project-item-select-holder, .markdown-body-page-header .nav-controls .project-item-select-holder {
+    .top-area .nav-controls .project-item-select-holder, .wiki-page-header .nav-controls .project-item-select-holder {
         margin: 0;
         width: 100%
     }
 
-    .top-area .nav-controls.inline, .markdown-body-page-header .nav-controls.inline {
+    .top-area .nav-controls.inline, .wiki-page-header .nav-controls.inline {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between
     }
 
-    .top-area .nav-controls.inline > .btn, .markdown-body-page-header .nav-controls.inline > .btn,
-    .top-area .nav-controls.inline > .btn-container, .markdown-body-page-header .nav-controls.inline > .btn-container,
-    .top-area .nav-controls.inline > .dropdown, .markdown-body-page-header .nav-controls.inline > .dropdown,
-    .top-area .nav-controls.inline > input, .markdown-body-page-header .nav-controls.inline > input,
-    .top-area .nav-controls.inline > form, .markdown-body-page-header .nav-controls.inline > form {
+    .top-area .nav-controls.inline > .btn, .wiki-page-header .nav-controls.inline > .btn,
+    .top-area .nav-controls.inline > .btn-container, .wiki-page-header .nav-controls.inline > .btn-container,
+    .top-area .nav-controls.inline > .dropdown, .wiki-page-header .nav-controls.inline > .dropdown,
+    .top-area .nav-controls.inline > input, .wiki-page-header .nav-controls.inline > input,
+    .top-area .nav-controls.inline > form, .wiki-page-header .nav-controls.inline > form {
         flex: 1 1 auto;
         margin: 0 0 10px;
         margin-left: 10px;
         width: auto
     }
 
-    .top-area .nav-controls.inline > .btn:first-child, .markdown-body-page-header .nav-controls.inline > .btn:first-child,
-    .top-area .nav-controls.inline > .btn-container:first-child, .markdown-body-page-header .nav-controls.inline > .btn-container:first-child,
-    .top-area .nav-controls.inline > .dropdown:first-child, .markdown-body-page-header .nav-controls.inline > .dropdown:first-child,
-    .top-area .nav-controls.inline > input:first-child, .markdown-body-page-header .nav-controls.inline > input:first-child,
-    .top-area .nav-controls.inline > form:first-child, .markdown-body-page-header .nav-controls.inline > form:first-child {
+    .top-area .nav-controls.inline > .btn:first-child, .wiki-page-header .nav-controls.inline > .btn:first-child,
+    .top-area .nav-controls.inline > .btn-container:first-child, .wiki-page-header .nav-controls.inline > .btn-container:first-child,
+    .top-area .nav-controls.inline > .dropdown:first-child, .wiki-page-header .nav-controls.inline > .dropdown:first-child,
+    .top-area .nav-controls.inline > input:first-child, .wiki-page-header .nav-controls.inline > input:first-child,
+    .top-area .nav-controls.inline > form:first-child, .wiki-page-header .nav-controls.inline > form:first-child {
         margin-left: 0;
         float: none
     }
 
-    .top-area .nav-controls.inline .btn-full, .markdown-body-page-header .nav-controls.inline .btn-full {
+    .top-area .nav-controls.inline .btn-full, .wiki-page-header .nav-controls.inline .btn-full {
         flex: 1 1 100%;
         margin-left: 0
     }
 }
 
-.top-area.adjust .nav-text, .adjust.markdown-body-page-header .nav-text,
-.top-area.adjust .nav-controls, .adjust.markdown-body-page-header .nav-controls {
+.top-area.adjust .nav-text, .adjust.wiki-page-header .nav-text,
+.top-area.adjust .nav-controls, .adjust.wiki-page-header .nav-controls {
     width: auto
 }
 
 @media (max-width: 575.98px) {
-    .top-area.adjust .nav-text, .adjust.markdown-body-page-header .nav-text,
-    .top-area.adjust .nav-controls, .adjust.markdown-body-page-header .nav-controls {
+    .top-area.adjust .nav-text, .adjust.wiki-page-header .nav-text,
+    .top-area.adjust .nav-controls, .adjust.wiki-page-header .nav-controls {
         width: 100%
     }
 }
 
-.top-area.multi-line .nav-text, .multi-line.markdown-body-page-header .nav-text {
+.top-area.multi-line .nav-text, .multi-line.wiki-page-header .nav-text {
     line-height: 20px
 }
 
-.top-area.multi-line .nav-controls, .multi-line.markdown-body-page-header .nav-controls {
+.top-area.multi-line .nav-controls, .multi-line.wiki-page-header .nav-controls {
     padding: 17px 0
 }
 
-.top-area pre, .markdown-body-page-header pre {
+.top-area pre, .wiki-page-header pre {
     width: 100%
 }
 
 @media (max-width: 575.98px) {
-    .top-area, .markdown-body-page-header {
+    .top-area, .wiki-page-header {
         flex-flow: row wrap
     }
 
-    .top-area .nav-controls, .markdown-body-page-header .nav-controls {
+    .top-area .nav-controls, .wiki-page-header .nav-controls {
         flex: 0 0 100%
     }
 
-    .top-area .nav-controls.controls-flex, .markdown-body-page-header .nav-controls.controls-flex {
+    .top-area .nav-controls.controls-flex, .wiki-page-header .nav-controls.controls-flex {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -18752,25 +18637,25 @@ body.modal-open {
         padding: 0 0 10px
     }
 
-    .top-area .nav-controls .controls-item, .markdown-body-page-header .nav-controls .controls-item,
-    .top-area .nav-controls .controls-item-full, .markdown-body-page-header .nav-controls .controls-item-full,
-    .top-area .nav-controls .controls-item:last-child, .markdown-body-page-header .nav-controls .controls-item:last-child {
+    .top-area .nav-controls .controls-item, .wiki-page-header .nav-controls .controls-item,
+    .top-area .nav-controls .controls-item-full, .wiki-page-header .nav-controls .controls-item-full,
+    .top-area .nav-controls .controls-item:last-child, .wiki-page-header .nav-controls .controls-item:last-child {
         flex: 1 1 35%;
         display: block;
         width: 100%;
         margin: 3px
     }
 
-    .top-area .nav-controls .controls-item .btn, .markdown-body-page-header .nav-controls .controls-item .btn,
-    .top-area .nav-controls .controls-item .dropdown, .markdown-body-page-header .nav-controls .controls-item .dropdown,
-    .top-area .nav-controls .controls-item-full .btn, .markdown-body-page-header .nav-controls .controls-item-full .btn,
-    .top-area .nav-controls .controls-item-full .dropdown, .markdown-body-page-header .nav-controls .controls-item-full .dropdown,
-    .top-area .nav-controls .controls-item:last-child .btn, .markdown-body-page-header .nav-controls .controls-item:last-child .btn,
-    .top-area .nav-controls .controls-item:last-child .dropdown, .markdown-body-page-header .nav-controls .controls-item:last-child .dropdown {
+    .top-area .nav-controls .controls-item .btn, .wiki-page-header .nav-controls .controls-item .btn,
+    .top-area .nav-controls .controls-item .dropdown, .wiki-page-header .nav-controls .controls-item .dropdown,
+    .top-area .nav-controls .controls-item-full .btn, .wiki-page-header .nav-controls .controls-item-full .btn,
+    .top-area .nav-controls .controls-item-full .dropdown, .wiki-page-header .nav-controls .controls-item-full .dropdown,
+    .top-area .nav-controls .controls-item:last-child .btn, .wiki-page-header .nav-controls .controls-item:last-child .btn,
+    .top-area .nav-controls .controls-item:last-child .dropdown, .wiki-page-header .nav-controls .controls-item:last-child .dropdown {
         margin: 0
     }
 
-    .top-area .nav-controls .controls-item-full, .markdown-body-page-header .nav-controls .controls-item-full {
+    .top-area .nav-controls .controls-item-full, .wiki-page-header .nav-controls .controls-item-full {
         flex: 1 1 100%
     }
 }
@@ -19343,7 +19228,7 @@ body.modal-open {
 }
 
 @media (min-width: 576px) {
-    .right-sidebar-collapsed:not(.markdown-body-sidebar):not(.build-sidebar):not(.issuable-bulk-update-sidebar) .content-wrapper {
+    .right-sidebar-collapsed:not(.wiki-sidebar):not(.build-sidebar):not(.issuable-bulk-update-sidebar) .content-wrapper {
         padding-right: 62px
     }
 
@@ -19375,7 +19260,7 @@ body.modal-open {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .right-sidebar-expanded:not(.markdown-body-sidebar):not(.build-sidebar):not(.issuable-bulk-update-sidebar) .content-wrapper {
+    .right-sidebar-expanded:not(.wiki-sidebar):not(.build-sidebar):not(.issuable-bulk-update-sidebar) .content-wrapper {
         padding-right: 62px
     }
 }
@@ -19540,13 +19425,13 @@ body.modal-open {
     bottom: 0;
     left: 0;
     background-color: #fafafa;
-    box-shadow: inset -2px 0 0 #e5e5e5;
+    box-shadow: inset -1px 0 0 #e5e5e5;
     transform: translate3d(0, 0, 0)
 }
 
 @media (min-width: 576px) and (max-width: 576px) {
     .nav-sidebar:not(.sidebar-collapsed-desktop) {
-        box-shadow: inset -2px 0 0 #e5e5e5, 2px 1px 3px rgba(0, 0, 0, 0.1)
+        box-shadow: inset -1px 0 0 #e5e5e5, 2px 1px 3px rgba(0, 0, 0, 0.1)
     }
 }
 
@@ -19679,7 +19564,7 @@ body.modal-open {
 
 @media (min-width: 576px) {
     .sidebar-top-level-items > li > a {
-        margin-right: 2px
+        margin-right: 1px
     }
 }
 
@@ -19689,7 +19574,7 @@ body.modal-open {
 }
 
 .sidebar-top-level-items > li.is-showing-fly-out > a {
-    margin-right: 2px
+    margin-right: 1px
 }
 
 @media (min-width: 576px) {
@@ -19782,14 +19667,14 @@ body.modal-open {
 }
 
 .toggle-sidebar-button, .close-nav-button {
-    width: 218px;
+    width: 219px;
     transition: width 0.3s;
     position: fixed;
     bottom: 0;
     padding: 16px;
     background-color: #fafafa;
     border: 0;
-    border-top: 2px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
     color: #707070;
     display: flex;
     align-items: center;
@@ -19839,7 +19724,7 @@ body.modal-open {
 
 .sidebar-collapsed-desktop .toggle-sidebar-button {
     padding: 16px;
-    width: 48px
+    width: 49px
 }
 
 .sidebar-collapsed-desktop .toggle-sidebar-button .collapse-text,
@@ -19924,65 +19809,65 @@ body.modal-open {
     overflow: auto
 }
 
-table.table, table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
+table.table, .markdown-body table, .markdown-body table, .md table, ul.notes > li .note-body .note-text table {
     margin-bottom: 16px
 }
 
-table.table .dropdown-menu a, table .dropdown-menu a,
+table.table .dropdown-menu a, .markdown-body table .dropdown-menu a,
 .markdown-body table .dropdown-menu a, .md table .dropdown-menu a, ul.notes > li .note-body .note-text table .dropdown-menu a {
     text-decoration: none
 }
 
-table.table .success, table .success, .markdown-body table .success,
+table.table .success, .markdown-body table .success, .markdown-body table .success,
 .md table .success, ul.notes > li .note-body .note-text table .success,
-table.table .warning, table .warning, .markdown-body table .warning,
+table.table .warning, .markdown-body table .warning, .markdown-body table .warning,
 .md table .warning, ul.notes > li .note-body .note-text table .warning,
-table.table .danger, table .danger, .markdown-body table .danger,
+table.table .danger, .markdown-body table .danger, .markdown-body table .danger,
 .md table .danger, ul.notes > li .note-body .note-text table .danger, table.table .info,
-table .info, .markdown-body table .info, .md table .info, ul.notes > li .note-body .note-text table .info {
+.markdown-body table .info, .markdown-body table .info, .md table .info, ul.notes > li .note-body .note-text table .info {
     color: #fff
 }
 
-table.table .success a:not(.btn), table .success a:not(.btn),
+table.table .success a:not(.btn), .markdown-body table .success a:not(.btn),
 .markdown-body table .success a:not(.btn), .md table .success a:not(.btn), ul.notes > li .note-body .note-text table .success a:not(.btn),
-table.table .warning a:not(.btn), table .warning a:not(.btn),
+table.table .warning a:not(.btn), .markdown-body table .warning a:not(.btn),
 .markdown-body table .warning a:not(.btn), .md table .warning a:not(.btn), ul.notes > li .note-body .note-text table .warning a:not(.btn),
-table.table .danger a:not(.btn), table .danger a:not(.btn),
+table.table .danger a:not(.btn), .markdown-body table .danger a:not(.btn),
 .markdown-body table .danger a:not(.btn), .md table .danger a:not(.btn), ul.notes > li .note-body .note-text table .danger a:not(.btn),
-table.table .info a:not(.btn), table .info a:not(.btn),
+table.table .info a:not(.btn), .markdown-body table .info a:not(.btn),
 .markdown-body table .info a:not(.btn), .md table .info a:not(.btn), ul.notes > li .note-body .note-text table .info a:not(.btn) {
     text-decoration: underline;
     color: #fff
 }
 
-table.table tr td, table tr td, .markdown-body table tr td, .md table tr td,
-ul.notes > li .note-body .note-text table tr td, table.table tr th, table tr th,
+table.table tr td, .markdown-body table tr td, .markdown-body table tr td, .md table tr td,
+ul.notes > li .note-body .note-text table tr td, table.table tr th, .markdown-body table tr th,
 .markdown-body table tr th, .md table tr th, ul.notes > li .note-body .note-text table tr th {
     padding: 10px 16px;
     line-height: 20px;
     vertical-align: middle
 }
 
-table.table tr th, table tr th, .markdown-body table tr th, .md table tr th,
+table.table tr th, .markdown-body table tr th, .markdown-body table tr th, .md table tr th,
 ul.notes > li .note-body .note-text table tr th {
     background-color: #fafafa;
     font-weight: 400;
     border-bottom: 0
 }
 
-table.table tr th.wide, table tr th.wide, .markdown-body table tr th.wide,
+table.table tr th.wide, .markdown-body table tr th.wide, .markdown-body table tr th.wide,
 .md table tr th.wide, ul.notes > li .note-body .note-text table tr th.wide {
     width: 55%
 }
 
-table.table tr th.table-th-transparent, table tr th.table-th-transparent,
+table.table tr th.table-th-transparent, .markdown-body table tr th.table-th-transparent,
 .markdown-body table tr th.table-th-transparent, .md table tr th.table-th-transparent,
 ul.notes > li .note-body .note-text table tr th.table-th-transparent {
     background: none;
     color: #707070
 }
 
-table.table tr td, table tr td, .markdown-body table tr td, .md table tr td,
+table.table tr td, .markdown-body table tr td, .markdown-body table tr td, .md table tr td,
 ul.notes > li .note-body .note-text table tr td {
     border-color: #f0f0f0
 }
@@ -20427,7 +20312,7 @@ code.key-fingerprint {
 
 .monospace, .commit-sha, .gfm-commit, .gfm-commit_range, .ref-name,
 .git-revision-dropdown .dropdown-content ul li a, .mr-state-widget .label-branch,
-.git-revision-dropdown-toggle, .commit-sha-group .label-monospace,
+.pipeline-number, .git-revision-dropdown-toggle, .commit-sha-group .label-monospace,
 .file-editor .file-title, .file-editor .editor-file-name, .ci-table .api,
 .git-clone-holder .form-control, .git-clone-holder .search form, .search .git-clone-holder form {
     font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace
@@ -20438,7 +20323,7 @@ code.key-fingerprint {
 }
 
 .commit-sha, .gfm-commit, .gfm-commit_range, .ref-name, .git-revision-dropdown .dropdown-content ul li a,
-.mr-state-widget .label-branch {
+.mr-state-widget .label-branch, .pipeline-number {
     font-size: 95%
 }
 
@@ -20989,20 +20874,20 @@ h1 small, h2 small, h3 small, h4 small {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #949494
+    color: #919191
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #949494;
+    color: #919191;
     opacity: 1
 }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-    color: #949494
+    color: #919191
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #949494
+    color: #919191
 }
 
 .zen-backdrop.fullscreen {
@@ -21334,6 +21219,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     font-size: 12px
 }
 
+.info-well svg {
+    vertical-align: text-top
+}
+
 .light-well, .description-block {
     background-color: #fafafa;
     padding: 15px
@@ -21521,6 +21410,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     display: inline-block;
     position: relative;
     top: 3px
+}
+
+.emoji-menu-btn > gl-emoji {
+    line-height: 1.5
 }
 
 .award-menu-holder {
@@ -21777,15 +21670,26 @@ gl-emoji {
     display: inline-flex;
     vertical-align: middle;
     font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1.5em
+    font-size: 1.5em;
+    line-height: 0.9
 }
 
 .ci-status-icon-success svg, .ci-status-icon-passed svg {
     fill: #1aaa55
 }
 
+.ci-status-icon-success.add-border svg, .ci-status-icon-passed.add-border svg {
+    border: 1px solid #1aaa55;
+    border-radius: 50%
+}
+
 .ci-status-icon-failed svg {
     fill: #db3b21
+}
+
+.ci-status-icon-failed.add-border svg {
+    border: 1px solid #db3b21;
+    border-radius: 50%
 }
 
 .ci-status-icon-pending svg, .ci-status-icon-failed_with_warnings svg,
@@ -21793,16 +21697,38 @@ gl-emoji {
     fill: #fc9403
 }
 
+.ci-status-icon-pending.add-border svg, .ci-status-icon-failed_with_warnings.add-border svg,
+.ci-status-icon-success_with_warnings.add-border svg {
+    border: 1px solid #fc9403;
+    border-radius: 50%
+}
+
 .ci-status-icon-running svg {
     fill: #2e87e0
+}
+
+.ci-status-icon-running.add-border svg {
+    border: 1px solid #2e87e0;
+    border-radius: 50%
 }
 
 .ci-status-icon-canceled svg, .ci-status-icon-disabled svg {
     fill: #2e2e2e
 }
 
+.ci-status-icon-canceled.add-border svg, .ci-status-icon-disabled.add-border svg {
+    border: 1px solid #2e2e2e;
+    border-radius: 50%
+}
+
 .ci-status-icon-created svg, .ci-status-icon-skipped svg, .ci-status-icon-notfound svg {
     fill: #c4c4c4
+}
+
+.ci-status-icon-created.add-border svg, .ci-status-icon-skipped.add-border svg,
+.ci-status-icon-notfound.add-border svg {
+    border: 1px solid #c4c4c4;
+    border-radius: 50%
 }
 
 .ci-status-icon-manual svg {
@@ -21825,7 +21751,7 @@ gl-emoji {
     padding: 0 2px
 }
 
-.snippet-form-holder .file-title {
+.snippet-form-holder .markdown-body .file-title {
     padding: 2px
 }
 
@@ -21837,7 +21763,7 @@ gl-emoji {
     max-width: 0
 }
 
-.snippet-markdown-body {
+.snippet-file-content {
     border-radius: 3px
 }
 
@@ -24973,7 +24899,7 @@ gl-emoji {
     content: "\f265"
 }
 
-.fa-markdown-bodypedia-w:before {
+.fa.markdown-body edia-w:before {
     content: "\f266"
 }
 
@@ -25791,10 +25717,6 @@ gl-emoji {
     background-color: #f6fafe
 }
 
-.board-card.is-active:first-child:not(:only-child), .board-card.is-active .board-card-assignee:hover a:first-child:not(:only-child) {
-    box-shadow: -10px 0 10px 1px #f6fafe
-}
-
 .board-card .badge {
     border: 0;
     outline: 0
@@ -26208,12 +26130,6 @@ gl-emoji {
     min-width: 200px
 }
 
-.board-milestone-footer-content {
-    padding-left: 12px;
-    padding-right: 12px;
-    color: #313236
-}
-
 .board-config-modal {
     width: 440px
 }
@@ -26418,7 +26334,8 @@ gl-emoji {
     display: flex;
     font-size: 15px;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    align-self: baseline
 }
 
 .build-page .top-bar .controllers svg {
@@ -26455,10 +26372,6 @@ gl-emoji {
     opacity: 1
 }
 
-.build-page .top-bar .controllers .btn-refresh {
-    border-radius: 4px
-}
-
 .build-page .top-bar .controllers .btn-scroll:disabled, .build-page .top-bar .controllers .btn-refresh:disabled {
     opacity: 0.35;
     cursor: not-allowed
@@ -26493,6 +26406,180 @@ gl-emoji {
 
 .with-performance-bar .build-page .top-bar.affix {
     top: 75px
+}
+
+.build-page-pod-logs .build-trace-container {
+    position: relative
+}
+
+.build-page-pod-logs .build-trace {
+    background: #000;
+    color: #c4c4c4;
+    white-space: pre;
+    overflow-x: auto;
+    font-size: 12px;
+    border-radius: 0;
+    border: 0;
+    padding: 8px
+}
+
+.build-page-pod-logs .build-trace .bash {
+    display: block
+}
+
+.build-page-pod-logs .build-trace.build-trace-rounded {
+    border-radius: 3px
+}
+
+.build-page-pod-logs .top-bar {
+    height: 48px;
+    min-height: 48px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: #2e2e2e;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 75px;
+    padding: 8px;
+    display: flex;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px
+}
+
+.build-page-pod-logs .top-bar .truncated-info {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.build-page-pod-logs .top-bar .dropdown {
+    display: flex
+}
+
+.build-page-pod-logs .top-bar .dropdown > .dropdown-menu-toggle {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    width: 300px
+}
+
+.build-page-pod-logs .top-bar .dropdown > .dropdown-menu {
+    width: 300px
+}
+
+.build-page-pod-logs .top-bar .controllers {
+    display: flex;
+    font-size: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: baseline;
+    flex-grow: 2
+}
+
+.build-page-pod-logs .top-bar .controllers svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+    fill: #2e2e2e
+}
+
+.build-page-pod-logs .top-bar .controllers .controllers-buttons {
+    color: #2e2e2e;
+    margin: 0 8px
+}
+
+.build-page-pod-logs .top-bar .controllers .controllers-buttons:last-child {
+    margin-right: 0
+}
+
+.build-page-pod-logs .top-bar .controllers .btn-scroll.animate .first-triangle {
+    animation: blinking-scroll-button 1s ease infinite;
+    animation-delay: 0.3s
+}
+
+.build-page-pod-logs .top-bar .controllers .btn-scroll.animate .second-triangle {
+    animation: blinking-scroll-button 1s ease infinite;
+    animation-delay: 0.2s
+}
+
+.build-page-pod-logs .top-bar .controllers .btn-scroll.animate .third-triangle {
+    animation: blinking-scroll-button 1s ease infinite
+}
+
+.build-page-pod-logs .top-bar .controllers .btn-scroll.animate:disabled {
+    opacity: 1
+}
+
+.build-page-pod-logs .top-bar .controllers .btn-scroll:disabled,
+.build-page-pod-logs .top-bar .controllers .btn-refresh:disabled {
+    opacity: 0.35;
+    cursor: not-allowed
+}
+
+.build-page-pod-logs .top-bar .refresh-control {
+    display: flex;
+    font-size: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: baseline;
+    flex-grow: 0;
+    margin-left: 2px
+}
+
+.build-page-pod-logs .top-bar .refresh-control svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+    fill: #2e2e2e
+}
+
+.build-page-pod-logs .top-bar .refresh-control .controllers-buttons {
+    color: #2e2e2e;
+    margin: 0 8px
+}
+
+.build-page-pod-logs .top-bar .refresh-control .controllers-buttons:last-child {
+    margin-right: 0
+}
+
+.build-page-pod-logs .top-bar .refresh-control .btn-scroll.animate .first-triangle {
+    animation: blinking-scroll-button 1s ease infinite;
+    animation-delay: 0.3s
+}
+
+.build-page-pod-logs .top-bar .refresh-control .btn-scroll.animate .second-triangle {
+    animation: blinking-scroll-button 1s ease infinite;
+    animation-delay: 0.2s
+}
+
+.build-page-pod-logs .top-bar .refresh-control .btn-scroll.animate .third-triangle {
+    animation: blinking-scroll-button 1s ease infinite
+}
+
+.build-page-pod-logs .top-bar .refresh-control .btn-scroll.animate:disabled {
+    opacity: 1
+}
+
+.build-page-pod-logs .top-bar .refresh-control .btn-scroll:disabled,
+.build-page-pod-logs .top-bar .refresh-control .btn-refresh:disabled {
+    opacity: 0.35;
+    cursor: not-allowed
+}
+
+.build-page-pod-logs .top-bar .refresh-control .controllers-buttons .btn-refresh {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle
+}
+
+.build-page-pod-logs .build-loader-animation {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    margin: auto auto 12px 2px;
+    border-radius: 50%;
+    animation: blinking-dots 1s linear infinite
 }
 
 .build-header .ci-header-container, .build-header .header-action-buttons {
@@ -26821,7 +26908,7 @@ gl-emoji {
 }
 
 .clusters-container .top-area .nav-controls > .btn.btn-add-cluster,
-.clusters-container .markdown-body-page-header .nav-controls > .btn.btn-add-cluster {
+.clusters-container .wiki-page-header .nav-controls > .btn.btn-add-cluster {
     margin-right: 0
 }
 
@@ -27001,10 +27088,10 @@ gl-emoji {
 }
 
 .text-expander {
-    display: inline-block;
+    display: inline-flex;
     background: #fff;
     color: #707070;
-    padding: 0 4px;
+    padding: 1px 4px;
     cursor: pointer;
     border: 1px solid #e3e3e3;
     border-radius: 4px;
@@ -27050,6 +27137,11 @@ gl-emoji {
 .commit-content {
     padding-right: 10px;
     white-space: normal
+}
+
+.commit-content .commit-title {
+    display: flex;
+    align-items: center
 }
 
 @media (min-width: 576px) {
@@ -27114,8 +27206,11 @@ gl-emoji {
 }
 
 .commit a, .commit button, .generic_commit_status a, .generic_commit_status button {
-    color: #2e2e2e;
     vertical-align: baseline
+}
+
+.commit a, .generic_commit_status a {
+    color: #2e2e2e
 }
 
 .commit a.autodevops-badge, .generic_commit_status a.autodevops-badge {
@@ -27269,7 +27364,7 @@ gl-emoji {
     outline: none
 }
 
-.table.tags, table.tags, .markdown-body table.tags, .md table.tags,
+.table.tags, .markdown-body table.tags, .markdown-body table.tags, .md table.tags,
 ul.notes > li .note-body .note-text table.tags {
     margin-bottom: 0
 }
@@ -27937,7 +28032,7 @@ ul.notes > li .note-body .note-text table.tags {
 
 #cycle-analytics .item-build-component .item-title .fa {
     color: #707070;
-    font-size: 12px
+    font-size: 90%
 }
 
 #cycle-analytics .empty-stage, #cycle-analytics .no-access-stage {
@@ -28024,7 +28119,8 @@ ul.notes > li .note-body .note-text table.tags {
     position: relative;
     line-height: 35px;
     display: flex;
-    flex-grow: 1
+    flex: 1 1;
+    min-width: 0
 }
 
 @media (min-width: 576px) {
@@ -28085,14 +28181,18 @@ ul.notes > li .note-body .note-text table.tags {
     background-color: #f5f5f5
 }
 
-.diff-file .file-title .diff-toggle-caret, .diff-file .file-title-flex-parent .diff-toggle-caret {
-    padding-right: 6px
+.diff-file .file-title svg, .diff-file .file-title-flex-parent svg {
+    vertical-align: middle
 }
 
 .diff-file .diff-content {
     background: #fff;
     color: #2e2e2e;
     border-radius: 0 0 3px 3px
+}
+
+.diff-file .diff-content .code {
+    padding: 0
 }
 
 .diff-file .diff-content .unfold {
@@ -28139,7 +28239,7 @@ ul.notes > li .note-body .note-text table.tags {
 
 .diff-file .diff-content table .line_holder td {
     line-height: 1.6;
-    font-size: 12px
+    font-size: 90%
 }
 
 .diff-file .diff-content table .line_holder td.noteable_line {
@@ -28148,6 +28248,12 @@ ul.notes > li .note-body .note-text table.tags {
 
 .diff-file .diff-content table .line_holder td span {
     white-space: pre-wrap
+}
+
+.diff-file .diff-content table .line_holder td span.context-cell {
+    display: inline-block;
+    width: 100%;
+    height: 100%
 }
 
 .diff-file .diff-content table .line_holder td .line {
@@ -28453,7 +28559,69 @@ ul.notes > li .note-body .note-text table.tags {
     white-space: pre-wrap
 }
 
-.markdown-body .diff-file {
+.diff-file .diff-file-container .frame.deleted {
+    border: 0;
+    background-color: inherit
+}
+
+.diff-file .diff-file-container .frame.deleted .image_file img {
+    border: 1px solid #f77
+}
+
+.diff-file .diff-file-container .frame.added {
+    border: 0;
+    background-color: inherit
+}
+
+.diff-file .diff-file-container .frame.added .image_file img {
+    border: 1px solid #63c363
+}
+
+.diff-file .diff-file-container .swipe.view .swipe-wrap, .diff-file .diff-file-container .onion-skin.view .swipe-wrap {
+    top: 0;
+    right: 0
+}
+
+.diff-file .diff-file-container .swipe.view .frame.deleted, .diff-file .diff-file-container .onion-skin.view .frame.deleted {
+    top: 0;
+    right: 0
+}
+
+.diff-file .diff-file-container .swipe.view .swipe-bar, .diff-file .diff-file-container .onion-skin.view .swipe-bar {
+    top: 0
+}
+
+.diff-file .diff-file-container .swipe.view .swipe-bar .top-handle,
+.diff-file .diff-file-container .onion-skin.view .swipe-bar .top-handle {
+    top: -14px;
+    left: -7px
+}
+
+.diff-file .diff-file-container .swipe.view .swipe-bar .bottom-handle,
+.diff-file .diff-file-container .onion-skin.view .swipe-bar .bottom-handle {
+    bottom: -14px;
+    left: -7px
+}
+
+.diff-file .diff-file-container .swipe.view .file-container, .diff-file .diff-file-container .onion-skin.view .file-container {
+    display: inline-block
+}
+
+.diff-file .diff-file-container .swipe.view .file-container .file-content,
+.diff-file .diff-file-container .onion-skin.view .file-container .file-content {
+    padding: 0
+}
+
+.diff-file .diff-file-container .swipe.view .file-container .file-content img,
+.diff-file .diff-file-container .onion-skin.view .file-container .file-content img {
+    max-width: none
+}
+
+.diff-file .diff-file-container .onion-skin.view .controls {
+    bottom: -25px
+}
+
+.file-content .diff-file {
     margin: 0;
     border: 0
 }
@@ -28468,6 +28636,10 @@ ul.notes > li .note-body .note-text table.tags {
 
 .files-changed {
     border-bottom: 0
+}
+
+.merge-request-details .file-content.image_file img {
+    max-height: 50vh
 }
 
 .diff-stats-summary-toggler {
@@ -28523,7 +28695,7 @@ ul.notes > li .note-body .note-text table.tags {
     margin-bottom: 0
 }
 
-.diff-line-num:not(.js-unfold-bottom) a::before {
+.markdown-body .diff-line-num:not(.js-unfold-bottom) a::before {
     content: attr(data-linenumber)
 }
 
@@ -28589,7 +28761,7 @@ ul.notes > li .note-body .note-text table.tags {
     margin-right: 0;
     border-color: #fff;
     cursor: pointer;
-    transition: all .1s ease-out
+    transition: all 0.1s ease-out
 }
 
 .diff-comment-avatar:nth-child(1), .diff-comments-more-count:nth-child(1) {
@@ -28621,7 +28793,7 @@ ul.notes > li .note-body .note-text table.tags {
     height: 24px;
     border-radius: 50%;
     padding: 0;
-    transition: transform .1s ease-out;
+    transition: transform 0.1s ease-out;
     z-index: 100
 }
 
@@ -28657,22 +28829,23 @@ ul.notes > li .note-body .note-text table.tags {
 
 @media (min-width: 576px) {
     .diff-files-changed {
-        position: -webkit-sticky;
-        position: sticky;
         top: 24px;
-        background-color: #fff;
-        z-index: 190
+        background-color: #fff
     }
 
     .diff-files-changed.diff-files-changed-merge-request {
-        top: 76px
+        position: sticky;
+        top: 90px;
+        z-index: 200;
+        margin: 16px 0;
+        padding: 0
     }
 
     .diff-files-changed.is-stuck {
         padding-top: 0;
         padding-bottom: 0;
-        border-bottom: 1px solid #eaeaea;
-        transform: translateY(16px)
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea
     }
 
     .diff-files-changed.is-stuck .diff-stats-additions-deletions-expanded,
@@ -28696,7 +28869,11 @@ ul.notes > li .note-body .note-text table.tags {
 .diff-file-changes {
     max-width: 560px;
     width: 100%;
-    z-index: 150
+    z-index: 150;
+    min-height: 40px;
+    max-height: 312px;
+    overflow-y: auto;
+    margin-bottom: 0
 }
 
 @media (min-width: 576px) {
@@ -28716,7 +28893,7 @@ ul.notes > li .note-body .note-text table.tags {
     margin-top: 2px
 }
 
-.diff-file-changes .diff-changed-markdown-body {
+.diff-file-changes .diff-changed-file-content {
     display: flex;
     flex-direction: column;
     min-width: 0
@@ -28729,12 +28906,12 @@ ul.notes > li .note-body .note-text table.tags {
 }
 
 .diff-file-changes .diff-changed-blank-file-name {
-    color: #949494;
+    color: #919191;
     font-style: italic
 }
 
 .diff-file-changes .diff-changed-file-path {
-    color: #949494
+    color: #919191
 }
 
 .diff-file-changes .diff-changed-stats {
@@ -29519,6 +29696,16 @@ ul.notes > li .note-body .note-text table.tags {
     padding: 8px
 }
 
+.prometheus-graphs .environments .dropdown-menu-toggle svg {
+    position: absolute;
+    right: 5%;
+    top: 25%
+}
+
+.prometheus-graphs .environments .dropdown-menu-toggle, .prometheus-graphs .environments .dropdown-menu {
+    width: 240px
+}
+
 .environments-actions .external-url, .environments-actions .monitoring-url,
 .environments-actions .terminal-button, .environments-actions .stop-env-link {
     width: 38px
@@ -29564,7 +29751,7 @@ ul.notes > li .note-body .note-text table.tags {
 
 .prometheus-graph-cursor {
     position: absolute;
-    background: #949494;
+    background: #919191;
     width: 1px
 }
 
@@ -29710,7 +29897,7 @@ ul.notes > li .note-body .note-text table.tags {
 }
 
 .prometheus-svg-container > svg .tick > text {
-    fill: #949494;
+    fill: #919191;
     font-size: 10px
 }
 
@@ -29993,6 +30180,70 @@ ul.notes > li .note-body .note-text table.tags {
 
 .graphs .graph-deletions {
     color: #db3b21
+}
+
+.svg-graph-container {
+    width: 100%
+}
+
+.svg-graph-container .axis-tick {
+    opacity: 0.4
+}
+
+.svg-graph-container .tick-text {
+    fill: #707070
+}
+
+.svg-graph-container .x-axis-text {
+    fill: #2e2e2e
+}
+
+.svg-graph-container .bar-rect {
+    fill: rgba(31, 120, 209, 0.1);
+    stroke: #1f78d1
+}
+
+.svg-graph-container .bar-rect:hover {
+    fill: rgba(23, 89, 156, 0.3)
+}
+
+.svg-graph-container .y-axis-label line {
+    stroke: #aaa
+}
+
+.svg-graph-container .y-axis-label text {
+    font-weight: bold;
+    font-size: 12px;
+    fill: #4f4f4f
+}
+
+.svg-graph-container-with-grab {
+    cursor: grab;
+    cursor: -webkit-grab
+}
+
+.svg-graph-container-grabbed {
+    cursor: grabbing;
+    cursor: -webkit-grabbing
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.animate-flicker {
+    animation: flickerAnimation 1.5s infinite;
+    fill: #a7a7a7
 }
 
 .milestone-row {
@@ -31264,7 +31515,9 @@ ul.group-list-tree li.group-row.has-description > .group-row-contents .title {
     display: inline-block;
     font-size: 14px;
     line-height: 24px;
-    align-self: center
+    align-self: center;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .js-issuable-selector-wrap .js-issuable-selector {
@@ -31758,7 +32011,7 @@ ul.related-merge-requests > li gl-emoji {
 }
 
 .create-mr-dropdown-wrap .ref::selection {
-    color: #949494
+    color: #919191
 }
 
 .create-mr-dropdown-wrap .dropdown .dropdown-menu-toggle {
@@ -32054,7 +32307,8 @@ ul.related-merge-requests > li gl-emoji {
     display: flex;
     justify-content: space-between;
     padding: 16px;
-    border-radius: 4px
+    border-radius: 4px;
+    border: 1px solid #f2f2f2
 }
 
 .manage-labels-list > li:not(.empty-message):not(.is-not-draggable).sortable-ghost {
@@ -32065,7 +32319,8 @@ ul.related-merge-requests > li gl-emoji {
     box-shadow: 0 1px 2px rgba(186, 186, 186, 0.5);
     cursor: move;
     cursor: -webkit-grab;
-    cursor: -moz-grab
+    cursor: -moz-grab;
+    border: 0
 }
 
 .prioritized-labels .manage-labels-list > li:not(.empty-message):not(.is-not-draggable):active {
@@ -32095,10 +32350,6 @@ ul.related-merge-requests > li gl-emoji {
     margin-bottom: 30px
 }
 
-.prioritized-labels h5 {
-    font-size: 14px
-}
-
 .prioritized-labels .add-priority {
     display: none;
     color: #fafafa
@@ -32107,10 +32358,6 @@ ul.related-merge-requests > li gl-emoji {
 .prioritized-labels li:hover .draggable-handler {
     display: inline-block;
     opacity: 1
-}
-
-.other-labels h5 {
-    font-size: 14px
 }
 
 .other-labels .remove-priority {
@@ -32193,7 +32440,7 @@ ul.related-merge-requests > li gl-emoji {
 
 .label-link {
     display: inline-flex;
-    vertical-align: top
+    vertical-align: text-bottom
 }
 
 .label-link:hover .color-label {
@@ -33401,16 +33648,36 @@ ul.related-merge-requests > li gl-emoji {
     margin-right: 10px
 }
 
-.mr-state-widget {
-    color: #2e2e2e;
+.mr-widget-heading {
+    position: relative;
     border: 1px solid #e5e5e5;
-    border-radius: 2px;
-    line-height: 28px
+    border-radius: 4px
 }
 
-.mr-state-widget .mr-widget-heading, .mr-state-widget .mr-widget-section,
-.mr-state-widget .mr-widget-footer {
-    padding: 16px;
+.mr-widget-heading:not(.deploy-heading)::before {
+    content: '';
+    border-left: 1px solid #dfdfdf;
+    position: absolute;
+    left: 32px;
+    top: -17px;
+    height: 16px
+}
+
+.mr-section-container {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    border-top: 0
+}
+
+.mr-widget-heading, .mr-widget-section, .mr-widget-footer {
+    padding: 16px
+}
+
+.mr-state-widget {
+    color: #2e2e2e
+}
+
+.mr-state-widget .mr-widget-section, .mr-state-widget .mr-widget-footer {
     border-top: solid 1px #e5e5e5
 }
 
@@ -33431,18 +33698,11 @@ ul.related-merge-requests > li gl-emoji {
 }
 
 .mr-state-widget .btn {
-    font-size: 14px;
-    max-height: 26px
+    font-size: 14px
 }
 
 .mr-state-widget .btn[disabled] {
     opacity: 0.3
-}
-
-.mr-state-widget .btn.btn-sm, .mr-state-widget .btn-group-sm > .btn {
-    line-height: 1;
-    padding: 5px 10px;
-    margin-top: 1px
 }
 
 .mr-state-widget .btn.dropdown-toggle .fa, .mr-state-widget .btn.dropdown-menu-toggle .fa {
@@ -33517,6 +33777,7 @@ ul.related-merge-requests > li gl-emoji {
 }
 
 .mr-state-widget .accept-merge-holder .accept-control {
+    display: inline-block;
     float: left;
     margin: 0;
     margin-left: 20px;
@@ -33557,7 +33818,9 @@ ul.related-merge-requests > li gl-emoji {
 
 .mr-state-widget .ci-widget {
     color: #2e2e2e;
-    display: flex
+    display: flex;
+    align-items: center;
+    justify-content: space-between
 }
 
 @media (max-width: 575.98px) {
@@ -33566,22 +33829,21 @@ ul.related-merge-requests > li gl-emoji {
     }
 }
 
+.mr-state-widget .ci-widget .ci-widget-content {
+    display: flex;
+    align-items: center
+}
+
 .mr-state-widget .mr-widget-icon {
     font-size: 22px;
     margin-right: 10px
 }
 
 .mr-state-widget .ci-status-icon svg {
-    width: 22px;
-    height: 22px;
     margin: 3px 0;
     position: relative;
     overflow: visible;
     display: block
-}
-
-.mr-state-widget .mr-widget-pipeline-graph {
-    padding: 0 4px
 }
 
 .mr-state-widget .mr-widget-pipeline-graph .dropdown-menu {
@@ -33593,7 +33855,7 @@ ul.related-merge-requests > li gl-emoji {
 }
 
 .mr-state-widget .normal {
-    line-height: 28px
+    flex: 1
 }
 
 .mr-state-widget .capitalize {
@@ -33602,7 +33864,7 @@ ul.related-merge-requests > li gl-emoji {
 
 .mr-state-widget .label-branch {
     color: #2e2e2e;
-    font-weight: 600;
+    font-weight: normal;
     overflow: hidden;
     word-break: break-all
 }
@@ -33623,6 +33885,10 @@ ul.related-merge-requests > li gl-emoji {
     right: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: #fafafa
+}
+
+.mr-state-widget .mr-widget-body {
+    line-height: 28px
 }
 
 .mr-state-widget .mr-widget-body::after {
@@ -33721,7 +33987,14 @@ ul.related-merge-requests > li gl-emoji {
     }
 
     .mr-state-widget .mr-widget-body .accept-action {
-        width: 100%
+        width: 100%;
+        text-align: center
+    }
+
+    .mr-state-widget .mr-widget-body .accept-control {
+        width: 100%;
+        text-align: center;
+        margin: 0
     }
 }
 
@@ -33884,15 +34157,63 @@ ul.related-merge-requests > li gl-emoji {
 .mr-source-target {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fafafa;
-    border-radius: 4px 4px 0 0;
-    padding: 8px 16px
+    border-radius: 4px;
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    min-height: 69px
+}
+
+@media (min-width: 768px) {
+    .mr-source-target {
+        align-items: center
+    }
 }
 
 .mr-source-target .dropdown-toggle .fa, .mr-source-target .dropdown-menu-toggle .fa {
     color: #2e2e2e
+}
+
+.mr-source-target .git-merge-icon-container {
+    border: 1px solid #bababa;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    color: #707070;
+    line-height: 28px
+}
+
+.mr-source-target .git-merge-icon-container .ic-git-merge {
+    vertical-align: middle;
+    width: 31px
+}
+
+.mr-source-target .git-merge-container {
+    justify-content: space-between;
+    flex: 1;
+    flex-direction: row;
+    align-items: center
+}
+
+@media (max-width: 991.98px) {
+    .mr-source-target .git-merge-container {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .mr-source-target .git-merge-container .branch-actions {
+        margin-top: 16px
+    }
+}
+
+@media (min-width: 992px) {
+    .mr-source-target .git-merge-container .branch-actions {
+        align-self: center
+    }
+}
+
+.mr-source-target .diverged-commits-count {
+    color: #707070;
+    font-size: 12px
 }
 
 .card-new-merge-request .card-header {
@@ -33991,16 +34312,14 @@ ul.related-merge-requests > li gl-emoji {
 .mr-version-controls {
     position: relative;
     background: #fafafa;
-    color: #2e2e2e;
-    z-index: 199
+    color: #2e2e2e
 }
 
 .mr-version-controls .mr-version-menus-container {
-    display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
     align-items: center;
-    padding: 16px
+    padding: 16px;
+    z-index: 199
 }
 
 .mr-version-controls .content-block {
@@ -34113,34 +34432,64 @@ ul.related-merge-requests > li gl-emoji {
     margin-right: -5px
 }
 
-.mr-widget-icon {
-    font-size: 22px;
-    margin: 0 10px 0 0
+.deploy-heading {
+    margin-top: -19px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fafafa
+}
+
+@media (min-width: 768px) {
+    .deploy-heading {
+        padding: 8px 16px
+    }
 }
 
 .deploy-heading .media-body {
-    min-width: 0
+    min-width: 0;
+    font-size: 12px;
+    margin-left: 48px
 }
 
 .deploy-body {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     flex-wrap: nowrap;
     white-space: nowrap
+}
+
+@media (max-width: 991.98px) {
+    .deploy-body {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .deploy-body .deployment-info {
+        margin-bottom: 16px
+    }
 }
 
 .deploy-body > * :not(:last-child) {
     margin-right: .3em
 }
 
-.deploy-link {
+.deploy-body svg {
+    vertical-align: text-top
+}
+
+.deploy-body .deployment-info {
+    flex: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 100px;
-    max-width: 150px;
     min-width: 0;
     max-width: 100%
+}
+
+.deploy-body .btn svg {
+    fill: #707070
 }
 
 .btn-link-retry[disabled] {
@@ -34154,12 +34503,57 @@ ul.related-merge-requests > li gl-emoji {
     text-decoration: none
 }
 
+.ci-widget-container {
+    justify-content: space-between;
+    flex: 1;
+    flex-direction: row
+}
+
+@media (max-width: 991.98px) {
+    .ci-widget-container {
+        flex-direction: column
+    }
+
+    .ci-widget-container .stage-cell .stage-container {
+        margin-top: 16px
+    }
+
+    .ci-widget-container .dropdown .mini-pipeline-graph-dropdown-menu.dropdown-menu {
+        transform: initial
+    }
+}
+
+.ci-widget-container .coverage {
+    font-size: 12px;
+    color: #707070;
+    line-height: initial
+}
+
+.ci-widget-container .mini-pipeline-graph-dropdown-toggle, .ci-widget-container .stage-cell .mini-pipeline-graph-dropdown-toggle svg {
+    height: 24px;
+    width: 24px
+}
+
 .issues-sortable-list .str-truncated {
     max-width: 90%
 }
 
+.milestones {
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 4px;
+    background-color: #f2f2f2
+}
+
 .milestones .milestone {
-    padding: 10px 16px
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 4px;
+    background-color: #fff
+}
+
+.milestones .milestone:not(:last-child) {
+    margin-bottom: 4px
 }
 
 .milestones .milestone h4 {
@@ -34168,7 +34562,25 @@ ul.related-merge-requests > li gl-emoji {
 
 .milestones .milestone .progress {
     width: 100%;
-    height: 6px
+    height: 6px;
+    margin-bottom: 4px
+}
+
+.milestones .milestone .milestone-progress a {
+    color: #1b69b6
+}
+
+.milestones .milestone .status-box {
+    font-size: 12px;
+    margin-top: 0;
+    margin-right: 4px
+}
+
+@media (max-width: 575.98px) {
+    .milestones .milestone .status-box {
+        line-height: unset;
+        padding: 4px 10px
+    }
 }
 
 .milestone-content .issues-count {
@@ -34370,6 +34782,10 @@ ul.related-merge-requests > li gl-emoji {
     padding-left: 1em
 }
 
+.milestone-range {
+    color: #919191
+}
+
 @media (max-width: 575.98px) {
     .milestone-banner-text, .milestone-banner-link {
         display: inline
@@ -34518,7 +34934,7 @@ ul.related-merge-requests > li gl-emoji {
 
 .burndown-chart .legend text {
     font-size: 13px;
-    fill: #949494
+    fill: #919191
 }
 
 .burndown-chart .legend rect {
@@ -34790,24 +35206,6 @@ ul.related-merge-requests > li gl-emoji {
     padding-bottom: 16px
 }
 
-.discussion-with-resolve-btn {
-    display: table;
-    width: 100%;
-    border-collapse: separate;
-    table-layout: auto
-}
-
-.discussion-with-resolve-btn .btn-group {
-    display: table-cell;
-    float: none;
-    width: 1%
-}
-
-.discussion-with-resolve-btn .btn-group:first-child {
-    width: 100%;
-    padding-right: 5px
-}
-
 .discussion-with-resolve-btn .discussion-actions {
     display: table
 }
@@ -35050,7 +35448,8 @@ ul.notes .discussion {
 }
 
 ul.notes .discussion .diff-content {
-    overflow: visible
+    overflow: visible;
+    padding: 0
 }
 
 ul.notes > li {
@@ -35582,7 +35981,6 @@ ul.notes .system-note .note-body {
 
 ul.notes .system-note .note-body .system-note-commit-list-toggler {
     color: #1b69b6;
-    display: none;
     padding: 10px 0 0;
     cursor: pointer;
     position: relative;
@@ -36076,7 +36474,7 @@ ul.notes .system-note .note-body .note-text.system-note-commit-list:not(.hide-sh
 .line-resolve-all {
     vertical-align: middle;
     display: inline-block;
-    padding: 6px 10px;
+    padding: 5px 10px 6px;
     background-color: #fafafa;
     border: 1px solid #e5e5e5;
     border-radius: 4px
@@ -36126,6 +36524,42 @@ ul.notes .system-note .note-body .note-text.system-note-commit-list:not(.hide-sh
 .line-resolve-btn .loading {
     margin: 0;
     height: auto
+}
+
+.files .diff-discussions .note-discussion.timeline-entry {
+    padding-left: 0
+}
+
+.files .diff-discussions .note-discussion.timeline-entry:last-child {
+    border-bottom: 0
+}
+
+.files .diff-discussions .note-discussion.timeline-entry > .timeline-entry-inner {
+    padding: 0
+}
+
+.files .diff-discussions .note-discussion.timeline-entry > .timeline-entry-inner > .timeline-content {
+    margin-left: 0
+}
+
+.files .diff-discussions .note-discussion.timeline-entry > .timeline-entry-inner > .timeline-icon {
+    display: none
+}
+
+.files .diff-discussions .note-discussion.timeline-entry .discussion-body {
+    padding-top: 0
+}
+
+.files .diff-discussions .note-discussion.timeline-entry .discussion-body .discussion-wrapper {
+    border-color: transparent
+}
+
+.files .diff-comment-form {
+    display: block
+}
+
+.files .add-diff-note svg {
+    margin-top: 4px
 }
 
 .notification-list-item {
@@ -36523,6 +36957,16 @@ ul.notes .system-note .note-body .note-text.system-note-commit-list:not(.hide-sh
     right: -7px;
     top: 10px;
     border-bottom: 2px solid #e5e5e5
+}
+
+.stage-cell .stage-container.mr-widget-pipeline-stages + .stage-container {
+    margin-left: 4px
+}
+
+.stage-cell .stage-container.mr-widget-pipeline-stages:not(:last-child)::after {
+    width: 4px;
+    right: -4px;
+    top: 11px
 }
 
 .admin-builds-table .ci-table td:last-child {
@@ -37334,7 +37778,7 @@ button.mini-pipeline-graph-dropdown-toggle:hover .fa.fa-caret-down {
     margin-left: 10px
 }
 
-.pipelines-container .top-area .nav-controls > .btn:last-child, .pipelines-container .markdown-body-page-header .nav-controls > .btn:last-child {
+.pipelines-container .top-area .nav-controls > .btn:last-child, .pipelines-container .wiki-page-header .nav-controls > .btn:last-child {
     float: none
 }
 
@@ -37826,7 +38270,7 @@ table.u2f-registrations th:not(:last-child), table.u2f-registrations td:not(:las
 }
 
 .application-theme label {
-    margin: 0 16px 16px 0;
+    margin: 0 32px 16px 0;
     text-align: center
 }
 
@@ -37834,7 +38278,7 @@ table.u2f-registrations th:not(:last-child), table.u2f-registrations td:not(:las
     font-size: 0;
     height: 48px;
     border-radius: 4px;
-    min-width: 135px;
+    min-width: 112px;
     margin-bottom: 8px
 }
 
@@ -37883,7 +38327,8 @@ table.u2f-registrations th:not(:last-child), table.u2f-registrations td:not(:las
 }
 
 .syntax-theme label {
-    margin-right: 20px;
+    margin-right: 32px;
+    margin-bottom: 16px;
     text-align: center
 }
 
@@ -38572,7 +39017,7 @@ table.u2f-registrations th:not(:last-child), table.u2f-registrations td:not(:las
     padding: 8px 0;
     text-align: center;
     background-color: #fff;
-    color: #949494;
+    color: #919191;
     transform: translateY(-50%);
     font-size: 12px;
     font-weight: 600;
@@ -39147,7 +39592,8 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     height: calc(100vh - 40px);
     margin-top: 0;
     border-top: 1px solid #eaeaea;
-    padding-bottom: 25px
+    padding-bottom: 25px;
+    color: #2e2e2e
 }
 
 .ide-view.is-collapsed .ide-file-list {
@@ -39170,12 +39616,8 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     cursor: pointer
 }
 
-.ide-file-list .file.file-open {
-    background: #f0f0f0
-}
-
 .ide-file-list .file.file-active {
-    font-weight: 600
+    background: #f2f2f2
 }
 
 .ide-file-list .file .ide-file-name {
@@ -39183,7 +39625,9 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: inherit;
-    line-height: 22px
+    line-height: 16px;
+    display: inline-block;
+    height: 18px
 }
 
 .ide-file-list .file .ide-file-name svg {
@@ -39213,8 +39657,8 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     display: none
 }
 
-.ide-file-list .file:hover, .ide-file-list .file:focus {
-    background: #f0f0f0
+.ide-file-list .file .ide-new-btn .btn {
+    padding: 2px 5px
 }
 
 .ide-file-list .file:hover .ide-new-btn, .ide-file-list .file:focus .ide-new-btn {
@@ -39403,8 +39847,8 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
 }
 
 .blob-editor-container .monaco-diff-editor.vs .margin {
-    background-color: #fafafa;
-    border-right: 1px solid #f0f0f0
+    background-color: #fff;
+    border-right: 1px solid #f2f2f2
 }
 
 .blob-editor-container .monaco-diff-editor.vs .margin .line-insert {
@@ -39423,6 +39867,13 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
 .multi-file-editor-holder {
     height: 100%;
     min-height: 0
+}
+
+.multi-file-editor-holder.is-readonly .monaco-editor, .multi-file-editor-holder.is-readonly .monaco-editor-background,
+.multi-file-editor-holder.is-readonly .monaco-editor .inputarea.ime-input,
+.multi-file-editor-holder .editor.original .monaco-editor, .multi-file-editor-holder .editor.original .monaco-editor-background,
+.multi-file-editor-holder .editor.original .monaco-editor .inputarea.ime-input {
+    background-color: #fafafa
 }
 
 .preview-container {
@@ -39449,23 +39900,22 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     text-align: center
 }
 
-.preview-container .file-container .markdown-body {
+.preview-container .file-container .file-content {
     padding: 16px;
     max-width: 100%;
     max-height: 100%
 }
 
-.preview-container .file-container .markdown-body img {
-    max-width: 90%;
-    max-height: 90%
+.preview-container .file-container .file-content img {
+    max-width: 90%
 }
 
-.preview-container .file-container .markdown-body .isZoomable {
+.preview-container .file-container .file-content .isZoomable {
     cursor: pointer;
     cursor: zoom-in
 }
 
-.preview-container .file-container .markdown-body .isZoomable.isZoomed {
+.preview-container .file-container .file-content .isZoomable.isZoomed {
     cursor: pointer;
     cursor: zoom-out;
     max-width: none;
@@ -39536,11 +39986,11 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     overflow: scroll
 }
 
-.multi-file-preview-holder .markdown-body.code {
+.multi-file-preview-holder .file-content.code {
     display: flex
 }
 
-.multi-file-preview-holder .markdown-body.code i {
+.multi-file-preview-holder .file-content.code i {
     margin-left: -10px
 }
 
@@ -39548,12 +39998,12 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     min-width: 50px
 }
 
-.multi-file-preview-holder .markdown-body, .multi-file-preview-holder .line-numbers,
+.multi-file-preview-holder .file-content, .multi-file-preview-holder .line-numbers,
 .multi-file-preview-holder .blob-content, .multi-file-preview-holder .code {
     min-height: 100%
 }
 
-.markdown-body.blob-no-preview a {
+.file-content.blob-no-preview a {
     margin-left: auto;
     margin-right: auto
 }
@@ -39653,25 +40103,9 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     min-height: 60px
 }
 
-.multi-file-commit-list .multi-file-commit-list-item {
-    margin-left: 0;
-    margin-right: 0
-}
-
 .multi-file-commit-list.form-text.text-muted {
     margin-left: 0;
     right: 0
-}
-
-.multi-file-commit-list-item .multi-file-discard-btn {
-    display: none;
-    margin-top: -2px;
-    margin-left: auto;
-    color: #1b69b6
-}
-
-.multi-file-commit-list-item:hover .multi-file-discard-btn {
-    display: flex
 }
 
 .multi-file-addition, .multi-file-addition-solid {
@@ -39701,7 +40135,7 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     margin-left: 3px
 }
 
-.multi-file-commit-list-item, .ide-file-list .file {
+.multi-file-commit-list-path, .ide-file-list .file {
     display: flex;
     align-items: center;
     margin-left: -8px;
@@ -39711,17 +40145,21 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     text-align: left
 }
 
-.multi-file-commit-list-item:hover, .multi-file-commit-list-item:focus,
+.multi-file-commit-list-path:hover, .multi-file-commit-list-path:focus,
 .ide-file-list .file:hover, .ide-file-list .file:focus {
-    background: #f0f0f0
+    background: #f2f2f2
+}
+
+.multi-file-commit-list-path:active, .ide-file-list .file:active {
+    background: #dfdfdf
 }
 
 .multi-file-commit-list-path {
-    padding: 0;
-    background: none;
-    border: 0;
-    text-align: left;
-    width: 100%
+    cursor: pointer
+}
+
+.multi-file-commit-list-path.is-active {
+    background-color: #f0f0f0
 }
 
 .multi-file-commit-list-path:hover, .multi-file-commit-list-path:focus {
@@ -39740,15 +40178,21 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     text-overflow: ellipsis;
     vertical-align: top;
     white-space: nowrap;
-    max-width: 100%
-}
-
-.multi-file-commit-list-file-path:hover {
-    text-decoration: underline
+    max-width: calc(100% - 30px)
 }
 
 .multi-file-commit-list-file-path:active {
     text-decoration: none
+}
+
+.multi-file-discard-btn {
+    top: 4px;
+    right: 8px;
+    bottom: 4px
+}
+
+.multi-file-discard-btn svg {
+    top: 0
 }
 
 .multi-file-commit-form {
@@ -39933,18 +40377,20 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
 }
 
 .ide-staged-action-btn {
-    margin-left: auto;
-    line-height: 22px
+    width: 22px;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.ide-staged-action-btn > svg {
+    top: 0
 }
 
 .ide-commit-file-count {
     min-width: 22px;
-    margin-left: auto;
     background-color: #fafafa;
-    border-radius: 4px;
-    border: 1px solid #eaeaea;
-    line-height: 20px;
-    text-align: center
+    border: 1px solid #eaeaea
 }
 
 .ide-commit-radios label {
@@ -40213,7 +40659,7 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
 }
 
 .ide-context-header .avatar {
-    flex: 0 0 40px
+    flex: 0 0 38px
 }
 
 .ide-context-header .ide-merge-requests-dropdown.dropdown-menu {
@@ -40403,6 +40849,15 @@ ul.notes > li .note-body .note-text .protected-tags-list table td:not(:last-chil
     color: #707070
 }
 
+.ide-merge-request-info .detail-page-header {
+    line-height: initial;
+    min-height: 38px
+}
+
+.ide-merge-request-info .issuable-details {
+    overflow: auto
+}
+
 .runner-state {
     padding: 6px 12px;
     margin-right: 10px;
@@ -40567,7 +41022,7 @@ input[type="checkbox"]:hover {
 }
 
 .search .search-input-wrap .dropdown-content {
-    max-height: 302px
+    max-height: none
 }
 
 .search.search-active form {
@@ -40576,7 +41031,7 @@ input[type="checkbox"]:hover {
 }
 
 .search.search-active form .search-input-wrap .search-icon, .search.search-active form .search-input-wrap .clear-icon {
-    color: #949494;
+    color: #919191;
     transition: color ease-in-out 0.15s
 }
 
@@ -40586,7 +41041,7 @@ input[type="checkbox"]:hover {
 }
 
 .search.search-active form .search-input::placeholder {
-    color: #949494
+    color: #919191
 }
 
 .search.search-active .location-badge {
@@ -40742,7 +41197,7 @@ input[type="checkbox"]:hover {
 
 .settings-content {
     max-height: 1px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     padding-right: 110px;
     animation: collapseMaxHeight 300ms ease-out;
     pointer-events: none
@@ -40871,6 +41326,20 @@ input[type="checkbox"]:hover {
     display: block
 }
 
+.initialize-with-readme-setting .form-check {
+    margin-bottom: 10px
+}
+
+.initialize-with-readme-setting .form-check .option-title {
+    font-weight: 400;
+    display: inline-block;
+    color: #2e2e2e
+}
+
+.initialize-with-readme-setting .form-check .option-description {
+    color: #54565b
+}
+
 .nested-settings {
     padding-left: 20px
 }
@@ -40975,16 +41444,8 @@ input[type="checkbox"]:hover {
     background: #fff
 }
 
-.modal-doorkeepr-auth .scope-description, .doorkeeper-app-form .scope-description {
-    color: #707070
-}
-
 .modal-doorkeepr-auth .modal-body {
     padding: 16px
-}
-
-.doorkeeper-app-form .scope-description {
-    margin: 0 0 5px 17px
 }
 
 .deprecated-service {
@@ -41001,7 +41462,8 @@ input[type="checkbox"]:hover {
 }
 
 .created-deploy-token-container .btn-clipboard {
-    margin-left: 5px
+    background-color: #fff;
+    border: 1px solid #dfdfdf
 }
 
 .created-deploy-token-container .deploy-token-help-block {
@@ -41786,63 +42248,63 @@ table .sherlock-code {
     color: #bbb
 }
 
-.new-markdown-body-page .new-markdown-body-page-slug-tip {
+.new-wiki-page .new-wiki-page-slug-tip {
     display: inline-block;
     max-width: 100%;
     margin-top: 5px
 }
 
-.markdown-body-form .edit-markdown-body-page-slug-tip {
+.wiki-form .edit-wiki-page-slug-tip {
     display: inline-block;
     max-width: 100%;
     margin-top: 5px
 }
 
-.title .edit-markdown-body-header {
+.title .edit-wiki-header {
     width: 780px;
     margin-left: auto;
     margin-right: auto;
     padding-right: 7px
 }
 
-.markdown-body-page-header {
+.wiki-page-header {
     position: relative
 }
 
-.markdown-body-page-header .markdown-body-breadcrumb {
+.wiki-page-header .wiki-breadcrumb {
     border-bottom: 1px solid #f0f0f0;
     padding: 11px 0
 }
 
-.markdown-body-page-header .markdown-body-page-title {
+.wiki-page-header .wiki-page-title {
     margin: 0;
     font-size: 22px
 }
 
-.markdown-body-page-header .markdown-body-last-edit-by {
+.wiki-page-header .wiki-last-edit-by {
     display: block;
     color: #707070
 }
 
-.markdown-body-page-header .markdown-body-last-edit-by strong {
+.wiki-page-header .wiki-last-edit-by strong {
     color: #2e2e2e
 }
 
-.markdown-body-page-header .light, .markdown-body-page-header .description-block {
+.wiki-page-header .light, .wiki-page-header .description-block {
     font-weight: 400;
     color: #707070
 }
 
-.markdown-body-page-header .git-access-header {
+.wiki-page-header .git-access-header {
     padding: 16px 0 10px
 }
 
-.markdown-body-page-header .git-clone-holder {
+.wiki-page-header .git-clone-holder {
     width: 100%;
     padding-bottom: 40px
 }
 
-.markdown-body-page-header button.sidebar-toggle {
+.wiki-page-header button.sidebar-toggle {
     position: absolute;
     right: 0;
     top: 11px;
@@ -41850,50 +42312,50 @@ table .sherlock-code {
 }
 
 @media (min-width: 576px) {
-    .markdown-body-page-header.has-sidebar-toggle {
+    .wiki-page-header.has-sidebar-toggle {
         padding-right: 40px
     }
 
-    .markdown-body-page-header .git-clone-holder {
+    .wiki-page-header .git-clone-holder {
         width: 480px;
         padding-bottom: 16px
     }
 
-    .markdown-body-page-header .nav-controls {
+    .wiki-page-header .nav-controls {
         width: auto;
         min-width: 50%
     }
 }
 
 @media (min-width: 768px) {
-    .markdown-body-page-header.has-sidebar-toggle {
+    .wiki-page-header.has-sidebar-toggle {
         padding-right: 0
     }
 
-    .markdown-body-page-header button.sidebar-toggle {
+    .wiki-page-header button.sidebar-toggle {
         display: none
     }
 }
 
-.markdown-body-git-access {
+.wiki-git-access {
     margin: 16px 0
 }
 
-.markdown-body-git-access h3 {
+.wiki-git-access h3 {
     font-size: 19px;
     font-weight: 400;
     margin: 16px 0
 }
 
-.right-sidebar.markdown-body-sidebar {
+.right-sidebar.wiki-sidebar {
     padding: 0
 }
 
-.right-sidebar.markdown-body-sidebar.right-sidebar-collapsed {
+.right-sidebar.wiki-sidebar.right-sidebar-collapsed {
     display: none
 }
 
-.right-sidebar.markdown-body-sidebar .sidebar-container {
+.right-sidebar.wiki-sidebar .sidebar-container {
     padding: 16px 0;
     width: calc(100% + 100px);
     padding-right: 100px;
@@ -41903,66 +42365,66 @@ table .sherlock-code {
     -webkit-overflow-scrolling: touch
 }
 
-.right-sidebar.markdown-body-sidebar .blocks-container {
+.right-sidebar.wiki-sidebar .blocks-container {
     padding: 0 16px
 }
 
-.right-sidebar.markdown-body-sidebar .block {
+.right-sidebar.wiki-sidebar .block {
     width: 100%
 }
 
-.right-sidebar.markdown-body-sidebar a {
+.right-sidebar.wiki-sidebar a {
     color: #7e7c7c
 }
 
-.right-sidebar.markdown-body-sidebar a:hover, .right-sidebar.markdown-body-sidebar .participants-more .btn-link:hover,
-.participants-more .right-sidebar.markdown-body-sidebar .btn-link:hover,
-.right-sidebar.markdown-body-sidebar .user-list-more .btn-link:hover, .user-list-more .right-sidebar.markdown-body-sidebar .btn-link:hover,
-.right-sidebar.markdown-body-sidebar a.active {
+.right-sidebar.wiki-sidebar a:hover, .right-sidebar.wiki-sidebar .participants-more .btn-link:hover,
+.participants-more .right-sidebar.wiki-sidebar .btn-link:hover,
+.right-sidebar.wiki-sidebar .user-list-more .btn-link:hover, .user-list-more .right-sidebar.wiki-sidebar .btn-link:hover,
+.right-sidebar.wiki-sidebar a.active {
     text-decoration: none
 }
 
-.right-sidebar.markdown-body-sidebar a:hover span, .right-sidebar.markdown-body-sidebar .participants-more .btn-link:hover span,
-.participants-more .right-sidebar.markdown-body-sidebar .btn-link:hover span,
-.right-sidebar.markdown-body-sidebar .user-list-more .btn-link:hover span,
-.user-list-more .right-sidebar.markdown-body-sidebar .btn-link:hover span,
-.right-sidebar.markdown-body-sidebar a.active span {
+.right-sidebar.wiki-sidebar a:hover span, .right-sidebar.wiki-sidebar .participants-more .btn-link:hover span,
+.participants-more .right-sidebar.wiki-sidebar .btn-link:hover span,
+.right-sidebar.wiki-sidebar .user-list-more .btn-link:hover span,
+.user-list-more .right-sidebar.wiki-sidebar .btn-link:hover span,
+.right-sidebar.wiki-sidebar a.active span {
     text-decoration: underline
 }
 
-.right-sidebar.markdown-body-sidebar .active > a {
+.right-sidebar.wiki-sidebar .active > a {
     color: #000
 }
 
-.right-sidebar.markdown-body-sidebar ul.markdown-body-pages, .right-sidebar.markdown-body-sidebar ul.markdown-body-pages li {
+.right-sidebar.wiki-sidebar ul.wiki-pages, .right-sidebar.wiki-sidebar ul.wiki-pages li {
     list-style: none;
     padding: 0;
     margin: 0
 }
 
-.right-sidebar.markdown-body-sidebar ul.markdown-body-pages li {
+.right-sidebar.wiki-sidebar ul.wiki-pages li {
     margin: 5px 0 10px
 }
 
-.right-sidebar.markdown-body-sidebar ul.markdown-body-pages ul {
+.right-sidebar.wiki-sidebar ul.wiki-pages ul {
     padding-left: 15px
 }
 
-.right-sidebar.markdown-body-sidebar .markdown-body-sidebar-header {
+.right-sidebar.wiki-sidebar .wiki-sidebar-header {
     padding: 0 16px 16px
 }
 
-.right-sidebar.markdown-body-sidebar .markdown-body-sidebar-header .gutter-toggle {
+.right-sidebar.wiki-sidebar .wiki-sidebar-header .gutter-toggle {
     margin-top: 0
 }
 
-ul.markdown-body-pages-list.content-list ul {
+ul.wiki-pages-list.content-list ul {
     list-style: none;
     margin-left: 0;
     padding-left: 15px
 }
 
-ul.markdown-body-pages-list.content-list ul li {
+ul.wiki-pages-list.content-list ul li {
     padding: 5px 0
 }
 
@@ -43178,7 +43640,8 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #c5c8c6
 }
 
-.code.dark .line_holder.match .line_content {
+.code.dark .line_holder.match .line_content, .code.dark .line_holder.old-nonewline .line_content,
+.code.dark .line_holder.new-nonewline .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
@@ -43540,7 +44003,8 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #f8f8f2
 }
 
-.code.monokai .line_holder.match .line_content {
+.code.monokai .line_holder.match .line_content, .code.monokai .line_holder.old-nonewline .line_content,
+.code.monokai .line_holder.new-nonewline .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
@@ -43892,7 +44356,8 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #93a1a1
 }
 
-.code.solarized-dark .line_holder.match .line_content {
+.code.solarized-dark .line_holder.match .line_content, .code.solarized-dark .line_holder.old-nonewline .line_content,
+.code.solarized-dark .line_holder.new-nonewline .line_content {
     color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1)
 }
@@ -44271,7 +44736,8 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #586e75
 }
 
-.code.solarized-light .line_holder.match .line_content {
+.code.solarized-light .line_holder.match .line_content, .code.solarized-light .line_holder.old-nonewline .line_content,
+.code.solarized-light .line_holder.new-nonewline .line_content {
     color: rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.4)
 }
@@ -44652,7 +45118,8 @@ ul.markdown-body-pages-list.content-list ul li {
     color: #2e2e2e
 }
 
-.code.white .line_holder.match .line_content {
+.code.white .line_holder.match .line_content, .code.white .line_holder .new-nonewline.line_content,
+.code.white .line_holder .old-nonewline.line_content {
     color: rgba(0, 0, 0, 0.3);
     background-color: #fafafa
 }
@@ -45957,8 +46424,36 @@ ul.markdown-body-pages-list.content-list ul li {
     display: block
 }
 
+.mr-widget-approvals-container {
+    align-items: center
+}
+
 .mr-widget-approvals-container .zero-approvals .ci-status-icon-success svg {
     fill: #c4c4c4
+}
+
+@media (max-width: 991.98px) {
+    .media-section {
+        align-items: flex-start
+    }
+
+    .media-section .media-body {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}
+
+@media (min-width: 992px) {
+    .media-section .code-text {
+        align-self: center
+    }
+}
+
+@media (min-width: 768px) {
+    .approvals-body {
+        display: flex;
+        align-items: center
+    }
 }
 
 .approvals-body .approve-btn {
@@ -46003,6 +46498,24 @@ ul.markdown-body-pages-list.content-list ul li {
     position: relative
 }
 
+.mr-state-widget .media-section {
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: -1px
+}
+
+.mr-state-widget .media-section:first-of-type {
+    border-radius: 4px 4px 0 0
+}
+
+.mr-widget-section .media {
+    align-items: center
+}
+
+.mr-widget-section .code-text {
+    flex: 1
+}
+
 .linked-pipeline-mini-list {
     display: inline-block
 }
@@ -46019,7 +46532,10 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .linked-pipeline-mini-list .arrow-icon svg {
-    fill: #e5e5e5
+    fill: #e5e5e5;
+    position: relative;
+    top: 4px;
+    left: -1px
 }
 
 .linked-pipeline-mini-list:hover .linked-pipeline-mini-item {
@@ -46279,7 +46795,7 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .linked-pipelines-column.stage-column .linked-pipeline.build {
-    height: 40px
+    height: 41px
 }
 
 .linked-pipelines-column.stage-column .linked-pipeline.build.flat-connector-before::before {
@@ -46369,7 +46885,7 @@ ul.markdown-body-pages-list.content-list ul li {
 
 .cross-project-triangle {
     position: absolute;
-    top: 48px;
+    top: 50px;
     width: 0;
     height: 0;
     border-bottom: 7px solid transparent;
@@ -46490,6 +47006,32 @@ ul.markdown-body-pages-list.content-list ul li {
 
 .git-clone-holder .btn-geo {
     border-left: none
+}
+
+.security-dashboard .card-header {
+    padding: 16px;
+    background-color: #fafafa
+}
+
+.security-dashboard .card-header .user-avatar-link {
+    color: #2e2e2e;
+    font-weight: 600
+}
+
+.security-dashboard .card-header .user-avatar-link .avatar {
+    margin-right: 4px
+}
+
+.security-dashboard .card-header svg {
+    vertical-align: sub
+}
+
+.security-dashboard .card-header .avatar {
+    float: none
+}
+
+.security-dashboard .split-report-section:last-of-type {
+    border-bottom: none
 }
 
 .user-callout.promotion-callout {
@@ -46693,7 +47235,7 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .roadmap-timeline-section .timeline-header-item .item-label, .roadmap-timeline-section .timeline-header-item .item-sublabel .sublabel-value {
-    color: #949494;
+    color: #919191;
     font-weight: 400
 }
 
@@ -46764,7 +47306,7 @@ ul.markdown-body-pages-list.content-list ul li {
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 90%;
     line-height: 1.5;
     padding: 2px 0
 }
@@ -46818,7 +47360,7 @@ ul.markdown-body-pages-list.content-list ul li {
     left: 0;
     width: 320px;
     padding: 8px 16px;
-    font-size: 12px;
+    font-size: 90%;
     background-color: #fff;
     z-index: 2
 }
@@ -46965,11 +47507,27 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .split-report-section .media {
-    align-items: center
+    align-items: center;
+    padding: 10px;
+    line-height: 20px
+}
+
+.split-report-section .media .space-children:first-child {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-left: 1px
 }
 
 .split-report-section .code-text {
-    width: 100%
+    width: 100%;
+    flex: 1
+}
+
+.mr-widget-grouped-section {
+    margin-top: 16px
 }
 
 .mr-widget-grouped-section .report-block-container {
@@ -47009,7 +47567,7 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .report-block-list .license-item .license-dependencies {
-    color: #949494
+    color: #919191
 }
 
 .report-block-list .license-item .btn-show-all-packages {
@@ -47051,7 +47609,7 @@ ul.markdown-body-pages-list.content-list ul li {
 }
 
 .report-block-list-issue-description-text::after {
-    content: "\00a0"
+    content: '\00a0'
 }
 
 .report-block-list-issue-description {
@@ -47078,6 +47636,10 @@ ul.markdown-body-pages-list.content-list ul li {
 .modal-security-report-dast .modal-dialog, .modal-security-report-dast .modal-no-backdrop {
     width: 800px;
     max-width: 800px
+}
+
+.modal-security-report-dast.modal-hide-footer .modal-footer {
+    display: none
 }
 
 .service-desk-issues .non-empty-state {
@@ -47445,6 +48007,4 @@ ul.markdown-body-pages-list.content-list ul li {
     cursor: not-allowed
 }
 
-pre.js-render-math {
-    text-align: center;
-}
+
