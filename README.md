@@ -1,3 +1,7 @@
+[![Unix Build Status][travis-image]][travis-link]
+[![Package Control Downloads][pc-image]][pc-link]
+![License][license-image]
+
 # Markdown Preview
 
 Preview and build your markdown files quickly in your web browser.
@@ -49,3 +53,8 @@ The code is available at [GitHub][home] under the [MIT license][license].
 [pymd]: https://github.com/Python-Markdown/markdown
 [pymdownx-docs]: http://facelessuser.github.io/pymdown-extensions/usage_notes/
 [tommi]: https://github.com/tommi
+[travis-image]: https://img.shields.io/travis/facelessuser/MarkdownPreview/master.svg
+[travis-link]: https://travis-ci.org/facelessuser/MarkdownPreview
+[pc-image]: https://img.shields.io/packagecontrol/dt/MarkdownPreview.svg
+[pc-link]: https://packagecontrol.io/packages/MarkdownPreview
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
