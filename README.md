@@ -12,7 +12,7 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 
 - Markdown preview using the [python-markdown][pymd] with syntax highlighting via Pygments and optional 3rd party extensions ([pymdown-extensions][pymdownx-docs] included by default).
 - Markdown previews via the GitHub API.
-- Markdown previews via the GitLab API.
+- Markdown previews via the GitLab API thanks to [@hadisfr][hadisfr].
 - Ability use other external Markdown parsers.
 - Build markdown file using Sublime Text build system.
 - Browser preview auto reload on save if you have the [LiveReload plugin][live-reload] installed.
@@ -49,6 +49,7 @@ The code is available at [GitHub][home] under the [MIT license][license].
 [hexatrope]: https://github.com/hexatrope
 [home]: https://github.com/revolunet/sublimetext-markdown-preview
 [hozaka]: https://github.com/hozaka
+[hadisfr]: https://github.com/hadisfr
 [issue]: https://github.com/facelessuser/MarkdownPreview/issues
 [license]: http://revolunet.mit-license.org
 [live-reload]: https://packagecontrol.io/packages/LiveReload
