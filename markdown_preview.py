@@ -794,9 +794,9 @@ class GitlabCompiler(OnlineCompiler):
 
     def fix_images_src(self, html):
         """Fix src of images tag which is replaced with a placeholder for lazy loading."""
-        re_header = re.compile(r'(?P<open><img)(?P<text1>.*?)(?P<src>src=".*")(?P<text2>.*?)' +
-                               '(?P<data_src>data-src=".*")(?P<text3>.*?)(?P<close>>)', re.DOTALL)
-        return re_header.sub(
+        re_image = re.compile(r'(?P<open><img)(?P<text1>[^>]*?)(?P<src>src="[^>]*")(?P<text2>[^>]*?)' +
+                              r'(?P<data_src>data-src="[^>]*")(?P<text3>[^>]*?)(?P<close>>)', re.DOTALL)
+        return re_image.sub(
             lambda m: m.group('open') + m.group('text1') + m.group('data_src')[5:] + m.group('text2') +
             m.group('text3') + m.group('close'), html)
 
