@@ -25,11 +25,13 @@ To load MathJax support, simply include the MathJax library along with the math 
 If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to your liking, though you may have to modify your MathJax config to accommodate certain changes. Check out Arithmatex documentation for more info.
 
 ```js
-    "markdown_extensions": {
-        "pymdownx.arithmatex": {
-            "generic": true
+    "markdown_extensions": [
+        {
+            "pymdownx.arithmatex": {
+                "generic": true,
+            },
         }
-    }
+    ]
 ```
 
 ## KaTeX Support
@@ -67,11 +69,13 @@ You also must provide the KaTeX CSS file. Optionally, if you'd like equation num
 If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to your liking, though you may have to modify your KaTeX config to accommodate certain changes. Check out Arithmatex documentation for more info.
 
 ```js
-    "markdown_extensions": {
-        "pymdownx.arithmatex": {
-            "generic": true
+    "markdown_extensions": [
+        {
+            "pymdownx.arithmatex": {
+                "generic": true,
+            },
         }
-    }
+    ]
 ```
 
 ## UML Support
