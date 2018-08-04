@@ -213,7 +213,8 @@ class MarkdownCheatsheetCommand(sublime_plugin.TextCommand):
 class Compiler(object):
     """Base compiler that does the markdown converting."""
 
-    default_css = ["res://MarkdownPreview/css/markdown.css"]
+    compiler_name = ""
+    default_css = []
     default_js = []
 
     def isurl(self, css_name):
@@ -225,17 +226,20 @@ class Compiler(object):
 
     def get_default_css(self):
         """Locate the correct CSS with the 'css' setting."""
-        css_list = self.settings.get('css', ['default'])
+        css_files = self.settings.get('css', ['default'])
 
-        if not isinstance(css_list, list):
-            css_list = [css_list]
+        if isinstance(css_files, dict):
+           css_files = css_files.get(self.compiler_name, ["default"])
 
-        if 'default' in css_list:
-            i = css_list.index('default')
-            css_list[i:i + 1] = self.default_css
+        if isinstance(css_files, str):
+            css_files = [css_files]
+
+        if 'default' in css_files:
+            i = css_files.index('default')
+            css_files[i:i + 1] = self.default_css
 
         css_text = []
-        for css_name in css_list:
+        for css_name in css_files:
             if css_name.startswith('res://'):
                 internal_file = os.path.join(sublime.packages_path(), os.path.normpath(css_name[6:]))
                 if os.path.exists(internal_file):
@@ -274,7 +278,11 @@ class Compiler(object):
         """Return JavaScript."""
         js_files = self.settings.get('js', ['default'])
 
-        if not isinstance(js_files, list):
+
+        if isinstance(js_files, dict):
+           js_files = js_files.get(self.compiler_name, ["default"])
+
+        if isinstance(js_files, str):
             js_files = [js_files]
 
         if 'default' in js_files:
@@ -552,7 +560,6 @@ class Compiler(object):
 class OnlineCompiler(Compiler):
     """Online compiler."""
 
-    compiler_name = ""
     content_type = "application/json"
     url = ""
     authentication_settings_key = ""
@@ -809,18 +816,18 @@ class ExternalMarkdownCompiler(Compiler):
     def __init__(self, parser):
         """Initialize."""
 
-        self.parser = parser
+        self.compiler_name = parser
         super(ExternalMarkdownCompiler, self).__init__()
 
     def parser_specific_convert(self, markdown_text):
         """Convert Markdown with external parser."""
         import subprocess
         settings = sublime.load_settings("MarkdownPreview.sublime-settings")
-        binary = settings.get('markdown_binary_map', {})[self.parser]
+        binary = settings.get('markdown_binary_map', {})[self.compiler_name]
 
         if len(binary) and os.path.exists(binary[0]):
             cmd = binary
-            sublime.status_message('converting markdown with %s...' % self.parser)
+            sublime.status_message('converting markdown with %s...' % self.compiler_name)
             if sublime.platform() == "windows":
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -850,6 +857,7 @@ class ExternalMarkdownCompiler(Compiler):
 class MarkdownCompiler(Compiler):
     """Python Markdown compiler."""
 
+    compiler_name = "markdown"
     default_css = ["res://MarkdownPreview/css/markdown.css"]
 
     def set_highlight(self, pygments_style, css_class):

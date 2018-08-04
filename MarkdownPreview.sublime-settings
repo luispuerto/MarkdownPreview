@@ -196,7 +196,11 @@
 
         Should be an array, but will take a single string to support legacy convention.
     */
-    "css": ["default"],
+    "css": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 
     /*
         Allow CSS overrides
@@ -232,7 +236,11 @@
 
         Should be an array, but will take a single string to stay consistent with "css".
     */
-    "js": ["default"],
+    "js": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 
     /*
         Sets syntax highlighting theme for blocks of code.
