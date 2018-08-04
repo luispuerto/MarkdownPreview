@@ -229,7 +229,7 @@ class Compiler(object):
         css_files = self.settings.get('css', ['default'])
 
         if isinstance(css_files, dict):
-           css_files = css_files.get(self.compiler_name, ["default"])
+            css_files = css_files.get(self.compiler_name, ["default"])
 
         if isinstance(css_files, str):
             css_files = [css_files]
@@ -278,9 +278,8 @@ class Compiler(object):
         """Return JavaScript."""
         js_files = self.settings.get('js', ['default'])
 
-
         if isinstance(js_files, dict):
-           js_files = js_files.get(self.compiler_name, ["default"])
+            js_files = js_files.get(self.compiler_name, ["default"])
 
         if isinstance(js_files, str):
             js_files = [js_files]
