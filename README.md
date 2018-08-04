@@ -4,7 +4,7 @@
 
 # Markdown Preview
 
-Preview and build your markdown files quickly in your web browser.
+Preview and build your markdown files quickly in your web browser using [Sublime Text](https://www.sublimetext.com/) 3.
 
 You can use the builtin [Python Markdown][pymd] parser (offline) or use the [GitHub Markdown API][gfm-api] (online) for the conversion.
 
