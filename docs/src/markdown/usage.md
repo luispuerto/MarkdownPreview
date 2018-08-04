@@ -70,7 +70,7 @@ To get live updates while editing a file after preview, you need to do the follo
 1. Enable the `enable_autoreload` setting in `MarkdownPreview.sublime-settings`.
     ```js
          /*
-            Enable auto-reloaded on save. Will not work if GitHub parser is used without oauth key specified.
+            Enable auto-reloaded on save. Will not work if GitHub parser GitLab parser is used without oauth key specified.
         */
         "enable_autoreload": true,
     ```
@@ -143,7 +143,7 @@ External parser commands and arguments should first be mapped to a name.  Each b
 Then the name can be placed in `enabled_parsers` to enable use of the new parser.
 
 ```js
-    "enabled_parsers": ["markdown", "github", "multimarkdown"],
+    "enabled_parsers": ["markdown", "github", "gitlab", "multimarkdown"],
 ```
 
 ## Configuring Python Markdown Extensions
@@ -233,6 +233,7 @@ And the parser that is used when building is set in the `parser` setting:
         default - The current default parser is python-markdown parser.
         markdown - Use the built-in python-markdown parser
         github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see https://help.github.com/articles/github-flavored-markdown/
+        gitlab - Use the gitlab API to convert markdown, so you can use GitLab flavored Markdown, see https://docs.gitlab.com/ee/user/markdown.html
     */
     "parser": "markdown",
 ```
@@ -443,12 +444,42 @@ GFM does not auto guess language in fenced blocks, but Markdown Preview does thi
 
 As mentioned earlier, a number of extensions are included by default. You can remove ones that are not part of GFM.
 
-## Including CSS
+## Parsing GitLab Flavored Markdown
 
-By default Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the default CSS.
+GitLab Flavored Markdown (GFM) is a popular markdown, too.  Markdown Preview can handle them online.
+
+### Online
+
+Parsing GFM using the online method requires using the GitLab API as the parser.  It may also require setting `gitlab_mode` to `gfm` (default) to get things like tasklists to render properly.
 
 ```js
-    "css": ["default"],
+    /*
+        Default mode for the gitlab Markdown parser : markdown (documents) or gfm (comments)
+        see https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
+    */
+    "gitlab_mode": "markdown",
+```
+
+You can set your personal token in the settings as follows:
+
+```js
+    /*
+        Uses a personal token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
+        Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
+    */
+    "gitlab_personal_token": "secret",
+```
+
+## Including CSS
+
+Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the default CSS. As seen below, CSS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
+
+```js
+    "css": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 ```
 
 You can include whatever CSS you want, and even remove the `default` if you like.  It can take URLs or file paths. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.css`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
@@ -460,7 +491,9 @@ You can also override the default CSS with special file specific CSS. This CSS d
 So assuming the following configuration:
 
 ```js
-    "css": ["default"],
+    "css": {
+        "markdown": ["default"],
+    }
     // File must be of one type below
     "markdown_filetypes": [".md", ".markdown", ".mdown"],
 ```
@@ -482,13 +515,25 @@ By default, the head is always included in the HTML output. This includes the CS
     "include_head": ["build", "browser", "sublime", "clipboard", "save"]
 ```
 
+### GitLab Highlight Theme
+
+In case of using GitLab online compiler, you can set `gitlab_highlight_theme` to personalize syntax highlighting.
+
+Currently available options are "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai". Take a look at GitLab documentations [here][gitlab_highlight_theme] for more details.
+
 ## Including JavaScript
 
-JavaScript files can be included via the `js` setting.  It is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
+Markdown Preview include default JS (if required for the given parser) via the `js` setting.  It uses the special keyword `default` to represent the default JS. As seen below, JS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
 
 ```js
-    "js": [],
+    "js": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 ```
+
+You can include whatever CSS you want, and even remove the `default` if you like. Each entry in the dictionary is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
 
 ## CriticMarkup
 

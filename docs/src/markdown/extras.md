@@ -3,7 +3,7 @@
 ## MathJax Support
 
 !!! danger
-    GitHub is not supported with MathJax. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
+    GitHub and GitLab is not supported with MathJax. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
 
 To render Tex style math in Markdown, you can use the default MathJax configuration that is included with Markdown Preview or create and reference your own.
 
@@ -16,10 +16,12 @@ Markdown Preview provides a script in `MarkdownPreview/js/math_config.js` that u
 To load MathJax support, simply include the MathJax library along with the math config file provided by this extension. You are free to provide your own and reference it instead if you'd like to tweak the configuration:
 
 ```js
-    "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
-        "res://MarkdownPreview/js/math_config.js"
-    ]
+    "js": {
+        "markdown": [
+            "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
+            "res://MarkdownPreview/js/math_config.js"
+        ]
+    }
 ```
 
 If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to your liking, though you may have to modify your MathJax config to accommodate certain changes. Check out Arithmatex documentation for more info.
@@ -36,6 +38,9 @@ If you are using `pymdownx.arithmatex` you can configure it like so to take adva
 
 ## KaTeX Support
 
+!!! warning
+    GitLab is already configured for KaTeX by default. You should just include `default` in your CSS and JS list.
+
 !!! danger
     GitHub is not supported with KaTeX. You will have to come up with a MathJax config that works for it and escape problematic syntax that GitHub may try to convert.
 
@@ -50,20 +55,24 @@ Markdown Preview provides a script in `MarkdownPreview/js/katex_config.js` that 
 To load KaTeX support, simply include the KaTeX library along with the KaTeX configuration script provided by this extension. You are free to provide your own and reference it instead if you'd like to tweak the configuration:
 
 ```js
-    "js": [
-        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
-        "res://MarkdownPreview/js/katex_config.js"
-    ],
+    "js": {
+        "markdown": [
+            "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
+            "res://MarkdownPreview/js/katex_config.js"
+        ]
+    },
 ```
 
 You also must provide the KaTeX CSS file. Optionally, if you'd like equation numbers, a simple CSS solution is provided, though it will left align your math.  Feel free to create your own.
 
 ```js
-    "css": [
-        "default",                                                            // <- The default Markdown CSS.
-        "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css", // <- KaTeX CSS
-        "res://MarkdownPreview/css/katex_eqnum.css"                           // <- Optional equation numbering CSS
-    ],
+    "css": {
+        "markdown": [
+            "default",                                                            // <- The default Markdown CSS.
+            "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css", // <- KaTeX CSS
+            "res://MarkdownPreview/css/katex_eqnum.css"                           // <- Optional equation numbering CSS
+        ]
+    },
 ```
 
 If you are using `pymdownx.arithmatex` you can configure it like so to take advantage of the generalized configuration.  You are also free to customize Arithmatex to your liking, though you may have to modify your KaTeX config to accommodate certain changes. Check out Arithmatex documentation for more info.
