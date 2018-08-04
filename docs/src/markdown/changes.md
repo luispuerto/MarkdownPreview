@@ -2,8 +2,8 @@
 
 ## 2.2.0
 
-- Add GitLab support.
-- Add per parser support for JavaScript and CSS configurations.
+- Add basic GitLab support.
+- Add per parser support for JavaScript and CSS configurations. Please see documentation to learn the new format.
 
 ## 2.1.2
 
