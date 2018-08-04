@@ -472,10 +472,14 @@ You can set your personal token in the settings as follows:
 
 ## Including CSS
 
-By default Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the default CSS.
+Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the default CSS. As seen below, CSS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
 
 ```js
-    "css": ["default"],
+    "css": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 ```
 
 You can include whatever CSS you want, and even remove the `default` if you like.  It can take URLs or file paths. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.css`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
@@ -487,7 +491,9 @@ You can also override the default CSS with special file specific CSS. This CSS d
 So assuming the following configuration:
 
 ```js
-    "css": ["default"],
+    "css": {
+        "markdown": ["default"],
+    }
     // File must be of one type below
     "markdown_filetypes": [".md", ".markdown", ".mdown"],
 ```
@@ -517,11 +523,17 @@ Currently available options are "white" (default), "dark", "solarized-dark", "so
 
 ## Including JavaScript
 
-JavaScript files can be included via the `js` setting.  It is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
+Markdown Preview include default JS (if required for the given parser) via the `js` setting.  It uses the special keyword `default` to represent the default JS. As seen below, JS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
 
 ```js
-    "js": [],
+    "js": {
+        "markdown": ["default"],
+        "github": ["default"],
+        "gitlab": ["default"]
+    },
 ```
+
+You can include whatever CSS you want, and even remove the `default` if you like. Each entry in the dictionary is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
 
 ## CriticMarkup
 

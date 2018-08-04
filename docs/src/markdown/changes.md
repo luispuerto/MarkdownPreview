@@ -1,5 +1,10 @@
 # Changes
 
+## 2.2.0
+
+- Add GitLab support.
+- Add per parser support for JavaScript and CSS configurations.
+
 ## 2.1.2
 
 - Don't allow live reload on save if using GitHub parser with no OAuth.
