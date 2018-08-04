@@ -38,6 +38,12 @@ document.write(
 """
 
 
+def log(msg):
+    """Print the MarkdownPreview log message in console."""
+
+    print("MarkdownPreview: %s" % msg)
+
+
 def yaml_load(stream, loader=yaml.Loader, object_pairs_hook=OrderedDict):
     """
     Custom yaml loader.
@@ -118,7 +124,7 @@ def load_resource(name):
     try:
         return sublime.load_resource('Packages/MarkdownPreview/{0}'.format(name))
     except Exception:
-        print("Error while load_resource('%s')" % name)
+        log("Error while load_resource('%s')" % name)
         traceback.print_exc()
         return ''
 
@@ -154,9 +160,9 @@ def get_references(file_name, encoding="utf-8"):
                 with codecs.open(file_name, "r", encoding=encoding) as f:
                     text = f.read()
             except Exception:
-                print(traceback.format_exc())
+                log(traceback.format_exc())
         else:
-            print("Could not find reference file %s!", file_name)
+            log("Could not find reference file %s!", file_name)
     return text
 
 
@@ -226,13 +232,23 @@ class Compiler(object):
 
     def get_default_css(self):
         """Locate the correct CSS with the 'css' setting."""
-        css_files = self.settings.get('css', ['default'])
+        css_files = self.settings.get('css', {})
+
+        if isinstance(css_files, list):
+            log(
+                "Warning: The list format for CSS is deprecated, please use the dictionary format.\n"
+                "List support will be removed in the future."
+            )
+
+        if isinstance(css_files, str):
+            log(
+                "Warning: The string format for CSS is deprecated, please use the dictionary format.\n"
+                "String support will be removed in the future."
+            )
+            css_files = [css_files]
 
         if isinstance(css_files, dict):
             css_files = css_files.get(self.compiler_name, ["default"])
-
-        if isinstance(css_files, str):
-            css_files = [css_files]
 
         if 'default' in css_files:
             i = css_files.index('default')
@@ -276,13 +292,23 @@ class Compiler(object):
 
     def get_javascript(self):
         """Return JavaScript."""
-        js_files = self.settings.get('js', ['default'])
+        js_files = self.settings.get('js', {})
+
+        if isinstance(js_files, list):
+            log(
+                "Warning: The list format for JS is deprecated, please use the dictionary format.\n"
+                "List support will be removed in the future."
+            )
+
+        if isinstance(js_files, str):
+            log(
+                "Warning: The string format for JS is deprecated, please use the dictionary format.\n"
+                "String support will be removed in the future."
+            )
+            js_files = [js_files]
 
         if isinstance(js_files, dict):
             js_files = js_files.get(self.compiler_name, ["default"])
-
-        if isinstance(js_files, str):
-            js_files = [js_files]
 
         if 'default' in js_files:
             i = js_files.index('default')
@@ -686,7 +712,7 @@ class OnlineCompiler(Compiler):
             markdown_html = self.curl_convert(data)
         except Exception:
             e = sys.exc_info()[1]
-            print(e)
+            log(e)
             traceback.print_exc()
             sublime.error_message(
                 "Cannot use %s's API to convert Markdown. Please check your settings.\n\n" % self.compiler_name +
@@ -851,7 +877,7 @@ class ExternalMarkdownCompiler(Compiler):
             if p.returncode:
                 # Log info to console
                 sublime.error_message("Could not convert file! See console for more info.")
-                print(markdown_html)
+                log(markdown_html)
                 markdown_html = _CANNOT_CONVERT
         else:
             sublime.error_message("Cannot find % binary!" % self.binary)
@@ -875,6 +901,7 @@ class MarkdownCompiler(Compiler):
                         ''.join(['.' + x for x in css_class.split(' ') if x])
                     )
                 except Exception:
+                    log("Error")
                     traceback.print_exc()
                     pygments_style = 'github'
             if style is None:
@@ -1174,8 +1201,8 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
         parser = settings.get('parser', 'markdown')
         if parser == 'default':
-            print(
-                'Markdown Preview: The use of "default" as a parser is now deprecated,'
+            log(
+                'Warning: The use of "default" as a parser is now deprecated,'
                 ' please specify a valid parser name.'
             )
             parser = 'markdown'
