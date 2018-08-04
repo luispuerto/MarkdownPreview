@@ -583,11 +583,18 @@ class OnlineCompiler(Compiler):
                 self.url
             ]
 
-            token = self.settings.get(self.authentication_settings_key)
-            if token:
+            # Join together token type and value
+            # If no type is provided, we will have just the value
+            token = []
+            if self.authentication_api_type:
+                token.append(self.authentication_api_type)
+            token_value = self.settings.get(self.authentication_settings_key)
+            token.append(token_value)
+
+            if token_value:
                 curl_args[1:1] = [
                     '-H',
-                    '%s: %s %s' % (self.authentication_api_key, self.authentication_api_type, token)
+                    '%s: %s' % (self.authentication_api_key, ' '.join(token))
                 ]
 
             markdown_html = self.unpack_data(subprocess.Popen(curl_args, stdout=subprocess.PIPE).communicate()[0])
