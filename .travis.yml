@@ -17,7 +17,7 @@ install:
   - pip install flake8-builtins
   - pip install pep8-naming
   - pip install pytest
-  - pip install "mkdocs<1.0"
+  - pip install mkdocs
   - pip install mkdocs-material
   - pip install pymdown-extensions
   - pip install pygments

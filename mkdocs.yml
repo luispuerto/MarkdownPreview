@@ -19,7 +19,7 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-pages:
+nav:
   - Markdown Preview: index.md
   - Installation: install.md
   - Usage: usage.md
