@@ -567,6 +567,7 @@ class Compiler(object):
         else:
             html = '<!DOCTYPE html>'
             html += '<html><head><meta charset="utf-8">'
+            html += '<meta name="viewport" content="width=device-width, initial-scale=1">'
             html += self.get_meta()
             html += self.get_stylesheet()
             html += self.get_javascript()
