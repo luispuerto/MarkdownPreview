@@ -69,8 +69,8 @@ To get live updates while editing a file after preview, you need to do the follo
 
 1. Enable the `enable_autoreload` setting in `MarkdownPreview.sublime-settings`.
     ```js
-         /*
-            Enable auto-reloaded on save. Will not work if GitHub parser GitLab parser is used without oauth key specified.
+        /*
+            Enable auto-reloaded on save. Will not work if GitHub parser or GitLab parser is used without oauth key specified.
         */
         "enable_autoreload": true,
     ```
