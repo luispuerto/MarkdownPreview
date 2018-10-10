@@ -72,12 +72,12 @@
         // You can't include "extra" and "superfences"
         // as "fenced_code" can not be included with "superfences",
         // so we include the pieces separately.
-        "markdown.extensions.smart_strong",
         "markdown.extensions.footnotes",
         "markdown.extensions.attr_list",
         "markdown.extensions.def_list",
         "markdown.extensions.tables",
         "markdown.extensions.abbr",
+        "pymdownx.betterem",
         {
             "markdown.extensions.codehilite": {
                 "guess_lang": false
@@ -101,7 +101,22 @@
         "markdown.extensions.admonition",
 
         // PyMdown extensions that help give a GitHub-ish feel
-        "pymdownx.superfences",  // Nested fences and UML support
+        {
+            "pymdownx.superfences": { // Nested fences and UML support
+                "custom_fences": [
+                    {
+                        "name": "flow",
+                        "class": "uml-flowchart",
+                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
+                    },
+                    {
+                        "name": "sequence",
+                        "class": "uml-sequence-diagram",
+                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
+                    }
+                ]
+            }
+        },
         {
             "pymdownx.magiclink": {   // Auto linkify URLs and email addresses
                 "repo_url_shortener": true,
