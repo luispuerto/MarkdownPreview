@@ -63,7 +63,14 @@
                 image_path: https://assets-cdn.github.com/images/icons/emoji/unicode/
                 non_standard_image_path: https://assets-cdn.github.com/images/icons/emoji/
           - pymdownx.tasklist
-          - pymdownx.superfences
+          - pymdownx.superfences:
+              custom_fences:
+                - name: flow
+                  class: uml-flowchart
+                  format: !!python/name:pymdownx.superfences.fence_code_format
+                - name: sequence
+                  class: uml-sequence-diagram
+                  format: !!python/name:pymdownx.superfences.fence_code_format
 ---
 test: This tests the meta extension
 title: This title will be overridden by YAML
