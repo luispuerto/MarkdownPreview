@@ -26,14 +26,14 @@ class StMarkdown(Markdown):
         We are overriding this in order to gracefully handle bad extensions
         and to prevent old deprecated style of 'extensions(option=value)'.
         """
-        MD3 = version_info[0] > 2
+        md3 = version_info[0] > 2
         for ext in extensions:
             try:
                 # Make sure we aren't using old form `extension(option=value)`
                 if isinstance(ext, util.string_type) and ('(' not in ext):
                     ext = self.build_extension(ext, configs.get(ext, []))
                 if isinstance(ext, Extension):
-                    if MD3:
+                    if md3:
                         ext._extendMarkdown(self)
                     else:
                         ext.extendMarkdown(self, globals())
