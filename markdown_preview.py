@@ -32,7 +32,7 @@ RELOAD_JS = """<script async>
 document.write(
   '<script src="http://' +
   (location.host || 'localhost').split(':')[0] +
-  ':%d/livereload.js?snipver=1"></' +
+  ':%d/livereload.js?snipver=1" async></' +
   'script>')
 </script>
 """
