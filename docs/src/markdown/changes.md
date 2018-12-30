@@ -1,5 +1,9 @@
 # Changes
 
+## 2.2.2
+
+- **FIX**: Reload issues in some browsers.
+
 ## 2.2.1
 
 - Add support for Markdown 3+ and Pymdownx 6+.
