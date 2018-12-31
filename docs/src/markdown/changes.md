@@ -7,7 +7,7 @@
 ## 2.2.1
 
 - Add support for Markdown 3+ and Pymdownx 6+.
-- Add viewport scaling in HTML.
+- Add `viewport` scaling in HTML.
 
 ## 2.2.0
 
