@@ -14,7 +14,7 @@ DELETE_UNSPECIFIED = True
 BUG = 'c45b46'
 FEATURE = '7b17d8'
 SUPPORT = 'efbe62'
-DOCS = 'b2ffeb'
+MAINTENANCE = 'b2ffeb'
 
 CATEGORY = '709ad8'
 SUBCATEGORY = 'bfd4f2'
@@ -36,11 +36,12 @@ label_list = {
     # Category
     'core': (CATEGORY, "Related to the core code."),
     'integration': (CATEGORY, "Related to packaging and/or testing."),
+    'maintenance': (MAINTENANCE, "Maintenance chore."),
     'docs': (CATEGORY, "Related to documentation."),
 
     # Sub categories
-    'markdown-parser': (SUBCATEGORY, "Python Markdown parser"),
-    'github-parser': (SUBCATEGORY, "GitHub parser"),
+    'markdown-parser': (SUBCATEGORY, "Python Markdown parser."),
+    'github-parser': (SUBCATEGORY, "GitHub parser."),
     'gitlab-parser': (SUBCATEGORY, "GitLab parser."),
     'other-parser': (SUBCATEGORY, "GitLab parser."),
 
