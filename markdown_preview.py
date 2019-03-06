@@ -1167,7 +1167,7 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             cmd = '"%s" %s' % (browser, path)
             if sys.platform == 'darwin':
                 cmd = "open -a %s" % cmd
-            elif sys.platform == 'linux2':
+            elif sys.platform == 'linux':
                 cmd += ' &'
             elif sys.platform == 'win32':
                 cmd = 'start "" %s' % cmd
