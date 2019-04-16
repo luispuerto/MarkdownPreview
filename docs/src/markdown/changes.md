@@ -1,5 +1,9 @@
 # Changes
 
+## 2.2.4
+
+- **FIX**: Fix GitHub emoji asset links.
+
 ## 2.2.3
 
 - **FIX**: Linux browser preview issue.
