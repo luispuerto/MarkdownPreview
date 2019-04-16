@@ -1,5 +1,9 @@
 # Changes
 
+## 2.2.3
+
+- **FIX**: Linux browser preview issue.
+
 ## 2.2.2
 
 - **FIX**: Reload issues in some browsers.
